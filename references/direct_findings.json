@@ -1,0 +1,142 @@
+{
+  "ebpf_tools": [
+    {
+      "name": "Tetragon (Cilium)",
+      "platform": "Linux",
+      "category": "eBPF/Segurança Runtime",
+      "source_url": "https://github.com/cilium/tetragon",
+      "description": "Observabilidade e enforcement de segurança baseado em eBPF em tempo real"
+    },
+    {
+      "name": "Tracee (Aqua Security)",
+      "platform": "Linux",
+      "category": "eBPF/Segurança Runtime",
+      "source_url": "https://github.com/aquasecurity/tracee",
+      "description": "Detecção de ameaças em runtime Linux usando eBPF"
+    },
+    {
+      "name": "eBPF-Sentinel",
+      "platform": "Linux",
+      "category": "eBPF/Monitoramento",
+      "source_url": "https://github.com/peddinenisrinivas/eBPF-Sentinel-Advanced-Linux-Observability-and-Security-Monitor",
+      "description": "Monitor avançado de observabilidade e segurança Linux via eBPF"
+    }
+  ],
+  "bluetooth_ble": [
+    {
+      "name": "Blue Hydra",
+      "platform": "Multi",
+      "category": "Bluetooth/Scanner",
+      "source_url": "https://github.com/pwnieexpress/blue_hydra",
+      "description": "Scanner de dispositivos Bluetooth com detecção de serviços"
+    },
+    {
+      "name": "BtleJack",
+      "platform": "Multi",
+      "category": "BLE/Hijacking",
+      "source_url": "https://github.com/virtualabs/btlejack",
+      "description": "Ferramenta de hijacking BLE (Bluetooth Low Energy)"
+    },
+    {
+      "name": "Bleah",
+      "platform": "Linux",
+      "category": "BLE/Framework",
+      "source_url": "https://github.com/evilsocket/bleah",
+      "description": "Framework de hacking BLE (do criador do bettercap)"
+    }
+  ],
+  "iot_firmware": [
+    {
+      "name": "Firmware Analysis Toolkit (FAT)",
+      "platform": "Linux",
+      "category": "IoT/Firmware",
+      "source_url": "https://github.com/attify/firmware-analysis-toolkit",
+      "description": "Kit de emulação e análise de firmware IoT/embarcado"
+    },
+    {
+      "name": "FirmwareForge",
+      "platform": "Linux",
+      "category": "IoT/Firmware",
+      "source_url": "https://github.com/varungor365/firmwareforge",
+      "description": "Toolkit automatizado para extração, engenharia reversa e exploração de firmware"
+    },
+    {
+      "name": "ZigDiggity",
+      "platform": "Linux",
+      "category": "IoT/Zigbee",
+      "source_url": "https://github.com/BishopFox/zigdiggity",
+      "description": "Framework de pentest Zigbee — ataques a redes e dispositivos Zigbee"
+    }
+  ],
+  "wifi": [
+    {
+      "name": "Aircrack-ng Suite",
+      "platform": "Linux",
+      "category": "WiFi/Auditoria",
+      "source_url": "https://github.com/aircrack-ng/aircrack-ng",
+      "description": "Suite completa de auditoria de segurança WiFi (WEP/WPA/WPA2)"
+    },
+    {
+      "name": "Wifite2",
+      "platform": "Linux",
+      "category": "WiFi/Automação",
+      "source_url": "https://github.com/derv82/wifite2",
+      "description": "Automação de ataques WiFi — auditoria contínua de redes sem fio"
+    }
+  ],
+  "macos": [
+    {
+      "name": "Objective-See Suite",
+      "platform": "macOS",
+      "category": "macOS/Forense",
+      "source_url": "https://objective-see.org/tools.html",
+      "description": "Suite de ferramentas de segurança macOS: KnockKnock, BlockBlock, LuLu, RansomWhere, ReiKey, Oversight"
+    },
+    {
+      "name": "KnockKnock",
+      "platform": "macOS",
+      "category": "macOS/Persistência",
+      "source_url": "https://objective-see.org/products/knockknock.html",
+      "description": "Detecta malware persistente no macOS escaneando pontos de lançamento"
+    },
+    {
+      "name": "LuLu Firewall",
+      "platform": "macOS",
+      "category": "macOS/Firewall",
+      "source_url": "https://objective-see.org/products/lulu.html",
+      "description": "Firewall gratuito para macOS que bloqueia conexões de saída não autorizadas"
+    }
+  ],
+  "ot_scada": [
+    {
+      "name": "ISAF (Industrial Security Auditing Framework)",
+      "platform": "Linux",
+      "category": "OT/SCADA/Auditoria",
+      "source_url": "https://gitlab.com/d0ubl3g/industrial-security-auditing-framework",
+      "description": "Framework para auditoria de segurança em ambientes industriais (ICS/SCADA)"
+    },
+    {
+      "name": "GRFICS",
+      "platform": "Linux",
+      "category": "OT/ICS/Simulação",
+      "source_url": "https://github.com/Fortiphyd/GRFICS",
+      "description": "Simulação gráfica de planta industrial para treinamento de cibersegurança ICS"
+    }
+  ],
+  "cisa_kev_2025_2026": [
+    {
+      "name": "CVE-2025-48595",
+      "platform": "Android",
+      "category": "CISA KEV/PrivEsc",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48595",
+      "description": "Android Framework: integer overflow → escalação de privilégios. Afeta Android 14-16. Ativamente explorado (Jun 2026)"
+    },
+    {
+      "name": "CVE-2022-0492",
+      "platform": "Linux",
+      "category": "CISA KEV/Container Escape",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0492",
+      "description": "Linux kernel cgroups v1: container escape para root no host. Adicionado ao KEV Jun 2026"
+    }
+  ]
+}
