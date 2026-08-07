@@ -177,6 +177,34 @@
 - Complements NIST and MITRE frameworks
 - Risk notification for AI, quantum, and emerging tech
 
+## OWASP Agentic Skills Top 10 (AST10)
+- First comprehensive security framework for AI agent skills
+- Covers all major AI agent platforms (Hermes, Claude, Codex, etc.)
+- AST01: Skill Prompt Injection
+- AST02: Skill Supply Chain Attack
+- AST03: Skill Privilege Escalation
+- AST04: Skill Data Exfiltration
+- AST05: Skill Persistence & Backdoors
+- AST06: Skill Cross-Agent Contamination
+- AST07: Skill Tool Misuse
+- AST08: Skill Output Manipulation
+- AST09: Skill Resource Abuse
+- AST10: Skill Evasion & Anti-Forensics
+- https://owasp.org/www-project-agentic-skills-top-10/
+
+## OWASP Top 10 for Agentic Applications 2026
+- ASI01: Agent Goal Hijack
+- ASI02: Tool Misuse & Exploitation
+- ASI03: Agent Identity & Privilege Abuse
+- ASI04: Multi-Agent Collusion Attacks
+- ASI05: Agent Memory Poisoning
+- ASI06: Agentic Supply Chain Compromise
+- ASI07: Autonomous Decision Exploitation
+- ASI08: Agent-to-Agent Lateral Movement
+- ASI09: Agentic Data Leakage
+- ASI10: Unbounded Agent Autonomy
+- https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+
 ---
 
 *This document evolves with the threat landscape. New frameworks and standards will be added as they become relevant.*

@@ -319,10 +319,15 @@
 
 ## External Skill Repositories
 
-| Repository | Skills | Frameworks Mapped |
-|---|---|---|
-| [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/anthropic-cybersecurity-skills) | **817** | MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF, MITRE F3 |
-| [ZeroPointRepo/awesome-hermes-skills](https://github.com/ZeroPointRepo/awesome-hermes-skills) | **101+** | — |
-| **This project** | **247** | MITRE ATT&CK, MISP, CVSS, EPSS, Sigma, YARA, NIST, ISO, OWASP |
+| Repository | Skills | Frameworks Mapped | Notes |
+|---|---|---|---|
+| [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/anthropic-cybersecurity-skills) | **817** | MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF, MITRE F3 | Largest public cybersecurity skill collection; 29 domains |
+| [0xarkstar/awesome-hermes-agent](https://github.com/0xarkstar/awesome-hermes-agent) | **700+** | MITRE ATT&CK, Sigma | Curated Hermes Agent security resources with mapped skills |
+| [ZeroPointRepo/awesome-hermes-skills](https://github.com/ZeroPointRepo/awesome-hermes-skills) | **101+** | — | Curated Hermes skill directory |
+| [Strategic-Automation/violin](https://github.com/Strategic-Automation/violin) | **31 playbooks** | OWASP Top 10, API Top 10, LLM Top 10 | Supervised Hermes pentest profile with guard plugin |
+| [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) | **curated list** | — | Hermes skills, tools, integrations directory |
+| [frankxai/awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) | **curated list** | — | Best Hermes-compatible skills and skill factories |
+| [gmh5225/awesome-ai-security](https://github.com/gmh5225/awesome-ai-security) | **31 playbooks** | OWASP, MITRE | AI security resources incl. Hermes pentest references |
+| **This project** | **247** | MITRE ATT&CK, MISP, CVSS, EPSS, Sigma, YARA, NIST, ISO, OWASP, AST10, ASI | 15 categorized skill domains + 23 frameworks |
 
-> The 817 Anthropic skills span 29 domains including AI security (ATLAS), fraud detection (F3), supply chain risk, and quantum-safe cryptography — domains not yet in this catalog. Total discoverable skills via this ecosystem: **1,165+**.
+> Total discoverable skills via this ecosystem: **1,900+** across 8 repositories. The 817 Anthropic skills + 700+ awesome-hermes-agent skills span 29+ domains including AI security (ATLAS), fraud detection (F3), supply chain risk, agentic security (AST10), and quantum-safe cryptography.
