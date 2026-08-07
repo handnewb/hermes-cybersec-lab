@@ -1,88 +1,120 @@
 ---
 name: cybersecurity-lab
-description: Mestre's cybersecurity lab — toolkit inventory, knowledge base, and evolving methodology for security research, pentesting, forensics, and threat intelligence.
+description: Turnkey cybersecurity lab — 130+ tools, 247 skills, frameworks, and evolving methodology for security research, pentesting, forensics, and threat intelligence.
 category: security
 ---
 
-# Cybersecurity Lab — Mestre
+# Hermes Cybersecurity Lab
 
-**Host:** Mestre (100.96.33.101 · Ubuntu 24.04 · 47 GB RAM · 435 GB free)
+**Compatible:** Linux (Ubuntu/Debian) and macOS. Partial Windows support via WSL.
 
-## Toolkit Inventory
+---
 
-### Network
-| Tool | Version | Path |
-|------|---------|------|
-| nmap | 7.94SVN | `/usr/bin/nmap` |
-| tcpdump | 4.99.4 | `/usr/bin/tcpdump` |
-| netcat | OpenBSD | `/usr/bin/nc` |
-| masscan | latest | `/usr/bin/masscan` |
+## What This Skill Provides
 
-### Forensics
-| Tool | Version | Path |
-|------|---------|------|
-| binwalk | latest | `/usr/bin/binwalk` |
-| foremost | latest | `/usr/bin/foremost` |
-| volatility3 | 2.28.0 | pip |
+When loaded by Hermes, this skill gives the agent full awareness of:
 
-### Analysis / Reverse Engineering
-| Tool | Version | Path |
-|------|---------|------|
-| radare2 | latest | `/usr/bin/radare2` |
-| gdb | latest | `/usr/bin/gdb` |
+- **130+ security tools** across 13 domains — from nmap to Shuffle SOAR
+- **247 procedural skills** — ready-to-execute guides for malware analysis, exploitation, forensics, threat hunting, and more
+- **16 frameworks & standards** — MITRE ATT&CK, MISP, CVSS, EPSS, STIX, Sigma, YARA, NIST, ISO 27001, and more
+- **Structured methodology** — passive recon → active scanning → exploitation → forensics → reporting
+- **Knowledge accumulation** — findings, false positives, and lessons compound over time
+- **One-shot installer** — `scripts/install.sh` installs everything (with Go, Python, and Ruby deps)
 
-### Web / API
-| Tool | Version | Path |
-|------|---------|------|
-| sqlmap | latest | `/usr/bin/sqlmap` |
-| ffuf | latest | `/usr/bin/ffuf` |
-| nuclei | latest | `/root/go/bin/nuclei` |
-
-### Python Stack
-| Package | Version |
-|---------|---------|
-| scapy | 2.7.0 |
-| impacket | 0.13.1 |
-| pwntools | 4.15.0 |
-| pycryptodomex | latest |
-| volatility3 | 2.28.0 |
-
-### Wordlists
-| Resource | Size | Path |
-|----------|------|------|
-| SecLists | 2.5 GB | `/usr/share/seclists/` |
-| rockyou | 14.3M lines | `/usr/share/wordlists/rockyou.txt.gz` |
-
-## Knowledge Accumulation Rules
-
-1. Every completed security engagement, analysis, or finding adds a dated entry to this skill's `references/findings.md`.
-2. New tools discovered during engagements are added to the inventory above.
-3. Methodology improvements are appended to `references/methodology.md`.
-4. False positives and dead ends are documented to prevent repetition.
-
-## Core Principles
-
-- **Passive before active** — enumerate without touching the target first.
-- **Document as you go** — every command and its output is evidence.
-- **Least privilege** — use the minimum access needed for each step.
-- **Clean exit** — restore any modified state before disconnecting.
+---
 
 ## Quick Start
 
 ```bash
+# Install all tools (one command)
+bash scripts/install.sh
+
 # Passive recon
 nmap -sV -sC -p- --min-rate 1000 <target>
 
-# Active scan (with authorization only)
-nmap -A -p- <target>
-
 # Web fuzzing
 ffuf -w /usr/share/seclists/Discovery/Web-Content/common.txt -u https://TARGET/FUZZ
+
+# Vulnerability scanning
+nuclei -u https://TARGET -t ~/nuclei-templates/
 
 # Forensics
 binwalk -Me firmware.bin
 volatility3 -f memory.dump windows.info
 
-# Network capture
-tcpdump -i eth0 -w capture.pcap
+# Threat intelligence
+curl -s https://api.first.org/data/v1/epss?cve=CVE-2024-XXXX | jq
 ```
+
+---
+
+## Documentation Index
+
+| File | Contents |
+|---|---|
+| **SKILL.md** (this file) | Overview, quick start, core principles |
+| `references/tools-ecosystem.md` | 131 tools across 13 categories with install commands |
+| `references/skills-catalog.md` | 247 categorized Hermes procedural skills |
+| `references/frameworks.md` | 16 cybersecurity frameworks and standards (MITRE, NIST, ISO, OWASP) |
+| `references/methodology.md` | Playbooks: recon, scanning, exploitation, forensics |
+| `references/findings.md` | Living log — discoveries, IOCs, lessons learned |
+| `scripts/install.sh` | One-shot installer for all tools + wordlists |
+
+---
+
+## Core Principles
+
+- **Passive before active** — enumerate without touching the target first
+- **Document as you go** — every command and its output is evidence
+- **Least privilege** — use the minimum access needed for each step
+- **Clean exit** — restore any modified state before disconnecting
+- **Verify, don't assume** — every finding gets corroboration before reporting
+
+---
+
+## Workflow
+
+```
+1. Scoping & Authorization
+   └─ confirm scope, rules of engagement, contact info
+
+2. Passive Recon
+   └─ WHOIS, DNS, certificate transparency, Shodan, OSINT
+   └─ skills: conducting-external-reconnaissance-with-osint
+
+3. Active Scanning (with authorization)
+   └─ nmap, masscan, naabu (ports)
+   └─ ffuf, dirsearch (web paths)
+   └─ nuclei (vulnerabilities)
+   └─ skills: scanning-network-with-nmap-advanced
+
+4. Exploitation (PoC only)
+   └─ metasploit, searchsploit, sqlmap, impacket
+   └─ skills: exploiting-vulnerabilities-with-metasploit-framework
+
+5. Post-Exploitation Analysis
+   └─ credential extraction, lateral movement, persistence check
+   └─ skills: post-exploiting-microsoft-graph-with-graphrunner
+
+6. Documentation & Evidence
+   └─ screenshots, logs, reproduction steps
+   └─ add to references/findings.md
+
+7. Cleanup & Reporting
+   └─ remove artifacts, restore state
+   └─ remediation guidance per finding
+```
+
+---
+
+## Knowledge Accumulation Rules
+
+1. Every completed engagement adds a **dated entry** to `references/findings.md`
+2. New tools discovered during engagements are added to `references/tools-ecosystem.md`
+3. Methodology improvements are appended to `references/methodology.md`
+4. False positives and dead ends are documented to prevent repetition
+5. IOCs are logged with source, timestamp, and confidence level
+
+---
+
+*This skill is a living document. It improves with every engagement.*
