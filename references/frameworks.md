@@ -142,6 +142,41 @@
 - Zones and conduits model
 - Security levels (SL 1-4)
 
+## MITRE ATLAS (Adversarial Threat Landscape for AI Systems)
+- Threat framework for AI-enabled systems
+- Maps adversary tactics against ML/AI systems
+- Complements ATT&CK for AI-specific threats
+- https://atlas.mitre.org/
+
+## MITRE F3 (Fight Fraud Framework)
+- Fraud tactics, techniques, and procedures
+- Maps fraud kill chain
+- Complements ATT&CK for financial threats
+- https://fightfraud.mitre.org/
+
+## NIST AI RMF (AI Risk Management Framework)
+- AI 100-1: AI Risk Management Framework
+- Govern, Map, Measure, Manage functions
+- Trustworthy AI characteristics
+- https://www.nist.gov/itl/ai-risk-management-framework
+
+## OWASP Top 10 for LLM Applications
+- LLM01: Prompt Injection
+- LLM02: Insecure Output Handling
+- LLM03: Training Data Poisoning
+- LLM04: Model Denial of Service
+- LLM05: Supply Chain Vulnerabilities
+- LLM06: Sensitive Information Disclosure
+- LLM07: Insecure Plugin Design
+- LLM08: Excessive Agency
+- LLM09: Overreliance
+- LLM10: Model Theft
+
+## FEND (Federal Emerging Technology Notification Database)
+- DHS CISA framework for emerging technology risk
+- Complements NIST and MITRE frameworks
+- Risk notification for AI, quantum, and emerging tech
+
 ---
 
 *This document evolves with the threat landscape. New frameworks and standards will be added as they become relevant.*

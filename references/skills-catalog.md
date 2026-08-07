@@ -314,3 +314,15 @@
 | 245 | testing-for-json-web-token-vulnerabilities |
 | 246 | testing-for-open-redirect-vulnerabilities |
 | 247 | testing-android-intents-for-vulnerabilities |
+
+---
+
+## External Skill Repositories
+
+| Repository | Skills | Frameworks Mapped |
+|---|---|---|
+| [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/anthropic-cybersecurity-skills) | **817** | MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF, MITRE F3 |
+| [ZeroPointRepo/awesome-hermes-skills](https://github.com/ZeroPointRepo/awesome-hermes-skills) | **101+** | — |
+| **This project** | **247** | MITRE ATT&CK, MISP, CVSS, EPSS, Sigma, YARA, NIST, ISO, OWASP |
+
+> The 817 Anthropic skills span 29 domains including AI security (ATLAS), fraud detection (F3), supply chain risk, and quantum-safe cryptography — domains not yet in this catalog. Total discoverable skills via this ecosystem: **1,165+**.

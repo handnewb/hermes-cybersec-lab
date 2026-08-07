@@ -43,6 +43,50 @@
 | **pacu** | AWS | AWS exploitation framework | `pip install pacu` |
 | **pwncat** | C2 | Post-exploitation C2 framework | `pip install pwncat-cs` |
 
+## 🔍 Network Detection & Response (NDR / IDS / IPS)
+
+| Tool | Category | Description | Install |
+|------|----------|-------------|---------|
+| **Suricata** | IDS/IPS | High-performance network threat detection | `apt install suricata` |
+| **Snort** | IDS/IPS | Network intrusion detection/prevention | `apt install snort` |
+| **Zeek** | NSM | Network security monitor (formerly Bro) | `apt install zeek` |
+| **Arkime** | PCAP | Full packet capture and search (formerly Moloch) | Manual download |
+
+## 🛡️ Endpoint Security & HIDS
+
+| Tool | Category | Description | Install |
+|------|----------|-------------|---------|
+| **Wazuh** | XDR/SIEM | Unified security monitoring and XDR | Docker/Manual |
+| **OSSEC** | HIDS | Host-based intrusion detection | `apt install ossec-hids` |
+| **OSQuery** | Endpoint | SQL-powered endpoint visibility (Meta/Facebook) | `apt install osquery` |
+| **ClamAV** | AV | Open source antivirus engine | `apt install clamav` |
+| **Fail2Ban** | IPS | Log-based intrusion prevention | `apt install fail2ban` |
+
+## 🏗️ Supply Chain & Secret Detection
+
+| Tool | Category | Description | Install |
+|------|----------|-------------|---------|
+| **Gitleaks** | Secret | Git secret scanning | `go install github.com/gitleaks/gitleaks/v8@latest` |
+| **truffleHog** | Secret | Secrets scanning in git repos | `pip install trufflehog` |
+| **Heisenberg** | Supply Chain | Software supply chain health check | Manual download |
+| **Syft** | SBOM | Software bill of materials generator | `go install github.com/anchore/syft/cmd/syft@latest` |
+| **Grype** | SCA | Vulnerability scanner for SBOMs | `go install github.com/anchore/grype/cmd/grype@latest` |
+
+## 🛡️ Web Application Firewall (WAF)
+
+| Tool | Category | Description | Install |
+|------|----------|-------------|---------|
+| **SafeLine** | WAF | Lightweight web application firewall | Docker |
+| **ModSecurity** | WAF | Apache/Nginx WAF module | `apt install libapache2-mod-security2` |
+| **Coraza** | WAF | Go-based WAF (ModSecurity compatible) | `go install github.com/corazawaf/coraza/v3@latest` |
+
+## 📊 Risk & Governance
+
+| Tool | Category | Description | Install |
+|------|----------|-------------|---------|
+| **MONARC** | Risk | Optimized risk analysis methodology | Manual download |
+| **VulnRisk** | Risk | Vulnerability risk scoring | Manual download |
+
 ## 🔬 Malware Analysis & Reverse Engineering
 
 | Tool | Category | Description | Install |
