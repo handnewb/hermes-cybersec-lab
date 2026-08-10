@@ -317,6 +317,112 @@
 
 ---
 
+
+## AI/LLM Security (20)
+
+| # | Skill |
+|---|-------|
+| 248 | adversarial-examples-defense-for-ml-models |
+| 249 | ai-agent-security-and-tool-use-sandboxing |
+| 250 | ai-generated-content-detection-and-watermarking |
+| 251 | ai-model-watermarking-and-ownership-verification |
+| 252 | ai-supply-chain-security-and-model-provenance |
+| 253 | ai-system-monitoring-for-anomalous-behavior |
+| 254 | embedding-inversion-and-privacy-attacks-on-vector-dbs |
+| 255 | federated-learning-security-and-gradient-leakage |
+| 256 | jailbreak-detection-and-guardrail-implementation |
+| 257 | llm-api-security-and-rate-limiting |
+| 258 | llm-output-validation-and-sanitization |
+| 259 | llm-red-teaming-methodology-and-frameworks |
+| 260 | mlops-pipeline-security-and-ci-cd-for-ai |
+| 261 | model-extraction-and-intellectual-property-protection |
+| 262 | multi-modal-input-validation-for-vision-language-models |
+| 263 | privacy-preserving-ml-inference-techniques |
+| 264 | prompt-injection-prevention-in-llm-applications |
+| 265 | rag-pipeline-security-and-document-injection |
+| 266 | secure-fine-tuning-and-lora-adapter-validation |
+| 267 | training-data-poisoning-detection-and-mitigation |
+
+## OT/ICS/SCADA Security (10)
+
+| # | Skill |
+|---|-------|
+| 268 | dnp3-protocol-vulnerability-analysis |
+| 269 | hmi-security-assessment-methodology |
+| 270 | ics-incident-response-and-containment |
+| 271 | industrial-wireless-protocol-security |
+| 272 | modbus-protocol-security-assessment |
+| 273 | opc-ua-security-configuration-hardening |
+| 274 | ot-asset-discovery-and-inventory-management |
+| 275 | plc-firmware-reverse-engineering |
+| 276 | safety-instrumented-system-(sis)-security |
+| 277 | scada-network-segmentation-and-dmz-design |
+
+## OSINT & Reconnaissance (8)
+
+| # | Skill |
+|---|-------|
+| 278 | automated-osint-pipeline-with-python-and-apis |
+| 279 | breach-data-hunting-and-credential-enumeration |
+| 280 | cryptocurrency-transaction-tracing-for-investigations |
+| 281 | dark-web-intelligence-gathering-methodology |
+| 282 | domain-and-dns-intelligence-gathering |
+| 283 | satellite-imagery-osint-for-physical-security |
+| 284 | social-media-footprint-analysis-and-correlation |
+| 285 | threat-actor-infrastructure-mapping |
+
+## Incident Response (8)
+
+| # | Skill |
+|---|-------|
+| 286 | active-directory-compromise-ir-playbook |
+| 287 | business-email-compromise-investigation-framework |
+| 288 | cloud-ir-and-forensics-for-aws-environments |
+| 289 | data-exfiltration-detection-and-response |
+| 290 | insider-threat-detection-and-response-workflow |
+| 291 | ransomware-incident-response-and-recovery-playbook |
+| 292 | supply-chain-compromise-ir-methodology |
+| 293 | zero-day-exploit-containment-and-forensics |
+
+## Threat Hunting & Detection (8)
+
+| # | Skill |
+|---|-------|
+| 294 | detecting-living-off-the-land-binaries-(lolbins) |
+| 295 | dns-tunneling-and-exfiltration-hunting |
+| 296 | hunting-credential-dumping-with-sysmon-and-elk |
+| 297 | hunting-for-c2-beacons-using-network-flow-analysis |
+| 298 | hunting-for-webshells-in-web-server-directories |
+| 299 | kerberoasting-and-as-rep-roasting-detection |
+| 300 | lateral-movement-detection-via-windows-event-logs |
+| 301 | powershell-obfuscation-detection-at-scale |
+
+## Mobile Security (8)
+
+| # | Skill |
+|---|-------|
+| 302 | android-apk-static-analysis-and-malware-triage |
+| 303 | android-intent-hijacking-and-permission-analysis |
+| 304 | detecting-mobile-spyware-and-stalkerware-indicators |
+| 305 | ios-ipa-security-assessment-methodology |
+| 306 | mobile-app-api-traffic-interception-with-burp-mitmproxy |
+| 307 | mobile-app-certificate-pinning-bypass-techniques |
+| 308 | mobile-biometric-authentication-security-testing |
+| 309 | owasp-mobile-top-10-assessment-framework |
+
+## Cloud Security Advanced (8)
+
+| # | Skill |
+|---|-------|
+| 310 | cloud-data-lake-access-control-and-auditing |
+| 311 | cloud-iam-privilege-escalation-paths-enumeration |
+| 312 | cloud-secrets-management-and-vault-auditing |
+| 313 | container-escape-detection-and-prevention |
+| 314 | cross-account-trust-relationship-abuse-detection |
+| 315 | infrastructure-as-code-security-scanning |
+| 316 | kubernetes-rbac-misconfiguration-audit |
+| 317 | serverless-function-security-and-cold-start-attacks |
+
 ## External Skill Repositories
 
 | Repository | Skills | Frameworks Mapped | Notes |
@@ -328,6 +434,6 @@
 | [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) | **curated list** | — | Hermes skills, tools, integrations directory |
 | [frankxai/awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) | **curated list** | — | Best Hermes-compatible skills and skill factories |
 | [gmh5225/awesome-ai-security](https://github.com/gmh5225/awesome-ai-security) | **31 playbooks** | OWASP, MITRE | AI security resources incl. Hermes pentest references |
-| **This project** | **247** | MITRE ATT&CK, MISP, CVSS, EPSS, Sigma, YARA, NIST, ISO, OWASP, AST10, ASI | 15 categorized skill domains + 23 frameworks |
+| **This project** | **317** | MITRE ATT&CK, MISP, CVSS, EPSS, Sigma, YARA, NIST, ISO, OWASP, AST10, ASI | 15 categorized skill domains + 23 frameworks |
 
 > Total discoverable skills via this ecosystem: **1,900+** across 8 repositories. The 817 Anthropic skills + 700+ awesome-hermes-agent skills span 29+ domains including AI security (ATLAS), fraud detection (F3), supply chain risk, agentic security (AST10), and quantum-safe cryptography.

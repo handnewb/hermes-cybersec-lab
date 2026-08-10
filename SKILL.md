@@ -1,6 +1,6 @@
 ---
 name: cybersecurity-lab
-description: Turnkey cybersecurity lab — 1,927 skills, 131+ tools, 23 frameworks, and evolving methodology for security research, pentesting, forensics, and threat intelligence. Includes one-step ecosystem cloner for 8 repositories.
+description: Turnkey cybersecurity lab — 1,997 skills, 131+ tools, 23 frameworks, and evolving methodology for security research, pentesting, forensics, and threat intelligence. Includes one-step ecosystem cloner for 8 repositories.
 category: security
 ---
 
@@ -14,13 +14,13 @@ category: security
 
 When loaded by Hermes, this skill gives the agent full awareness of:
 
-- **1,927 procedural skills** across 8 repositories — ready-to-execute guides for malware analysis, exploitation, forensics, threat hunting, and more. 247 embedded, 1,680 in external repos cloned by `scripts/clone-all.sh`.
+- **1,997 procedural skills** across 8 repositories — ready-to-execute guides for malware analysis, exploitation, forensics, threat hunting, and more. 317 embedded, 1,680 in external repos cloned by `scripts/clone-all.sh`.
 - **131+ security tools** across 13 domains — from nmap to Shuffle SOAR
 - **23 frameworks & standards** — MITRE ATT&CK, MISP, CVSS, EPSS, STIX, Sigma, YARA, NIST, ISO 27001, OWASP AST10, Agentic 2026, and more
 - **Structured methodology** — passive recon → active scanning → exploitation → forensics → CTI → reporting
 - **Knowledge accumulation** — findings, false positives, and lessons compound over time
 - **One-shot installer** — `scripts/install.sh` installs everything (with Go, Python, and Ruby deps)
-- **One-shot ecosystem cloner** — `scripts/clone-all.sh` clones all 8 repos (1,927 skills) with a single command
+- **One-shot ecosystem cloner** — `scripts/clone-all.sh` clones all 8 repos (1,997 skills) with a single command
 
 ---
 
@@ -55,12 +55,12 @@ curl -s https://api.first.org/data/v1/epss?cve=CVE-2024-XXXX | jq
 |---|---|
 | **SKILL.md** (this file) | Overview, quick start, core principles |
 | `references/tools-ecosystem.md` | 131 tools across 13 categories with install commands |
-| `references/skills-catalog.md` | 247 categorized Hermes procedural skills |
+| `references/skills-catalog.md` | 317 categorized Hermes procedural skills |
 | `references/frameworks.md` | 23 cybersecurity frameworks and standards (MITRE, NIST, ISO, OWASP) |
 | `references/methodology.md` | Playbooks: recon, scanning, exploitation, forensics |
 | `references/findings.md` | Living log — discoveries, IOCs, lessons learned |
 | `scripts/install.sh` | One-shot installer for all 131+ tools + wordlists |
-| `scripts/clone-all.sh` | One-shot ecosystem cloner — 8 repos, 1,927 skills |
+| `scripts/clone-all.sh` | One-shot ecosystem cloner — 8 repos, 1,997 skills |
 
 ---
 

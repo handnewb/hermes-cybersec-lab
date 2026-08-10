@@ -1,19 +1,20 @@
 # 🛡️ Hermes Cybersecurity Lab
 
-**Turnkey cybersecurity ecosystem for Hermes Agent** — **1,927 skills**, **131+ tools**, **23 frameworks** across 8 repositories. Preconfigured toolkit with wordlists, forensics, and evolving methodology for security research, pentesting, forensics, threat hunting, and threat intelligence.
+**Turnkey cybersecurity ecosystem for Hermes Agent** — **1,997 skills**, **131+ tools**, **23 frameworks** across 8 repositories. Preconfigured toolkit with wordlists, forensics, and evolving methodology for security research, pentesting, forensics, threat hunting, and threat intelligence.
 
 ## 📊 Ecosystem at a Glance
 
 | Layer | Count | Location |
 |---|---|---|
-| **Skills** | **1,927** | 247 embedded + 1,680 across 7 external repos |
+| **Skills** | **1,997** | 317 embedded + 1,680 across 7 external repos |
+| **Domains** | **22** | AI/LLM, OT/ICS, OSINT, IR, TH, Mobile, Cloud + 15 core domains |
 | **Tools** | **131+** | Installed via `scripts/install.sh` — network, forensics, exploitation, cloud, CTI |
 | **Frameworks** | **23** | MITRE ATT&CK/D3FEND/ATLAS/F3/FEND, NIST CSF/RMF, ISO 27001, OWASP (Web/LLM/AST10), CIS, CVSS, EPSS, Sigma, YARA, STIX, CWE, PTES, Cyber Kill Chain, Diamond Model, SSVC, IEC 62443 |
 
 ```
                      ┌──────────────────────────────┐
                      │  hermes-cybersec-lab (core)   │
-                     │  247 skills · 131 tools       │
+                     │  317 skills · 131 tools       │
                      │  23 frameworks · install.sh   │
                      └──────────┬───────────────────┘
                                 │ clone-all.sh
@@ -35,7 +36,7 @@
 git clone https://github.com/handnewb/hermes-cybersec-lab.git
 cd hermes-cybersec-lab
 
-# Clone all 7 external repos (1,927 skills total)
+# Clone all 7 external repos (1,997 skills total)
 bash scripts/clone-all.sh
 ```
 
@@ -59,7 +60,7 @@ cp -r . ~/.hermes/profiles/<profile>/skills/cybersecurity-lab/
 
 When loaded by Hermes, this skill gives the agent:
 
-- **Full ecosystem awareness** — knows all 1,927 skills and which external repo holds each one
+- **Full ecosystem awareness** — knows all 1,997 skills and which external repo holds each one
 - **Tool inventory awareness** — knows which 131+ security tools are installed and where
 - **Structured methodology** — passive recon → active scanning → exploitation → forensics → CTI → reporting
 - **Knowledge accumulation** — findings, false positives, and lessons compound over time
@@ -72,7 +73,7 @@ hermes-cybersec-lab/
 ├── SKILL.md                          # Main skill — inventory, methodology, quick refs
 ├── README.md                         # This file
 ├── references/
-│   ├── skills-catalog.md             # 247 embedded Hermes procedural skills (15 domains)
+│   ├── skills-catalog.md             # 317 embedded Hermes procedural skills (22 domains)
 │   ├── tools-ecosystem.md            # 131 tools across 13 categories with install commands
 │   ├── frameworks.md                 # 23 cybersecurity frameworks and standards
 │   ├── methodology.md                # Playbooks: recon, scanning, exploitation, forensics
@@ -95,7 +96,7 @@ hermes-cybersec-lab/
 | 6 | [awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) | curated | Skills, tools, integrations directory |
 | 7 | [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) | curated | Best Hermes-compatible skills and skill factories |
 
-## 📋 Skill Domains (embedded 247)
+## 📋 Skill Domains (embedded 317)
 
 | Domain | Skills |
 |---|---|
