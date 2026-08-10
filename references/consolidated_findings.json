@@ -1,0 +1,698 @@
+{
+  "total_entries": 98,
+  "sources": {
+    "mobile": 40,
+    "linux_unix_macos": 40,
+    "threat_intel": 30,
+    "direct": 18
+  },
+  "generated": "2026-08-07",
+  "entries": [
+    {
+      "name": "MobSF (Mobile Security Framework)",
+      "platform": "Android, iOS, Windows Mobile",
+      "category": "Pentesting / SAST / DAST / Malware",
+      "source_url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+      "description": "Plataforma de pesquisa de segurança para apps mobile com análise estática e dinâmica, suporte a APK, IPA e APPX. Cobre OWASP Mobile Top 10, análise de malware e privacidade."
+    },
+    {
+      "name": "drozer",
+      "platform": "Android",
+      "category": "Pentesting",
+      "source_url": "https://github.com/WithSecureLabs/drozer",
+      "description": "Framework de avaliação de segurança Android que explora inter-process communication (IPC), content providers, intents e permissões expostas."
+    },
+    {
+      "name": "Frida",
+      "platform": "Android, iOS, Windows, macOS, Linux",
+      "category": "Instrumentação Dinâmica / Pentesting",
+      "source_url": "https://github.com/frida/frida",
+      "description": "Kit de instrumentação dinâmica para injeção de scripts JavaScript em processos nativos. Essencial para bypass de SSL pinning, jailbreak detection e hooking de métodos."
+    },
+    {
+      "name": "objection",
+      "platform": "Android, iOS",
+      "category": "Pentesting / Runtime Exploration",
+      "source_url": "https://github.com/sensepost/objection",
+      "description": "Toolkit de exploração mobile em runtime baseado em Frida. Bypass de SSL pinning, jailbreak/root detection, dump de keychain e file system exploration com comandos simples."
+    },
+    {
+      "name": "APKTool",
+      "platform": "Android",
+      "category": "Engenharia Reversa",
+      "source_url": "https://github.com/iBotPeaches/Apktool",
+      "description": "Ferramenta para descompilar e recompilar APKs, decodificando resources.arsc, AndroidManifest.xml e arquivos dex para formato smali intermediário."
+    },
+    {
+      "name": "jadx",
+      "platform": "Android",
+      "category": "Engenharia Reversa / Decompilação",
+      "source_url": "https://github.com/skylot/jadx",
+      "description": "Decompilador Dex-to-Java com GUI e CLI. Converte bytecode Dalvik de APK, dex, aar e aab para código Java legível, incluindo AndroidManifest.xml e resources."
+    },
+    {
+      "name": "APKLeaks",
+      "platform": "Android",
+      "category": "Pentesting / Varredura de Segredos",
+      "source_url": "https://github.com/dwisiswant0/apkleaks",
+      "description": "Scanner open-source para APKs que decompila com jadx e busca URIs, endpoints e segredos (API keys, tokens) usando mais de 53 regras regex."
+    },
+    {
+      "name": "dex2jar",
+      "platform": "Android",
+      "category": "Engenharia Reversa",
+      "source_url": "https://github.com/pxb1988/dex2jar",
+      "description": "Converte arquivos DEX (Dalvik Executable) para arquivos JAR. Ponte essencial entre bytecode Android e ferramentas Java como JD-GUI."
+    },
+    {
+      "name": "Bytecode Viewer",
+      "platform": "Android, Java",
+      "category": "Engenharia Reversa",
+      "source_url": "https://github.com/Konloch/bytecode-viewer",
+      "description": "Suite leve de engenharia reversa Java/Android com múltiplos decompiladores, disassemblers, bytecode editor e scanner de código malicioso integrado."
+    },
+    {
+      "name": "APKLab",
+      "platform": "Android",
+      "category": "Engenharia Reversa / Análise de Malware",
+      "source_url": "https://github.com/Surendrajat/APKLab",
+      "description": "Extensão do VS Code que integra apktool, jadx, Quark-Engine, uber-apk-signer, apk-mitm e smali-lsp para análise direta no IDE."
+    },
+    {
+      "name": "classyshark",
+      "platform": "Android",
+      "category": "Engenharia Reversa",
+      "source_url": "https://github.com/google/android-classyshark",
+      "description": "Navegador de executáveis Android mantido pelo Google. Visualiza classes, métodos e dependências de APKs, DEX e AAR de forma interativa."
+    },
+    {
+      "name": "Androguard",
+      "platform": "Android",
+      "category": "Análise de Malware / Engenharia Reversa",
+      "source_url": "https://github.com/androguard/androguard",
+      "description": "Framework Python completo para análise de arquivos Android: DEX, APK, AXML e ARSC. Permite diffing de APKs, visualização de permissões e análise de chamadas."
+    },
+    {
+      "name": "Quark Engine",
+      "platform": "Android",
+      "category": "Análise de Malware / Scoring",
+      "source_url": "https://github.com/quark-engine/quark-engine",
+      "description": "Motor de análise de malware Android com sistema de pontuação. Usa carregador de bytecode Dalvik customizado e regras para detectar comportamentos maliciosos em segundos."
+    },
+    {
+      "name": "DroidLysis",
+      "platform": "Android",
+      "category": "Análise de Malware / Triagem",
+      "source_url": "https://github.com/cryptax/droidlysis",
+      "description": "Ferramenta de pré-análise para triagem de amostras Android suspeitas. Automatiza tarefas repetitivas de engenharia reversa: extração de propriedades, strings, permissões, e metadados."
+    },
+    {
+      "name": "Grapefruit",
+      "platform": "iOS",
+      "category": "Pentesting / Runtime Instrumentation",
+      "source_url": "https://github.com/ChiChou/Grapefruit",
+      "description": "Ferramenta open-source de avaliação de apps iOS com interface Web. Baseada em Frida, abstrai tarefas de pentest como inspeção de classes, métodos e manipulação runtime."
+    },
+    {
+      "name": "Passionfruit",
+      "platform": "iOS",
+      "category": "Pentesting / Blackbox Assessment",
+      "source_url": "https://github.com/chaitin/passionfruit",
+      "description": "Ferramenta de avaliação blackbox para apps iOS com interface web. Permite inspecionar classes, métodos, arquivos, keychain e tráfego de rede sem conhecimento do código fonte."
+    },
+    {
+      "name": "Keychain-Dumper",
+      "platform": "iOS",
+      "category": "Pentesting / Extração de Credenciais",
+      "source_url": "https://github.com/ptoomey3/Keychain-Dumper",
+      "description": "Extrai todos os itens do Keychain iOS em dispositivos com jailbreak. Revela senhas, certificados e tokens armazenados por aplicações com suas respectivas ACLs."
+    },
+    {
+      "name": "needle",
+      "platform": "iOS",
+      "category": "Pentesting / Security Assessment",
+      "source_url": "https://github.com/withsecure/needle",
+      "description": "Framework de teste de segurança iOS (da MWR/WithSecure). Cobre análise estática e dinâmica, manipulação de armazenamento, tráfego de rede e bypass de proteções."
+    },
+    {
+      "name": "class-dump",
+      "platform": "iOS, macOS",
+      "category": "Engenharia Reversa",
+      "source_url": "https://github.com/nygard/class-dump",
+      "description": "Extrai declarações de interfaces Objective-C de binários Mach-O. Essencial para mapear classes, propriedades e métodos de aplicações iOS."
+    },
+    {
+      "name": "iNalyzer",
+      "platform": "iOS",
+      "category": "Pentesting / SAST",
+      "source_url": "https://github.com/RPwnage/iNalyzer",
+      "description": "Analisador de segurança para apps iOS que decompila e inspeciona binários IPA em busca de vulnerabilidades comuns e más práticas de segurança."
+    },
+    {
+      "name": "DVIA-v2 (Damn Vulnerable iOS App)",
+      "platform": "iOS",
+      "category": "Treinamento / Laboratório",
+      "source_url": "https://github.com/prateek147/DVIA-v2",
+      "description": "Aplicação iOS intencionalmente vulnerável para treinamento de pentesting mobile. Cobre Insecure Data Storage, SSL Pinning, Touch ID bypass, jailbreak detection, etc."
+    },
+    {
+      "name": "APTF (Apple Penetration Testing Framework)",
+      "platform": "macOS, iOS",
+      "category": "Pentesting",
+      "source_url": "https://github.com/d6fault/APTF",
+      "description": "Framework de pentesting para macOS que automatiza coleta de informações do sistema, enumeração de aplicações, verificação de configurações e persistência."
+    },
+    {
+      "name": "iGoat",
+      "platform": "iOS",
+      "category": "Treinamento / Laboratório",
+      "source_url": "https://github.com/OWASP/iGoat-Swift",
+      "description": "Aplicação iOS vulnerável mantida pela OWASP para aprendizado de segurança mobile. Exercícios progressivos cobrindo keychain, armazenamento, rede e proteção de binários."
+    },
+    {
+      "name": "InjuredAndroid",
+      "platform": "Android",
+      "category": "Treinamento / Laboratório",
+      "source_url": "https://github.com/B3nac/InjuredAndroid",
+      "description": "Aplicação Android intencionalmente vulnerável com CTF-style flags. Cobre deeplinks maliciosos, XSS em WebView, SQL injection, broadcast receivers expostos e mais."
+    },
+    {
+      "name": "AndroGoat",
+      "platform": "Android",
+      "category": "Treinamento / Laboratório",
+      "source_url": "https://github.com/satishpatnayak/AndroGoat",
+      "description": "Aplicação Android vulnerável open-source para treinamento. Cobre OWASP Mobile Top 10, exploração de componentes e más configurações de segurança."
+    },
+    {
+      "name": "android-security-awesome",
+      "platform": "Android",
+      "category": "Curadoria / Referência",
+      "source_url": "https://github.com/ashishb/android-security-awesome",
+      "description": "Coleção curada de ferramentas, frameworks, artigos e recursos de segurança Android. Referência essencial cobrindo análise estática, dinâmica, forense e hardening."
+    },
+    {
+      "name": "osx-and-ios-security-awesome",
+      "platform": "iOS, macOS",
+      "category": "Curadoria / Referência",
+      "source_url": "https://github.com/ashishb/osx-and-ios-security-awesome",
+      "description": "Coleção curada de ferramentas e recursos de segurança para macOS e iOS. Cobre engenharia reversa, pentesting, forense e hardening."
+    },
+    {
+      "name": "iLEAPP (iOS Logs Events And Plists Parser)",
+      "platform": "iOS",
+      "category": "Forense Mobile",
+      "source_url": "https://github.com/abrignoni/iLEAPP",
+      "description": "Parser forense open-source para iOS. Processa backups/extractions e extrai centenas de artefatos: logs de instalação, notificações, localização, IMEI, ícones de tela, contatos."
+    },
+    {
+      "name": "ALEAPP (Android Logs Events And Protobuf Parser)",
+      "platform": "Android",
+      "category": "Forense Mobile",
+      "source_url": "https://github.com/abrignoni/ALEAPP",
+      "description": "Parser forense open-source para Android. Processa extrações lógicas e full filesystem, parseando centenas de artefatos de sistema e aplicativos. Alternativa gratuita a ferramentas comerciais."
+    },
+    {
+      "name": "Andriller",
+      "platform": "Android",
+      "category": "Forense Mobile / Aquisição",
+      "source_url": "https://github.com/den4uk/andriller",
+      "description": "Utilitário de aquisição forense read-only para Android com quebra de lockscreen (Pattern/PIN/Password) e decoders customizados para dados de apps."
+    },
+    {
+      "name": "MVT (Mobile Verification Toolkit)",
+      "platform": "Android, iOS",
+      "category": "Forense Mobile / Detecção de Comprometimento",
+      "source_url": "https://github.com/mvt-project/mvt",
+      "description": "Kit de verificação forense consensual para Android e iOS. Identifica sinais de comprometimento (spyware como Pegasus) analisando backups, logs do sistema e indicadores de IOCs."
+    },
+    {
+      "name": "libimobiledevice",
+      "platform": "iOS",
+      "category": "Forense Mobile / Comunicação",
+      "source_url": "https://github.com/libimobiledevice/libimobiledevice",
+      "description": "Biblioteca open-source para comunicação com dispositivos iOS via USB/WiFi. Permite backup, restauração, instalação de apps, acesso a logs e sistema de arquivos."
+    },
+    {
+      "name": "Santoku Linux",
+      "platform": "Android, iOS",
+      "category": "Forense Mobile / Distribuição Linux",
+      "source_url": "https://github.com/santoku/Santoku-Linux",
+      "description": "Distribuição Linux especializada em forense mobile, malware e segurança. ISO bootável com ferramentas pré-instaladas: AFLogical, dex2jar, apktool, drozer e drivers de dispositivos."
+    },
+    {
+      "name": "RLEAPP (Router Logs Events And Parser)",
+      "platform": "Multi-plataforma (Roteadores)",
+      "category": "Forense Mobile / Logs",
+      "source_url": "https://github.com/abrignoni/RLEAPP",
+      "description": "Parser forense da família LEAPPs para artefatos de roteadores. Complementa iLEAPP e ALEAPP na análise de dispositivos de rede na investigação digital."
+    },
+    {
+      "name": "VLEAPP (Vehicle Logs Events And Parser)",
+      "platform": "Multi-plataforma (Veículos)",
+      "category": "Forense Mobile / Logs",
+      "source_url": "https://github.com/abrignoni/VLEAPP",
+      "description": "Parser forense da família LEAPPs para sistemas veiculares. Extrai artefatos de infotainment, navegação e sistemas embarcados automotivos."
+    },
+    {
+      "name": "LAVA (LEAPP Artifact Viewer App)",
+      "platform": "Android, iOS (via LEAPPs)",
+      "category": "Forense Mobile / Visualização",
+      "source_url": "https://github.com/abrignoni/LAVA",
+      "description": "Ferramenta moderna de visualização e geração de relatórios para a família LEAPPs. Interface gráfica que correlaciona eventos entre dispositivos em investigações forenses."
+    },
+    {
+      "name": "OWASP MASVS",
+      "platform": "Android, iOS",
+      "category": "OWASP Mobile / Padrão de Verificação",
+      "source_url": "https://github.com/OWASP/masvs",
+      "description": "Padrão de verificação de segurança para apps mobile da OWASP (Mobile Application Security Verification Standard). Define controles baseline de segurança e privacidade."
+    },
+    {
+      "name": "OWASP MASTG",
+      "platform": "Android, iOS",
+      "category": "OWASP Mobile / Guia de Testes",
+      "source_url": "https://github.com/OWASP/mastg",
+      "description": "Guia abrangente de testes de segurança para apps mobile (Mobile Application Security Testing Guide). Cobre OS internals, engenharia reversa avançada e casos de teste alinhados ao MASVS."
+    },
+    {
+      "name": "OWASP MASWE",
+      "platform": "Android, iOS",
+      "category": "OWASP Mobile / Enumeração de Fraquezas",
+      "source_url": "https://github.com/OWASP/maswe",
+      "description": "Enumeração de fraquezas de segurança mobile da OWASP (Mobile Security Weakness Enumeration). Catálogo estruturado de fraquezas mapeadas para MASVS e MASTG."
+    },
+    {
+      "name": "OWASP MAS Checklist",
+      "platform": "Android, iOS",
+      "category": "OWASP Mobile / Checklist",
+      "source_url": "https://mas.owasp.org/checklists/",
+      "description": "Checklist de segurança mobile da OWASP vinculando controles MASVS aos casos de teste MASTG. Rastreável por versão e commit ID, utilizável em pentests e auditorias."
+    },
+    {
+      "name": "linux-kernel-exploitation-resources",
+      "platform": "Linux",
+      "category": "Kernel Exploitation & Hardening",
+      "source_url": "https://github.com/xairy/linux-kernel-exploitation",
+      "description": "Coleção abrangente de links e recursos sobre segurança e exploração do kernel Linux, mantida por Andrey Konovalov (xairy). Inclui técnicas como ret2usr, bypass de SMEP/SMAP/KASLR, heap spraying no SLUB, e escalação de privilégios via kernel."
+    },
+    {
+      "name": "syzkaller-kernel-fuzzing",
+      "platform": "Linux/FreeBSD/Windows",
+      "category": "Kernel Exploitation & Hardening",
+      "source_url": "https://github.com/google/syzkaller",
+      "description": "Fuzzer de kernel coverage-guided desenvolvido pelo Google. Gera programas de syscall em syzlang, executa em VMs e usa KCOV para rastrear cobertura. Suporta Linux, FreeBSD, Windows e outros kernels. Essencial para descoberta de vulnerabilidades no kernel."
+    },
+    {
+      "name": "lynis-security-auditing",
+      "platform": "Linux/macOS/BSD",
+      "category": "Linux Hardening & Auditoria",
+      "source_url": "https://github.com/CISOfy/lynis",
+      "description": "Ferramenta de auditoria de segurança para sistemas UNIX-like (Linux, macOS, BSD). Realiza varredura profunda de segurança, testa defesas do sistema e fornece recomendações de hardening alinhadas com benchmarks CIS. Gera índice de hardening com dicas acionáveis."
+    },
+    {
+      "name": "selinux-apparmor-hardening",
+      "platform": "Linux",
+      "category": "Linux Hardening & Auditoria",
+      "source_url": "https://github.com/SELinuxProject/selinux",
+      "description": "Módulos de Segurança do Kernel Linux (LSM): SELinux (Security-Enhanced Linux) e AppArmor implementam Mandatory Access Control (MAC). SELinux usa políticas baseadas em tipos e contextos; AppArmor usa perfis baseados em caminhos. Ambos essenciais para hardening de servidores Linux."
+    },
+    {
+      "name": "grsecurity-kernel-hardening",
+      "platform": "Linux",
+      "category": "Kernel Exploitation & Hardening",
+      "source_url": "https://grsecurity.net/compare.php",
+      "description": "Suite de patches de hardening para o kernel Linux com proteções avançadas: PaX (proteção de memória executável), RBAC (Role-Based Access Control), mitigação de exploração de heap/stack, e auditoria completa. Oferece proteção que nem SELinux nem containers fornecem isoladamente."
+    },
+    {
+      "name": "linux-exploit-suggester",
+      "platform": "Linux",
+      "category": "Kernel Exploitation & Hardening",
+      "source_url": "https://github.com/The-Z-Labs/linux-exploit-suggester",
+      "description": "Ferramenta de sugestão de exploits para escalação de privilégios em Linux. Detecta automaticamente a versão do kernel, filtra exploits já corrigidos e testa cada um até obter root. Suporta múltiplas arquiteturas e compilação runtime de exploits."
+    },
+    {
+      "name": "kernel-exploitation-heap-techniques",
+      "platform": "Linux",
+      "category": "Kernel Exploitation & Hardening",
+      "source_url": "https://santaclz.github.io/2024/01/20/Linux-Kernel-Exploitation-Heap-techniques.html",
+      "description": "Guia avançado de exploração de heap do kernel Linux cobrindo heap spraying, modprobe_path, criação de primitivas de leitura/escrita arbitrária nos alocadores SLUB/SLAB/SLOB. Inclui técnicas de KASLR heap leak e cross-cache reuse."
+    },
+    {
+      "name": "freebsd-security-hardening",
+      "platform": "FreeBSD",
+      "category": "Unix/BSD Security",
+      "source_url": "https://docs.freebsd.org/en/books/handbook/security/",
+      "description": "Guia oficial de segurança do FreeBSD cobrindo: Jails (isolamento pré-container), framework MAC (Mandatory Access Control), Capsicum (capability mode), GELI (criptografia de disco), auditoria TrustedBSD, securelevel, e hardening de SSH/PF firewall."
+    },
+    {
+      "name": "hardenedbsd-exploit-mitigations",
+      "platform": "FreeBSD/HardenedBSD",
+      "category": "Unix/BSD Security",
+      "source_url": "https://github.com/HardenedBSD/hardenedBSD",
+      "description": "Fork do FreeBSD com mitigações de exploração avançadas: ASLR reforçado, CFI (Control Flow Integrity), PaX, W^X estrito, e compilação PIE completa. Implementa proteções de kernel self-protection inspiradas no grsecurity para o ecossistema BSD."
+    },
+    {
+      "name": "openbsd-pledge-unveil-security",
+      "platform": "OpenBSD",
+      "category": "Unix/BSD Security",
+      "source_url": "https://man.openbsd.org/pledge",
+      "description": "Mecanismos de mitigação exclusivos do OpenBSD: pledge(2) restringe syscalls que um processo pode invocar (modelo de least privilege), e unveil(2) limita acesso ao sistema de arquivos. Juntos formam sandboxing nativo sem overhead de virtualização."
+    },
+    {
+      "name": "secbsd-pentesting-os",
+      "platform": "OpenBSD/SecBSD",
+      "category": "Unix/BSD Security",
+      "source_url": "https://www.secbsd.org/",
+      "description": "Sistema operacional baseado no OpenBSD para hacking ético e pentesting. Herda a arquitetura de segurança robusta do OpenBSD (proactive hardening, code auditing, exploit mitigations) e adiciona ferramentas ofensivas para testes de penetração."
+    },
+    {
+      "name": "freebsd-cis-benchmark",
+      "platform": "FreeBSD",
+      "category": "Unix/BSD Security",
+      "source_url": "https://freebsdfoundation.org/project/center-for-internet-security-cis-freebsd-14-benchmark/",
+      "description": "Benchmark CIS oficial para FreeBSD 14: guia de hardening com recomendações de configuração segura para administradores de sistema, auditores de segurança e organizações que precisam de compliance regulatório no ecossistema FreeBSD."
+    },
+    {
+      "name": "bastillebsd-jail-management",
+      "platform": "FreeBSD",
+      "category": "Unix/BSD Security",
+      "source_url": "https://bastillebsd.org/",
+      "description": "Framework de gerenciamento de Jails do FreeBSD para automação de containers BSD. Permite criar, gerenciar e compartilhar jails com templates reutilizáveis. Essencial para isolamento de serviços e ambientes de segurança no FreeBSD."
+    },
+    {
+      "name": "objective-see-knockknock",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://github.com/objective-see/KnockKnock",
+      "description": "Ferramenta gratuita e open-source para macOS que enumera todos os itens de persistência: Kernel Extensions, Launch Items, Login Items, cron jobs, e scripts de inicialização. Equivalente ao AutoRuns do Windows para detecção de malware persistente em Mac."
+    },
+    {
+      "name": "objective-see-blockblock",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://github.com/objective-see/BlockBlock",
+      "description": "Monitor de persistência contínuo para macOS. Alerta e bloqueia em tempo real qualquer tentativa de instalação de componentes persistentes (Launch Agents, Launch Daemons, Kernel Extensions, Login Items), permitindo remoção automática do item malicioso."
+    },
+    {
+      "name": "objective-see-lulu-firewall",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://github.com/objective-see/LuLu",
+      "description": "Firewall gratuito e open-source para macOS que monitora e bloqueia conexões de rede não autorizadas. Detecta tráfego de saída suspeito, alerta o usuário e permite criar regras granulares. Complementa a suíte de segurança Objective-See."
+    },
+    {
+      "name": "objective-see-ransomwhere",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://objective-see.org/products/ransomwhere.html",
+      "description": "Detector de ransomware para macOS. Monitora operações de criptografia de arquivos em tempo real usando o framework Endpoint Security da Apple. Detecta comportamento de ransomware antes que danos significativos ocorram e bloqueia o processo malicioso."
+    },
+    {
+      "name": "objective-see-taskexplorer",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://objective-see.org/products/taskexplorer.html",
+      "description": "Explorador de processos avançado para macOS. Visualiza status de assinatura de código, dylibs carregadas, arquivos abertos, conexões de rede e muito mais para cada tarefa em execução. Essencial para análise de malware e forense de memória em Mac."
+    },
+    {
+      "name": "objective-see-kextviewr",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://objective-see.org/products/kextviewr.html",
+      "description": "Visualizador de Kernel Extensions (kexts) carregadas no macOS. Exibe status de assinatura, caminho completo, taxas de detecção do VirusTotal e metadados. Crucial para detectar rootkits e kexts maliciosas que operam com privilégios elevados no kernel."
+    },
+    {
+      "name": "objective-see-oversight",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://objective-see.org/products/oversight.html",
+      "description": "Monitor de privacidade para webcam e microfone no macOS. Alerta quando qualquer processo acessa a câmera ou ativa o microfone interno. Protege contra spyware que tenta gravar áudio/vídeo sem consentimento do usuário."
+    },
+    {
+      "name": "google-santa-macos-authorization",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://github.com/google/santa",
+      "description": "Sistema de autorização e monitoramento de binários para macOS desenvolvido pelo Google. Implementa allowlisting/blocklisting centralizado usando o framework Endpoint Security da Apple. Impede execução de malware em frotas de Macs corporativos."
+    },
+    {
+      "name": "macos-endpoint-security-framework",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://developer.apple.com/documentation/endpointsecurity",
+      "description": "Framework nativo da Apple (Endpoint Security) para monitoramento de eventos do sistema em macOS: execução de processos, montagem de sistemas de arquivos, carregamento de kexts, e eventos de rede. Base para EDRs modernos como Santa e ferramentas Objective-See."
+    },
+    {
+      "name": "macos-sip-bypass-analysis",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2025/01/13/analyzing-cve-2024-44243-a-macos-system-integrity-protection-bypass-through-kernel-extensions/",
+      "description": "Análise de bypass do System Integrity Protection (SIP) no macOS. O SIP (rootless) protege arquivos críticos do sistema. Vulnerabilidades como CVE-2024-44243 permitem contornar essa proteção via kernel extensions, comprometendo a segurança fundamental do macOS."
+    },
+    {
+      "name": "macos-security-privacy-guide",
+      "platform": "macOS",
+      "category": "macOS Malware & Forense",
+      "source_url": "https://github.com/drduh/macOS-Security-and-Privacy-Guide",
+      "description": "Guia abrangente de hardening de segurança e privacidade para macOS: configuração de FileVault, firewall pf, Gatekeeper, XProtect, transparência de consentimento (TCC), e verificação de integridade do sistema. Referência definitiva para hardening de Mac."
+    },
+    {
+      "name": "falco-container-runtime-security",
+      "platform": "Linux/Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/falcosecurity/falco",
+      "description": "Ferramenta de segurança runtime CNCF-graduated que monitora syscalls do Linux para detectar comportamento anômalo em containers. Identifica técnicas de container escape como montagem de filesystems do host, acesso a paths sensíveis e abuso de capacidades privilegiadas."
+    },
+    {
+      "name": "tetragon-ebpf-security-observability",
+      "platform": "Linux/Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/cilium/tetragon",
+      "description": "Componente eBPF-based do Cilium para observabilidade de segurança e runtime enforcement. Detecta e reage a eventos de segurança como execução de processos, atividade de syscalls, e acesso a arquivos/sistema. Kubernetes-aware com TracingPolicies para bloqueio em kernel."
+    },
+    {
+      "name": "trivy-vulnerability-scanner",
+      "platform": "Linux/Containers/Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/aquasecurity/trivy",
+      "description": "Scanner de segurança abrangente da Aqua Security. Detecta CVEs, misconfigurations, segredos expostos, e gera SBOMs em containers, Kubernetes, repositórios de código, sistemas de arquivos e infraestrutura cloud. Essencial para DevSecOps e supply chain security."
+    },
+    {
+      "name": "kube-bench-cis-kubernetes",
+      "platform": "Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/aquasecurity/kube-bench",
+      "description": "Ferramenta que verifica se o Kubernetes está implantado de acordo com o CIS Kubernetes Benchmark. Executa checks automatizados contra o API server, etcd, controller manager, scheduler e kubelets. Referência para auditoria de compliance de clusters."
+    },
+    {
+      "name": "kube-hunter-kubernetes-pentest",
+      "platform": "Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/aquasecurity/kube-hunter",
+      "description": "Ferramenta de hunting ativo de vulnerabilidades em clusters Kubernetes. Descobre fraquezas de segurança do ponto de vista do atacante: API servers expostos, dashboards desprotegidos, permissões excessivas, e pods privilegiados exploráveis."
+    },
+    {
+      "name": "kubeaudit-kubernetes-security",
+      "platform": "Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/Shopify/kubeaudit",
+      "description": "Ferramenta da Shopify que audita deploys Kubernetes contra controles comuns de segurança. Detecta containers rodando como root, capabilities privilegiadas, readOnlyRootFilesystem ausente, e limites de recursos não configurados."
+    },
+    {
+      "name": "kyverno-kubernetes-policy-engine",
+      "platform": "Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/kyverno/kyverno",
+      "description": "Engine de políticas CNCF para Kubernetes que gerencia políticas como recursos nativos (sem Rego/OPA). Permite validação, mutação, geração e verificação de imagens. Implementa Pod Security Standards, image signature verification e supply chain controls."
+    },
+    {
+      "name": "opa-gatekeeper-policy-enforcement",
+      "platform": "Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/open-policy-agent/gatekeeper",
+      "description": "Admission controller CNCF que integra o Open Policy Agent (OPA) ao Kubernetes. Políticas escritas em Rego. Implementa Constraints e ConstraintTemplates para enforcement de segurança como bloqueio de privileged pods e imagens não confiáveis."
+    },
+    {
+      "name": "container-escape-cve-detection",
+      "platform": "Linux/Docker/Kubernetes",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://www.container-security.site/attackers/container_breakout_vulnerabilities.html",
+      "description": "Catálogo de CVEs de container escape documentando vulnerabilidades no runc, containerd e Docker: CVE-2024-21626 (Leaky Vessels file descriptor leak), CVE-2025-31133 (bind-mount bypass), e técnicas de privileged container breakout para acesso ao host."
+    },
+    {
+      "name": "tracee-ebpf-runtime-forensics",
+      "platform": "Linux/Containers",
+      "category": "eBPF Security Monitoring",
+      "source_url": "https://github.com/aquasecurity/tracee",
+      "description": "Ferramenta de segurança runtime e forense da Aqua Security usando eBPF. Instrumenta o kernel Linux em runtime capturando syscalls, eventos de ciclo de vida de processos, rede e arquivos. Inclui 330+ detecções comportamentais pré-construídas para ameaças."
+    },
+    {
+      "name": "cilium-ebpf-networking-security",
+      "platform": "Linux/Kubernetes",
+      "category": "eBPF Security Monitoring",
+      "source_url": "https://github.com/cilium/cilium",
+      "description": "Plataforma CNCF de networking e segurança baseada em eBPF para Kubernetes. Implementa NetworkPolicies, observabilidade de rede (Hubble), transparência de serviço e segurança de API com identidade de workload. Base do Tetragon para runtime enforcement."
+    },
+    {
+      "name": "pwru-ebpf-packet-tracing",
+      "platform": "Linux",
+      "category": "eBPF Security Monitoring",
+      "source_url": "https://github.com/cilium/pwru",
+      "description": "Ferramenta eBPF-based do Cilium para rastreamento de pacotes de rede no kernel Linux. Responde 'Packet, where are you?' com filtros avançados para introspecção do estado do kernel. Essencial para debugging de conectividade e análise de fluxos de rede suspeitos."
+    },
+    {
+      "name": "bpftrace-system-observability",
+      "platform": "Linux",
+      "category": "eBPF Security Monitoring",
+      "source_url": "https://github.com/bpftrace/bpftrace",
+      "description": "Linguagem de tracing dinâmico de alto nível para Linux baseada em eBPF. Permite escrever scripts one-liners para análise de syscalls, file I/O, atividade de rede, e comportamento de processos. Essencial para threat hunting e detecção de anomalias em tempo real."
+    },
+    {
+      "name": "cillium-hubble-network-observability",
+      "platform": "Linux/Kubernetes",
+      "category": "eBPF Security Monitoring",
+      "source_url": "https://github.com/cilium/hubble",
+      "description": "Plataforma de observabilidade de rede totalmente distribuída para Kubernetes usando eBPF. Fornece visibilidade de fluxos de rede, dependências de serviço, DNS queries e métricas de conexão. Integrado ao Cilium para segurança de rede cloud-native."
+    },
+    {
+      "name": "ebpf-security-observability-guide",
+      "platform": "Linux",
+      "category": "eBPF Security Monitoring",
+      "source_url": "https://github.com/isovalent/ebpf-security-observability",
+      "description": "Guia abrangente de segurança observability com eBPF cobrindo: hooks do kernel (kprobes, tracepoints, LSM), detecção de execução de processos, monitoramento de acesso a arquivos, network observability, e integração com pipelines SIEM para alertas de segurança."
+    },
+    {
+      "name": "docker-bench-security",
+      "platform": "Docker/Linux",
+      "category": "Container Escape & Kubernetes Security",
+      "source_url": "https://github.com/docker/docker-bench-security",
+      "description": "Script oficial do CIS Docker Benchmark que verifica configurações de segurança do Docker daemon e containers. Audita dezenas de checks de hardening: exposição de socket, user namespace, capabilities, seccomp profiles, e cgroups restrictions."
+    },
+    {
+      "name": "Tetragon (Cilium)",
+      "platform": "Linux",
+      "category": "eBPF/Segurança Runtime",
+      "source_url": "https://github.com/cilium/tetragon",
+      "description": "Observabilidade e enforcement de segurança baseado em eBPF em tempo real"
+    },
+    {
+      "name": "Tracee (Aqua Security)",
+      "platform": "Linux",
+      "category": "eBPF/Segurança Runtime",
+      "source_url": "https://github.com/aquasecurity/tracee",
+      "description": "Detecção de ameaças em runtime Linux usando eBPF"
+    },
+    {
+      "name": "eBPF-Sentinel",
+      "platform": "Linux",
+      "category": "eBPF/Monitoramento",
+      "source_url": "https://github.com/peddinenisrinivas/eBPF-Sentinel-Advanced-Linux-Observability-and-Security-Monitor",
+      "description": "Monitor avançado de observabilidade e segurança Linux via eBPF"
+    },
+    {
+      "name": "Blue Hydra",
+      "platform": "Multi",
+      "category": "Bluetooth/Scanner",
+      "source_url": "https://github.com/pwnieexpress/blue_hydra",
+      "description": "Scanner de dispositivos Bluetooth com detecção de serviços"
+    },
+    {
+      "name": "BtleJack",
+      "platform": "Multi",
+      "category": "BLE/Hijacking",
+      "source_url": "https://github.com/virtualabs/btlejack",
+      "description": "Ferramenta de hijacking BLE (Bluetooth Low Energy)"
+    },
+    {
+      "name": "Bleah",
+      "platform": "Linux",
+      "category": "BLE/Framework",
+      "source_url": "https://github.com/evilsocket/bleah",
+      "description": "Framework de hacking BLE (do criador do bettercap)"
+    },
+    {
+      "name": "Firmware Analysis Toolkit (FAT)",
+      "platform": "Linux",
+      "category": "IoT/Firmware",
+      "source_url": "https://github.com/attify/firmware-analysis-toolkit",
+      "description": "Kit de emulação e análise de firmware IoT/embarcado"
+    },
+    {
+      "name": "FirmwareForge",
+      "platform": "Linux",
+      "category": "IoT/Firmware",
+      "source_url": "https://github.com/varungor365/firmwareforge",
+      "description": "Toolkit automatizado para extração, engenharia reversa e exploração de firmware"
+    },
+    {
+      "name": "ZigDiggity",
+      "platform": "Linux",
+      "category": "IoT/Zigbee",
+      "source_url": "https://github.com/BishopFox/zigdiggity",
+      "description": "Framework de pentest Zigbee — ataques a redes e dispositivos Zigbee"
+    },
+    {
+      "name": "Aircrack-ng Suite",
+      "platform": "Linux",
+      "category": "WiFi/Auditoria",
+      "source_url": "https://github.com/aircrack-ng/aircrack-ng",
+      "description": "Suite completa de auditoria de segurança WiFi (WEP/WPA/WPA2)"
+    },
+    {
+      "name": "Wifite2",
+      "platform": "Linux",
+      "category": "WiFi/Automação",
+      "source_url": "https://github.com/derv82/wifite2",
+      "description": "Automação de ataques WiFi — auditoria contínua de redes sem fio"
+    },
+    {
+      "name": "Objective-See Suite",
+      "platform": "macOS",
+      "category": "macOS/Forense",
+      "source_url": "https://objective-see.org/tools.html",
+      "description": "Suite de ferramentas de segurança macOS: KnockKnock, BlockBlock, LuLu, RansomWhere, ReiKey, Oversight"
+    },
+    {
+      "name": "KnockKnock",
+      "platform": "macOS",
+      "category": "macOS/Persistência",
+      "source_url": "https://objective-see.org/products/knockknock.html",
+      "description": "Detecta malware persistente no macOS escaneando pontos de lançamento"
+    },
+    {
+      "name": "LuLu Firewall",
+      "platform": "macOS",
+      "category": "macOS/Firewall",
+      "source_url": "https://objective-see.org/products/lulu.html",
+      "description": "Firewall gratuito para macOS que bloqueia conexões de saída não autorizadas"
+    },
+    {
+      "name": "ISAF (Industrial Security Auditing Framework)",
+      "platform": "Linux",
+      "category": "OT/SCADA/Auditoria",
+      "source_url": "https://gitlab.com/d0ubl3g/industrial-security-auditing-framework",
+      "description": "Framework para auditoria de segurança em ambientes industriais (ICS/SCADA)"
+    },
+    {
+      "name": "GRFICS",
+      "platform": "Linux",
+      "category": "OT/ICS/Simulação",
+      "source_url": "https://github.com/Fortiphyd/GRFICS",
+      "description": "Simulação gráfica de planta industrial para treinamento de cibersegurança ICS"
+    },
+    {
+      "name": "CVE-2025-48595",
+      "platform": "Android",
+      "category": "CISA KEV/PrivEsc",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48595",
+      "description": "Android Framework: integer overflow → escalação de privilégios. Afeta Android 14-16. Ativamente explorado (Jun 2026)"
+    },
+    {
+      "name": "CVE-2022-0492",
+      "platform": "Linux",
+      "category": "CISA KEV/Container Escape",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0492",
+      "description": "Linux kernel cgroups v1: container escape para root no host. Adicionado ao KEV Jun 2026"
+    }
+  ]
+}
