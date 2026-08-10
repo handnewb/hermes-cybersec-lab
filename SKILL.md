@@ -20,7 +20,7 @@ When loaded by Hermes, this skill gives the agent full awareness of:
 - **Structured methodology** — passive recon → active scanning → exploitation → forensics → CTI → reporting
 - **Knowledge accumulation** — findings, false positives, and lessons compound over time
 - **One-shot installer** — `scripts/install.sh` installs everything (with Go, Python, and Ruby deps)
-- **One-shot ecosystem cloner** — `scripts/clone-all.sh` clones all 8 repos (1,997 skills) with a single command
+- **One-shot ecosystem cloner** — `scripts/clone-all.sh` clones all 8 repos (2,062 skills) with a single command
 
 ---
 

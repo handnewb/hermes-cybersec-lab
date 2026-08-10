@@ -1,55 +1,65 @@
 ---
 name: cryptocurrency-transaction-tracing-for-investigations
-description: This skill enables investigators to track and analyze cryptocurrency transactions for potential money laundering or other illicit activities, ideal when dealing with high-risk cases or complex financial crimes.
+description: This skill enables investigators to trace cryptocurrency transactions for potential money laundering or other illicit activities. It is useful when investigating financial crimes involving cryptocurrencies and requires a basic understanding of blockchain technology.
 category: security
 subcategory: osint
-tools_needed: Blockchain explorer tools (e.g., Chainalysis, Blockchain.com), cryptocurrency wallet analysis software (e.g., Elliptic, CipherTrace), SQL databases for storing and analyzing transaction data
+tools_needed: Blockchain Explorer, Etherscan, BlockCypher
+
+# Cryptocurrency Transaction Tracing For Investigations
 
 ## Purpose
-Cryptocurrency transaction tracing is a crucial skill for investigators to uncover hidden financial flows and identify potential money laundering schemes. By leveraging blockchain exploration tools, cryptocurrency wallet analysis software, and SQL database management, this skill enables investigators to reconstruct the sequence of transactions, identify suspicious patterns, and ultimately build a case against suspected illicit actors.
+Cryptocurrency transaction tracing is essential for investigators to follow the flow of funds across multiple transactions and identify potential money laundering or other illicit activities. This skill allows investigators to visualize the cryptocurrency transactions, track the movement of funds, and potentially link it to real-world identities.
 
 ## Prerequisites
-- Basic knowledge of blockchain technology and its applications in cryptocurrency transactions
-- Familiarity with SQL databases and data analysis concepts
+- Basic understanding of blockchain technology
+- Familiarity with a programming language (Python or JavaScript)
 
 ## Procedure
 
-### Step 1: Explore Blockchain Explorer Tools
+### Step 1: Set up Blockchain Explorer
 ```bash
-# Using Chainalysis API to retrieve blockchain data
-chainalysis_api_url="https://api.chainalysis.com/api/v1/blockchain/transactions"
-chainalysis_api_key="YOUR_CHAINANALYSIS_API_KEY"
-response=$(curl -X GET "$chainalysis_api_url" -H "Authorization: Bearer $chainalysis_api_key")
-```
-This step utilizes blockchain explorer tools like Chainalysis to retrieve relevant transaction data, including sender and recipient information, transaction amounts, and timestamps.
+# Install required packages
+pip install etherscan
+blockcypher-python-api
 
-### Step 2: Anonymize and Mask Transaction Data
+# Create an account on a Blockchain Explorer platform (e.g., Etherscan)
+```
+
+### Step 2: Search for Cryptocurrency Transactions
 ```bash
-# Using Elliptic library in Python to anonymize transaction data
-import elliptic
+# Use the Blockchain Explorer API to search for transactions by address or transaction hash
+etherscan --api-key <API_KEY> --address <ADDRESS> --limit 100
 
-anonymizer = elliptic.EccKeyPair("YOUR_ELLIPTIC_API_KEY")
-transaction_data = {
-    "sender": "0x1234567890abcdef",
-    "recipient": "0x9876543210fedcba",
-    "amount": 10000000000
-}
-
-anonymized_data = anonymizer.keypair.sign(transaction_data)
+blockcypher --api-key <API_KEY> --address <ADDRESS>
 ```
-This step leverages cryptocurrency wallet analysis software like Elliptic to anonymize and mask sensitive transaction data, protecting the identities of involved parties.
 
-### Step 3: Analyze SQL Database for Transaction Patterns
+### Step 3: Parse Transaction Data and Identify Patterns
 ```bash
-# Using PostgreSQL database management tool to analyze transaction patterns
-psql -U postgres -d transactions_database -c "SELECT * FROM suspicious_transactions WHERE amount > $100000"
+# Use a programming language (e.g., Python) to parse the transaction data and identify patterns
+import json
+
+with open('transaction_data.json') as f:
+    transactions = json.load(f)
+
+for transaction in transactions:
+    # Extract relevant information from each transaction
+    transaction_hash = transaction['hash']
+    from_address = transaction['from']
+    to_address = transaction['to']
+    amount = transaction['value']
+
+    # Check for suspicious patterns (e.g., large transactions or sudden changes)
+    if amount > 1000 and abs(from_address - to_address) == 0:
+        print(f"Suspicious transaction: {transaction_hash}")
 ```
-This step queries a SQL database containing transaction data, searching for suspicious patterns such as large or suspiciously frequent transactions.
 
 ## Expected Results
-- A list of cryptographically secure and anonymized transaction data
-- Identification of potential money laundering schemes or other illicit activities
+A list of suspected cryptocurrency transactions with potential money laundering or other illicit activities.
 
 ## Common Pitfalls
-- Insufficient understanding of blockchain technology and its applications in cryptocurrency transactions
-- Inadequate masking or anonymization of sensitive data, potentially exposing identities of involved parties
+- Overlooking the fact that blockchain transactions are publicly visible and can be linked to real-world identities.
+- Misinterpreting or misclassifying suspicious transactions as legitimate.
+
+## References
+- Blockchain Explorer documentation (https://docs.blockchain.com/)
+- Etherscan API documentation (https://www.etherscan.io/apidocs)

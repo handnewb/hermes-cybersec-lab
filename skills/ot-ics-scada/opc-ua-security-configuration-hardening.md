@@ -1,42 +1,55 @@
 ---
 name: opc-ua-security-configuration-hardening
-description: This skill enables advanced security configurations for OPC UA systems in OT-ICS-SCADA environments, focusing on securing data access, encryption, and authentication. It is ideal to use this skill when implementing or upgrading OPC UA systems with a focus on security.
+description: This skill configures OPC UA security to harden against common attacks, suitable for industrial control systems (ICS) and Supervisory Control and Data Acquisition (SCADA) environments. It provides a baseline configuration for ensuring the security of OPC UA networks.
 category: security
 subcategory: ot-ics-scada
-tools_needed: OPC UA Client Library, Node-RED, UAC (Unified Access Control), OpenSSL
+tools_needed: Node.js, npm, opcua client library
 
 # OPC UA Security Configuration Hardening
 
 ## Purpose
-OPC UA systems in OT-ICS-SCADA environments are prone to vulnerabilities such as data tampering, unauthorized access, and unencrypted communication. This skill addresses these security issues by implementing robust security configurations, including encryption, authentication, and authorization.
+OPC UA security is vulnerable to attacks such as denial-of-service (DoS) and privilege escalation. This skill addresses these security problems by configuring OPC UA to use secure communication protocols and authentication mechanisms.
 
 ## Prerequisites
-- Basic knowledge of OPC UA fundamentals and UAC.
-- Experience with Node-RED for automation.
+- Basic knowledge of OPC UA fundamentals
+- Familiarity with Node.js and npm
 
 ## Procedure
 
-### Step 1: Configure Unified Access Control (UAC) Policy
+### Step 1: Install opcua client library
 ```bash
-node-red-contrib-uac-config --policy myuacpolicy --port 5654
+npm install opcua-client
 ```
-This step sets up the UAC policy, which controls access to OPC UA resources. The `--policy` option specifies the name of the policy (`myuacpolicy`), and `--port` specifies the port number (in this case, 5654).
+Install the opcua client library using npm, which is required for interacting with OPC UA servers.
 
-### Step 2: Enable Transport Layer Security (TLS) for Encryption
-```bash
-opcua-client --tlsopt -cert /path/to/client-cert.pem -key /path/to/client-key.pem -ca /path/to/ca-cert.pem
-```
-This step enables TLS encryption for the OPC UA communication. Replace `/path/to/` with actual file paths to your client certificate, private key, and CA certificate.
+### Step 2: Configure OPC UA security
+```javascript
+const opcua = require('opcua');
 
-### Step 3: Configure Authentication Using Certificates
-```bash
-node-red-contrib-uac-auth-config --cert /path/to/server-cert.pem -key /path/to/server-key.pem
+// Create an OPC UA client
+const client = new opcua.Client('opc.tcp://localhost:4800/');
+
+// Set the authentication mechanism to Basic Authentication
+client.setSecurityToken(opcua.SecurityToken.BASIC_AUTH);
+
+// Specify the username and password for authentication
+const credentials = {
+  username: 'admin',
+  password: 'password'
+};
+
+// Connect to the OPC UA server using the specified credentials
+await client.connect(credentials);
 ```
-This step configures authentication using certificates for the OPC UA server. Replace `/path/to/` with actual file paths to your server certificate and private key.
+Configure the OPC UA client library to use secure communication protocols and Basic Authentication.
 
 ## Expected Results
-The system should now be secure, with encrypted communication, authenticated access, and authorized access control.
+The OPC UA server should be successfully connected with the specified authentication mechanism, indicating a hardening of the security configuration.
 
 ## Common Pitfalls
-- Forgetting to replace placeholder paths with actual file locations.
-- Failing to regularly update certificates for secure communication.
+- Not specifying a strong password for authentication.
+- Using outdated or insecure versions of the opcua client library.
+
+## References
+- https://github.com/FreeOpcUa/opcua-specification/blob/master/Part2/Overview.md#security
+- OPC UA Security Guide (available online)

@@ -1,40 +1,41 @@
 ---
 name: ot-asset-discovery-and-inventory-management
-description: This skill enables OT asset discovery and inventory management to identify and track critical infrastructure devices, ensuring visibility into device ownership, configuration, and potential security gaps. It is essential for performing regular vulnerability assessments and compliance reporting in industrial control systems.
+description: This skill addresses the security problem of discovering and managing OT assets in SCADA systems, ensuring accurate inventory management to prevent unauthorized access or equipment tampering. It is essential for identifying potential vulnerabilities and implementing effective security measures.
 category: security
 subcategory: ot-ics-scada
-tools_needed: Nmap, OpenVAS, Siemens SIMATIC IT WinCC
+tools_needed: Nmap, OpenVAS, Microsoft PowerShell
 
 # Ot Asset Discovery And Inventory Management
 
 ## Purpose
-The OT asset discovery and inventory management skill addresses the security problem of not having a comprehensive understanding of critical infrastructure devices in industrial control systems. This lack of visibility increases the risk of device compromise, data breaches, and operational disruptions.
+OT asset discovery and inventory management is crucial in SCADA systems to prevent unauthorized access, tampering, or cyber attacks. It helps identify potential vulnerabilities and ensures compliance with regulatory requirements.
 
 ## Prerequisites
-- Familiarity with Nmap for network scanning and identification.
-- Basic knowledge of OpenVAS vulnerability scanning and reporting.
+- Familiarity with Nmap for network scanning and OpenVAS for vulnerability assessment.
+- Basic knowledge of Microsoft PowerShell for scripting and automation.
 
 ## Procedure
 
-### Step 1: Identify Devices on a Network
+### Step 1: Network Scanning using Nmap
 ```bash
-nmap -sP <target_network> --open
+nmap -sP <SCADA_network_IP> -f "udp, icmp"
 ```
-This command uses Nmap to scan the target network and identify open ports, which can help in identifying devices connected to the network.
+This step uses Nmap to scan the SCADA network for open ports and protocols, helping identify potential entry points for unauthorized access.
 
-### Step 2: Gather Device Information with OpenVAS
+### Step 2: Vulnerability Assessment using OpenVAS
 ```bash
-openvas-scan -I -L <device_ip>
+openvas-scanner --script=microbit-identify \
+    --severity=high --output <SCADA_network_IP>_vulnerabilities.csv
 ```
-OpenVAS scans a device for vulnerabilities and gathers information on its configuration. This step helps in determining if a device is part of the OT environment.
+This step uses OpenVAS to scan the SCADA network for known vulnerabilities and output a list of identified risks in CSV format.
 
 ## Expected Results
-The expected result is a list of devices connected to the network, along with their IP addresses, open ports, and potential vulnerabilities.
+A comprehensive inventory of OT assets, including open ports, protocols, and identified vulnerabilities.
 
 ## Common Pitfalls
-- Not considering network segmentation when identifying devices.
-- Failing to account for temporary or dynamic IP assignments.
+- Overlooking hidden services or ports.
+- Failing to update and patch vulnerable systems promptly.
 
 ## References
-- https://nmap.org/
-- https://openvas.org/
+- Nmap documentation: <https://nmap.org/doc/>
+- OpenVAS documentation: <https://www.openvas.org/docs/>

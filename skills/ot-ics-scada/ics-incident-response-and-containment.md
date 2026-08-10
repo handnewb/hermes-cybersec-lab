@@ -1,47 +1,52 @@
 ---
-name: ICS Incident Response And Containment
-description: This skill enables responders to quickly identify and contain industrial control system (ICS) incidents, reducing the risk of propagation and minimizing downtime. It's essential for organizations managing critical infrastructure, such as power plants, water treatment facilities, or oil refineries.
+name: ics-incident-response-and-containment
+description: This skill teaches how to respond to and contain Industrial Control Systems (ICS) security incidents, such as malware outbreaks or unauthorized access attempts. It's essential for OT-ICS SCADA professionals who need to identify, mitigate, and restore their ICS systems to a secure state.
 category: security
 subcategory: ot-ics-scada
-tools_needed: Nmap, Nessus, Metasploit
+tools_needed: Nmap, Metasploit, Nessus
 
-# ICS Incident Response And Containment
+# Ics Incident Response And Containment
 
 ## Purpose
-ICS incident response and containment is crucial to prevent the spread of malware, data exfiltration, or other forms of cyber attacks that could compromise critical infrastructure. Effective response and containment strategies can help mitigate damage, minimize downtime, and ensure business continuity.
+Industrial Control Systems (ICS) are critical infrastructure components that require specialized security measures. This skill addresses the security problem of responding to and containing ICS incidents, minimizing downtime and potential damage to the production process.
 
 ## Prerequisites
-- Familiarity with ICS security principles and protocols (e.g., NERC CIP)
-- Knowledge of network scanning and vulnerability assessment tools (e.g., Nmap)
-- Understanding of threat intelligence and incident response frameworks
+- Familiarity with Linux-based systems and networking protocols
+- Knowledge of threat intelligence and incident response best practices
 
 ## Procedure
 
-### Step 1: Network Discovery using Nmap
+### Step 1: Identify ICS Network and System Vulnerabilities
 ```bash
-nmap -sT -P0 <ICS_network_IP>
+nmap -sT -P0 -oN ICS_Network
 ```
-This step involves using Nmap to discover open ports, services, and operating systems on the ICS network. The `-sT` flag performs a TCP connect scan, while `-P0` disables the OS detection.
+ Scan the target network for open ports, services, and operating systems to identify potential vulnerabilities.
 
-### Step 2: Vulnerability Assessment with Nessus
+### Step 2: Conduct Preliminary Threat Assessment
 ```bash
-nessus -i <ICS_network_IP> -l severity:High -r output
+metasploit -s --target=ICS-Threat-Assessment
 ```
-This step uses Nessus to scan the ICS network for high-severity vulnerabilities. The `-i` flag specifies the target IP range, while `-l` filters results to only include high-severity findings.
+ Use Metasploit's threat assessment module to analyze the identified vulnerabilities and estimate the likelihood of a successful exploit.
 
-### Step 3: Exploit Development with Metasploit
+### Step 3: Contain the Incident
 ```bash
-msfconsole > use exploit/<exploit_name>
+nmap -sT -P0 -oN Containment_Ports
 ```
-This step involves using Metasploit to develop an exploit for a identified vulnerability. The `use` command loads the exploit module, and `<exploit_name>` should be replaced with the actual exploit name.
+ Scan the network for ports used by malicious processes or malware, and isolate them using firewall rules and network segmentation techniques.
+
+### Step 4: Eradicate Malware (if applicable)
+```bash
+msfconsole -q -x "use auxiliary/scanner/multiplatform/scan; set QUIT ON; scan <malware_address>"
+```
+ Use Metasploit's built-in scanner to identify and eradicate malware from infected systems.
 
 ## Expected Results
-The response should include:
-- A detailed network topology diagram
-- A list of high-severity vulnerabilities
-- An updated ICS security plan incorporating recommended mitigations
+The ICS system should be restored to a secure state, with all identified vulnerabilities addressed and potential threats eradicated.
 
 ## Common Pitfalls
-- Failing to prioritize vulnerability remediation based on risk assessment
-- Not thoroughly reviewing and validating threat intelligence information
-- Insufficient training or resources for incident response teams
+- Insufficient network segmentation, leading to lateral movement of malicious activity.
+- Failure to prioritize incident containment, allowing the threat to spread further.
+
+## References
+- NIST Cybersecurity Framework (NCSF)
+- IEC 62443-1:2006 Standard for Industrial Automation and Control Systems Security

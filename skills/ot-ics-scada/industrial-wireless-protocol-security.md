@@ -1,52 +1,43 @@
 ---
-name: Industrial Wireless Protocol Security Assessment
-description: This skill assesses the security vulnerabilities of industrial wireless protocols used in SCADA systems, identifying potential entry points for attackers and providing recommendations for remediation.
+name: industrial-wireless-protocol-security
+description: This skill addresses the security vulnerabilities of industrial wireless protocols such as Zigbee and Z-Wave, commonly used in SCADA systems, by identifying potential attacks, assessing network security posture, and implementing mitigation strategies to prevent unauthorized access and data breaches.
 category: security
 subcategory: ot-ics-scada
-
-tools_needed: Wireshark, Nmap, Kali Linux
+tools_needed: Wireshark, Nmap, Nessus
 
 ## Purpose
-Industrial wireless protocols are increasingly used in SCADA systems to transmit critical control data between devices. However, these protocols are often poorly secured, making them vulnerable to exploitation by malicious actors.
+Industrial wireless protocols are increasingly being used in SCADA systems due to their ease of deployment and low cost. However, these protocols pose significant security risks if not properly secured, including eavesdropping, tampering, and replay attacks.
 
 ## Prerequisites
-- Basic knowledge of network protocol analysis using Wireshark.
-- Familiarity with command-line interface tools such as Nmap.
+- Basic knowledge of Wireshark for packet analysis
+- Understanding of network scanning tools like Nmap
 
 ## Procedure
 
-### Step 1: Protocol Analysis
-Use Wireshark to capture and analyze industrial wireless protocols used in the target SCADA system. Focus on identifying authentication mechanisms, encryption methods, and data transmission formats.
+### Step 1: Identify Potential Threats Using Nmap and Nessus
+```bash
+nmap -sP [target_device] --script=vuln
+```
+This command scans the target device for open ports and identifies potential vulnerabilities.
 
 ```bash
-# Capture Wireshark packets from the SCADA system's wireless interface
-tshark -i wlan0 -r output.pcap
+nessus -start [target_device] -output /path/to/output.xml
 ```
+This command starts a vulnerability scan on the target device, generating an XML report detailing potential security issues.
 
-### Step 2: Vulnerability Scanning
-Use Nmap to scan the target device for open ports and services used by industrial wireless protocols. Identify potential vulnerabilities in authentication mechanisms, encryption methods, and data transmission formats.
-
+### Step 2: Analyze Network Traffic with Wireshark
 ```bash
-# Perform a TCP SYN scan on the SCADA system's IP address
-nmap -sS 192.168.1.100
+tshark -r [capture_file] -Y "protocol== Zigbee" 
 ```
-
-### Step 3: Encryption Analysis
-Analyze the encryption methods used by industrial wireless protocols to identify potential weaknesses. Use tools such as OpenSSL or Wireshark's decryption capabilities to analyze encrypted data.
-
-```bash
-# Decrypt a sample packet using OpenSSL
-openssl decrypt -in decrypted.bin -out plain_text.txt
-```
+This command filters and displays only Zigbee protocol packets from a capture file.
 
 ## Expected Results
-- A list of identified vulnerabilities in the SCADA system's industrial wireless protocols.
-- A description of recommended remediation steps, including patching or replacing vulnerable software.
+A thorough analysis of network traffic should reveal potential security threats, such as unknown devices, unauthenticated users, or unauthorized access attempts.
 
 ## Common Pitfalls
-- Failing to capture sufficient packets for analysis.
-- Misinterpreting or misidentifying protocol versions and encryption methods.
+- Failure to update firmware regularly
+- Inadequate encryption or authentication mechanisms
 
 ## References
-- IEEE 802.15.4 (Zigbee) security standard.
-- Industrial Wireless Protocol Security Best Practices Guide.
+- [OWASP Zigbee Protocol Security](https://www.owasp.org/index.php/Zigbee_Proto_col_Security)
+- [Nmap Scanning Guide](https://nmap.org/manual/all-scanning.html)

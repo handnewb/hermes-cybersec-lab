@@ -1,71 +1,58 @@
 ---
 name: scada-network-segmentation-and-dmz-design
-description: This skill allows you to design a secure SCADA network segmentation and DMZ (Demilitarized Zone) architecture to prevent lateral movement and unauthorized access. It's essential when dealing with critical infrastructure control systems, such as those used in industrial automation, power grids, or water treatment plants.
+description: This skill enables the design and implementation of a secure SCADA network segmentation and DMZ (Demilitarized Zone) to protect industrial control systems from cyber threats. It is useful when implementing or upgrading existing SCADA networks, especially in critical infrastructure sectors such as energy, water, and transportation.
 category: security
 subcategory: ot-ics-scada
-tools_needed: Nmap, Python, Wireshark
+tools_needed: Nmap, Nessus, Wireshark
 
-# SCADA Network Segmentation And DMZ Design
+# Scada Network Segmentation And Dmz Design
 
 ## Purpose
-SCADA network segmentation and DMZ design are crucial to prevent lateral movement and unauthorized access in critical infrastructure control systems. A well-designed DMZ helps protect the internal network from external threats while allowing authorized traffic.
+The primary goal of this skill is to design a secure DMZ architecture for SCADA networks that separates the control system from the network and implements robust security controls. This ensures the confidentiality, integrity, and availability of industrial control systems from unauthorized access.
 
 ## Prerequisites
-- Basic knowledge of Linux operating system, particularly Red Hat Enterprise Linux or CentOS.
-- Familiarity with security protocols (e.g., NTP, SNTP) and firewalls (e.g., pfSense, Firewalld).
+- Familiarity with Linux operating systems (e.g., Ubuntu or CentOS)
+- Knowledge of networking fundamentals (TCP/IP, subnetting, routing)
+- Experience with Nmap for network scanning
 
 ## Procedure
 
-### Step 1: Network Discovery using Nmap
-
+### Step 1: Network Inventory and Scanning
 ```bash
-nmap -sP <SCADA_IP_RANGE>
+nmap -sP <SCADA_Network_IP> -O --script=vuln
 ```
-
-This step identifies all devices connected to the SCADA network, including routers, switches, and other hosts.
+This step generates a detailed inventory of the SCADA network devices and identifies potential vulnerabilities.
 
 ### Step 2: Segmenting the Network
-
-Create separate segments for:
-
-*   **Inner Segment**: For critical infrastructure control systems (e.g., DCS, PLCs).
-*   **DMZ Segment**: A public-facing segment with web servers, firewalls, and intrusion detection/prevention systems.
-*   **Outer Segment**: The external network connecting to the DMZ.
-
 ```bash
-sudo firewall-cmd --zone=outer --add-network=dmz --permanent
+sudo ip addr add 10.0.1.0/24 dev eth0
+sudo ip addr add 10.0.2.0/24 dev eth1
+
+echo "interface lo {
+    inet6 local6 INADDR any;
+}
+" >> /etc/sysconfig/network-scripts/ifcfg-eth0
+
+echo "interface lo {
+    inet6 local7 INADDR any;
+}" >> /etc/sysconfig/network-scripts/ifcfg-eth1
 ```
+This step creates separate subnets for the control system (10.0.1.0/24) and the DMZ (10.0.2.0/24), isolating them from each other.
 
-### Step 3: Applying Security Policies
-
-Configure host-based firewalls for each segment:
-
+### Step 3: Configuring the DMZ
 ```bash
-# Inner Segment
-sudo firewall-cmd --zone=inner --add-rich-rule='rule family="ipv4" source address="192.168.1.0/24" protocol tcp port range 443 target accept'
+sudo firewall-cmd --zone=dmz --add-forward-rule input port=80 protocol=tcp to any anywhere
 ```
-
-```bash
-# DMZ Segment
-sudo firewall-cmd --zone=dmz --add-rich-rule='rule family="ipv4" source address="192.168.2.0/24" protocol tcp port range 80 443 target accept'
-```
-
-### Step 4: Implementing Intrusion Detection and Prevention Systems
-
-Configure IDPS to monitor the DMZ segment:
-
-```bash
-sudo snort -c /etc/snort/snort.conf
-```
+This step allows incoming HTTP traffic to the DMZ, enabling monitoring and logging of incoming requests without exposing the control system.
 
 ## Expected Results
--   All incoming traffic is properly routed through the DMZ.
--   Critical infrastructure control systems are isolated from external networks.
+- A secure, isolated SCADA network with a separate DMZ.
+- Robust security controls in place (firewall rules, network segmentation).
 
 ## Common Pitfalls
--   Insufficient segmentation and isolation can lead to lateral movement between segments.
--   Inadequate network monitoring may result in undetected security breaches.
+- Insufficient subnetting or firewall configuration, leading to unauthorized access.
+- Inadequate logging and monitoring of traffic within the DMZ.
 
 ## References
--   NIST SP 800-53: "Security Categorization for Information and Communications Technology Systems"
--   OWASP SCADA Security Guide
+- NIST SP 800-53: "Security and Privacy Controls for IT Systems and Organizations"
+- ISO/IEC 27001: "Information security management systems - Requirements"

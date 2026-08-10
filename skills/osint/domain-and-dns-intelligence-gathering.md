@@ -1,49 +1,41 @@
 ---
 name: domain-and-dns-intelligence-gathering
-description: This skill is used to gather intelligence on domains and DNS records, helping to identify potential security risks and vulnerabilities. It's particularly useful when investigating phishing campaigns, tracking malicious activities, or analyzing network traffic patterns.
+description: This skill enables the gathering of domain and DNS intelligence to identify potential security threats, track malware, or uncover intellectual property violations using publicly available data sources. It is particularly useful when conducting open-source intelligence (OSINT) for threat hunting, incident response, or compliance monitoring.
 category: security
 subcategory: osint
-tools_needed: dnsmap, dig, whois, Maltego
+tools_needed: dnsmap, dig, nslookup
 
 # Domain And Dns Intelligence Gathering
 
 ## Purpose
-The purpose of this skill is to identify and analyze potential security threats related to domain and DNS records. This can include tracking malicious domains, identifying phishing campaigns, or detecting suspicious network activity.
+Domain and DNS intelligence gathering is crucial in identifying potential security threats, tracking malware, and uncovering intellectual property violations. This skill helps threat hunters, incident responders, and compliance officers to gather relevant information from publicly available data sources.
 
 ## Prerequisites
-- Familiarity with command-line interfaces (CLI)
-- Basic knowledge of DNS protocols and record types
+- Basic understanding of DNS protocol
+- Familiarity with command-line interfaces
 
 ## Procedure
 
-### Step 1: Gather Domain Information using Whois
+### Step 1: DNSenum
 ```bash
-whois example.com
+dnsmap -d example.com
 ```
-This step retrieves basic information about a domain, including its registrar, IP addresses, and expiration dates.
+This step enumerates all the domains associated with a given domain (example.com) and reveals potential subdomains, IP addresses, and mail servers.
 
-### Step 2: Analyze DNS Records with dig
+### Step 2: DNS digging
 ```bash
-dig +short A example.com
+dig +short mx example.com
 ```
-This step displays the IP addresses associated with a domain's A records, which can help identify potential security risks or vulnerabilities.
 
-### Step 3: Use dnsmap to Identify Malicious Domains
-```bash
-dnsmap -f example.com
-```
-This step scans a domain for known malware domains and identifies potential threats.
+This step retrieves the mail exchange (MX) records for a given domain (example.com), providing information on potential email providers and their associated IP addresses.
 
 ## Expected Results
-- The ability to gather basic information about a domain.
-- The IP addresses associated with the domain's A records.
-- Identification of malicious domains or suspicious DNS activity.
+The successful execution of this skill should reveal potential security threats, track malware, or uncover intellectual property violations. The gathered intelligence can be used to update threat intelligence feeds, inform incident response efforts, or enhance compliance monitoring.
 
 ## Common Pitfalls
-- Misinterpreting DNS records or domain information as legitimate.
-- Overlooking potential security risks due to incomplete data.
-- Failing to analyze results thoroughly.
+- Misinterpretation of DNS records as legitimate domain names
+- Failure to account for temporary DNS changes
 
 ## References
-- [IETF RFC 1035: Domain Names - Implementation and Specification](https://www.rfc-editor.org/rfc/rfc1035.txt)
-- [Whois Lookup Guide](https://www.whoislookup.co/whoi)
+- https://www.dnsmap.info/
+- https://en.wikipedia.org/wiki/Domain_Name_System

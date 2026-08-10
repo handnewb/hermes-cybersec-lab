@@ -1,6 +1,6 @@
 ---
 name: mobile-app-api-traffic-interception-with-burp-mitmproxy
-description: This skill enables mobile app API traffic interception for security testing purposes, allowing you to identify potential vulnerabilities such as authentication bypass or sensitive data leakage. It is particularly useful when testing the security of mobile apps that use APIs for functionality.
+description: This skill allows users to intercept API traffic from a mobile app using Burp Suite's Mitmproxy extension, helping to identify potential security vulnerabilities such as sensitive data exposure or unauthorized API calls. It is particularly useful for security testing and penetration testing in mobile app development.
 category: security
 subcategory: mobile-security
 tools_needed: Burp Suite, Mitmproxy
@@ -8,46 +8,34 @@ tools_needed: Burp Suite, Mitmproxy
 # Mobile App Api Traffic Interception With Burp/Mitmproxy
 
 ## Purpose
-This skill addresses the security problem of identifying potential vulnerabilities in mobile app APIs. By intercepting API traffic, you can test the app's security posture and identify weaknesses that an attacker could exploit.
+This skill addresses the security problem of intercepting and analyzing API traffic from a mobile app to identify potential vulnerabilities. By using Burp's Mitmproxy extension, users can intercept and manipulate API requests and responses, allowing for deeper analysis and testing.
 
 ## Prerequisites
-- Familiarity with Burp Suite and Mitmproxy
-- Understanding of HTTP requests and responses
+- Basic knowledge of Burp Suite and its extensions
+- Familiarity with the mobile app's API endpoints and data formats
 
 ## Procedure
 
-### Step 1: Configure Burp Suite as a Proxy Server
+### Step 1: Setting up Mitmproxy Extension in Burp
 ```bash
-# On Windows:
-burpsuite.exe --proxy http://localhost:8080
-
-# On Linux/Mac:
-burp burp -i http://localhost:8080
+burpuite --enable-extension <path_to_Mitmproxy_extension>
 ```
-Configure your mobile app's HTTP proxy to point to the Burp proxy server.
+This step enables the Mitmproxy extension within Burp Suite, allowing users to intercept API traffic from the mobile app.
 
-### Step 2: Start Mitmproxy and Forward Traffic to Burp
+### Step 2: Configuring Mitmproxy for Mobile App Traffic
 ```bash
-# On Windows:
-mitmdump.exe --ssl -s 8080
-
-# On Linux/Mac:
-mitmdump --ssl -s 8080
+python -m mitmproxy --config /path/to/mitmproxy_config.xml
 ```
-This step sets up Mitmproxy as a proxy server that forwards traffic from the mobile app to Burp.
-
-### Step 3: Inspect API Traffic in Burp Suite
-1. Start the mobile app and send a request using Burp's "Intercept" feature.
-2. Inspect the request and response bodies, headers, and query strings.
-3. Use Burp's "Decoded" view to decode binary data.
+This step configures Mitmproxy to intercept and analyze API traffic from the mobile app, specifying the target URL or domain.
 
 ## Expected Results
-Success is indicated by successful interception of API traffic and ability to inspect requests and responses.
+- Intercepted API requests and responses
+- Analysis of request and response headers, bodies, and cookies
 
 ## Common Pitfalls
-- Not properly configuring the proxy server or Mitmproxy
-- Missing key certificates or authentication credentials
+- Misconfiguration of Mitmproxy extension
+- Insufficient knowledge of Burp Suite's extensions and features
 
 ## References
-- The official Burp Suite documentation: <https://portswigger.net/burp>
-- The official Mitmproxy documentation: <https://mitmproxy.org/>
+- [Burp Suite documentation](https://docs.burp-suite.com)
+- [Mitmproxy documentation](https://mitmproxy.org/)

@@ -1,48 +1,55 @@
 ---
 name: hmi-security-assessment-methodology
-description: This skill assesses the security of Human-Machine Interfaces (HMIs) in Industrial Control Systems (ICS), identifying vulnerabilities that could be exploited by adversaries to disrupt operations or gain unauthorized access. To use this skill, you need knowledge of ICS, SCADA systems, and network protocols.
+description: This skill provides a structured approach to assessing the security of Human-Machine Interfaces (HMIs) in Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) systems, identifying vulnerabilities and providing recommendations for remediation. It is particularly useful when conducting security assessments for ICS/SCADA systems with HMIs.
 category: security
 subcategory: ot-ics-scada
-tools_needed: Nmap, Nessus, Metasploit
+tools_needed: Nmap, Metasploit, Nessus
 
 # HMI Security Assessment Methodology
 
 ## Purpose
-A comprehensive security assessment of HMIs is crucial to identify potential vulnerabilities before they can be exploited by adversaries. This skill provides a structured approach to assessing the security posture of HMIs in ICS and SCADA systems.
+The primary purpose of this skill is to identify vulnerabilities in the Human-Machine Interface (HMI) layer of Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) systems. By conducting a comprehensive security assessment of the HMI, system operators can ensure that their ICS/SCADA system is secure against cyber threats.
 
 ## Prerequisites
-- Basic knowledge of ICS, SCADA systems, and network protocols (TCP/IP, UDP, HTTP, etc.)
-- Familiarity with penetration testing tools such as Nmap, Nessus, and Metasploit
+- Basic knowledge of Linux operating system commands
+- Familiarity with common networking protocols and ports used by HMIs
 
 ## Procedure
 
-### Step 1: Identify HMIs and Network Connections
+### Step 1: Network Discovery
 ```bash
-nmap -sC -A <SCADA_IP> --script=vuln
+nmap -sC -sV --script=vuln <HMI_IP_address>
 ```
-This step identifies open network connections and potential vulnerabilities associated with the HMIs.
+This command uses Nmap to perform a network scan of the HMI, identifying open ports and potential vulnerabilities.
 
-### Step 2: Analyze HMI Protocol Communications
+### Step 2: Identify HMI Software Versions
 ```bash
-tcpdump -i any port 80 or port 443 > hmi_traffic.pcap
+nmap -O <HMI_IP_address> | grep "Operating System"
 ```
+This command uses Nmap to identify the operating system running on the HMI, which can help determine software versions and potential vulnerabilities.
 
-This step captures protocol communications between HMIs and servers, helping to identify potential communication patterns that could be used to exploit vulnerabilities.
-
-### Step 3: Perform Vulnerability Scanning
+### Step 3: Check for Known Vulnerabilities
 ```bash
-nessus -sV --html-report <HMI_IP> -p 80,443
+nmap --script vuln <HMI_IP_address>
 ```
-This step performs vulnerability scanning on the identified HMIs, highlighting potential weaknesses in security configurations and protocols.
+This command uses Nessus to scan the HMI for known vulnerabilities in the identified software versions.
+
+### Step 4: Conduct Passive Network Scanning
+```bash
+nmap -sT <HMI_IP_address> -P0
+```
+This command uses Nmap to perform a passive network scan of the HMI, identifying potential entry points for attackers.
 
 ## Expected Results
-A comprehensive report detailing identified vulnerabilities, potential exploits, and recommendations for remediation.
+- A list of open ports and their corresponding software versions
+- Identification of known vulnerabilities in the identified software versions
+- Potential entry points for attackers
 
 ## Common Pitfalls
-- Insufficient patching of software components
-- Weak password policies for HMI users
-- Unencrypted data transfer between HMIs
+- Failing to update software versions with known vulnerabilities
+- Not conducting regular security assessments of HMIs
 
 ## References
-- NIST Cybersecurity Framework (CSF)
-- IEC 62443 (Industrial Automation and Control Systems Security)
+- Nmap documentation: <https://nmap.org/book/>
+- Nessus documentation: <https://www.tenable.com/products/nessus>
+- OWASP top 10: <https://owasp.org/www-project-top-ten/>

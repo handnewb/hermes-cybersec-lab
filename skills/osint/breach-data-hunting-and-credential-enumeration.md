@@ -1,38 +1,40 @@
 ---
 name: breach-data-hunting-and-credential-enumeration
-description: This skill enables the identification of breached organizations and credential enumeration using publicly available OSINT data sources. It's ideal for incident responders, security analysts, or researchers to gather crucial information about potential threats.
+description: This skill helps identify compromised credentials and breach data from publicly available sources using Open-Source Intelligence (OSINT) techniques, ideal for security professionals looking to supplement their threat intelligence efforts.
 category: security
 subcategory: osint
-tools_needed: Maltego, Shodan, DNSelk
+tools_needed: Nmap, Maltego, Whois
 
 ## Purpose
-Breach data hunting and credential enumeration are essential skills in identifying potential security threats. This skill helps identify compromised credentials, leaked databases, and exposed infrastructure, allowing for swift incident response.
+The purpose of this skill is to enable security professionals to hunt for breach data and enumerate compromised credentials from publicly available sources using OSINT techniques. This skill helps identify potential vulnerabilities and threats that may not be immediately apparent through other means.
 
 ## Prerequisites
-- Familiarity with OSINT tools like Maltego and Shodan.
-- Basic understanding of DNS (Domain Name System) concepts.
+- Familiarity with command-line tools such as Nmap
+- Basic understanding of Open-Source Intelligence (OSINT) concepts
 
 ## Procedure
 
-### Step 1: Extracting Compromised Credentials Using Shodan
-
+### Step 1: Network Reconnaissance using Nmap
 ```bash
-shodan search "credentials" -f json --count
+nmap -sS --script-vuln [target-domain/IP] > vulns.txt
 ```
+This step uses Nmap to perform a port scan of the target domain or IP, identifying potential vulnerabilities and reporting them to a text file.
 
-This command uses Shodan to search for compromised credentials across various systems and services, returning a list of relevant results in JSON format.
-
-### Step 2: Analyzing DNS Data with DNSelk
-
+### Step 2: Credential Enumeration using Maltego
 ```bash
-dnselk -s [target-domain] output.txt
+maltego-console -f /path/to/vulns.txt -o csv > credentials.csv
 ```
+This step uses Maltego's Console tool to parse the vulnerability data from the previous step and generate a CSV report of potential credentials, including email addresses and domain names.
 
-Replace `[target-domain]` with the target domain you're analyzing. This command uses DNSelk to scrape DNS data from the specified domain, generating a text file containing extracted information.
+### Step 3: Domain Registration and Whois Lookup
+```bash
+whois [domain-name] | grep registrar > domain_info.txt
+```
+This step uses Whois to look up information about the domain registration, including the registrar and contact details, which can help identify potential threats.
 
 ## Expected Results
-Success will be indicated by the presence of relevant results in the extracted files (e.g., compromised credentials and DNS data).
+A CSV report of potential credentials, a text file of vulnerability data, and a text file of domain registration information.
 
 ## Common Pitfalls
-- Misinterpreting or overlooking publicly available security warnings.
-- Failing to verify the authenticity of gathered OSINT data.
+- Overreliance on publicly available data, which may not always be accurate or up-to-date.
+- Failure to consider the context and relevance of the gathered data in relation to the specific security threat.

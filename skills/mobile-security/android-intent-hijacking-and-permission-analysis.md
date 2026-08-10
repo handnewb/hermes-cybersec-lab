@@ -1,40 +1,49 @@
 ---
 name: android-intent-hijacking-and-permission-analysis
-description: This skill helps identify potential Android intent hijacking vulnerabilities and analyze application permissions to ensure secure mobile app development. It is useful for developers and security analysts who need to review and secure Android apps for sensitive data access.
+description: Analyzes Android apps for intent hijacking vulnerabilities and permission management issues to prevent malicious activity. This skill is essential for mobile security auditors and penetration testers who need to identify potential threats in Android applications.
 category: security
 subcategory: mobile-security
-tools_needed: Androguard, Permission Inspector
+tools_needed: Android Studio, ADB, permission tool
 
 # Android Intent Hijacking And Permission Analysis
 
 ## Purpose
-Android intent hijacking occurs when an app uses an intent that another app had previously installed but no longer exists or is not authorized to use. This skill addresses the security problem by analyzing application permissions and identifying potential vulnerabilities.
+Android apps often rely on intents to perform various actions, such as sending emails or making phone calls. However, if an attacker can hijack these intents, they can execute malicious code without the user's knowledge. This skill helps identify vulnerabilities in intent handling and permission management, allowing security professionals to strengthen Android app defenses.
 
 ## Prerequisites
-- Familiarity with Java and Android development
-- Basic knowledge of Androguard and its functionality
+- Basic understanding of Java and Android development
+- Familiarity with Android Studio and ADB
 
 ## Procedure
 
-### Step 1: Analyze App Permissions using Permission Inspector
+### Step 1: Inspect Intent Filters
 ```bash
-permission-inspector -a com.example.app // Analyze the permissions required by 'com.example.app'
+adb shell pm list package -f
 ```
-This step uses the Permission Inspector tool to display all the permissions requested by a specific Android app. Review the list of permissions for potential vulnerabilities.
+Inspects the intent filters declared in the AndroidManifest.xml file for each installed app, identifying potential targets for intent hijacking.
 
-### Step 2: Scan App Code using Androguard
+### Step 2: Analyze Permission Requests
 ```bash
-androguard -a com.example.app.apk // Scan the APK code for suspicious intent usage
+android permission tool --declare-permissions /system/etc/android.permission.xml
 ```
-This step uses Androguard to scan the APK code for any suspicious intent usage, such as sending intents outside of the app's normal functionality.
+Analyzes the system's permissions file to identify potentially insecure or unnecessary permissions requested by apps.
+
+### Step 3: Check Intent Resolution
+```bash
+adb shell dumpsys intent -p <package_name>
+```
+Dumps the intent resolution process for a specific package, revealing how intents are resolved and executed within the app.
 
 ## Expected Results
-The output should display a list of permissions requested by the app and any potential vulnerabilities found in the app's code.
+- Identifying intent filters that can be exploited by attackers
+- Finding unnecessary or insecure permissions requested by apps
+- Understanding how intents are resolved and executed within apps
 
 ## Common Pitfalls
-- Misinterpreting app permissions as a security risk when they are actually legitimate
-- Not scanning for intent hijacking vulnerabilities
+- Overly permissive intent filters that allow malicious activity
+- Insufficient or missing permission handling in apps
+- Misunderstanding of Android's intent resolution mechanism
 
 ## References
-- Androguard official documentation: <https://androguard.io/doc/>
-- Permission Inspector official documentation: <https://permissioninspector.com/docs/>
+- Android Developers: Intent Fundamentals
+- OWASP: Mobile Security Testing Guide

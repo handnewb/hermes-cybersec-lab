@@ -1,46 +1,40 @@
 ---
 name: plc-firmware-reverse-engineering
-description: This skill enables users to analyze and understand the firmware of Programmable Logic Controllers (PLCs) to identify potential security vulnerabilities and exploits. It is essential for cybersecurity professionals in Industrial Control Systems (ICS) environments.
+description: This skill allows Hermes Agents to perform reverse engineering on PLC firmware to identify vulnerabilities and weaknesses, essential for OT-ICS-SCADA security assessments. It is particularly useful when accessing outdated or proprietary firmware that may not be easily accessible through standard vulnerability scanning tools.
 category: security
 subcategory: ot-ics-scada
-tools_needed: Ghidra, IDA Pro, PowerView
+tools_needed: Ghidra, IDA Pro, x64dbg
 
-# PLC Firmware Reverse Engineering
+# Plc Firmware Reverse Engineering
 
 ## Purpose
-The goal of this skill is to reverse engineer PLC firmware to identify potential security weaknesses and understand how they can be exploited. This knowledge enables cybersecurity professionals to develop countermeasures to protect Industrial Control Systems (ICS) from cyber threats.
+PLC firmware reverse engineering helps identify potential vulnerabilities and weaknesses in Industrial Control Systems (ICS), which can be exploited by attackers to gain unauthorized access or disrupt operations. By analyzing the firmware, Hermes Agents can gain insights into the system's architecture, identify potential entry points, and prioritize remediation efforts.
 
 ## Prerequisites
-- Basic understanding of binary analysis and disassembly techniques.
-- Familiarity with Ghidra or IDA Pro for reverse engineering tasks.
+- Familiarity with reverse engineering tools such as Ghidra and IDA Pro.
+- Understanding of PLC programming languages (e.g., Ladder Logic, Function Block Diagrams).
 
 ## Procedure
 
-### Step 1: Disassembling the PLC Firmware
+### Step 1: Disassembling the Firmware
 ```bash
-ghidra -s <firmware_binary_file> --disassemble
+ghidra -disassemble firmware.bin
 ```
-Disassemble the PLC firmware to understand its structure and identify potential security vulnerabilities.
+Disassembling the firmware allows the agent to understand the binary's structure and identify potential entry points.
 
-### Step 2: Analyzing Data Structures and Functions
-```bash
-ida_pro -d <firmware_binary_file> --view-type=struct --search-strings="security_function"
+### Step 2: Identifying Object File Formats
+```python
+ida_pro -a firmware.obj
 ```
-Analyze data structures, such as memory layouts and registers, to gain insights into the PLC's functionality. Search for specific strings related to security functions.
-
-### Step 3: Understanding Memory Management
-```bash
-ghidra -s <firmware_binary_file> --view-type=heap --search-strings="memory_allocation"
-```
-Understand how the PLC manages memory allocation and deallocation. Identify potential vulnerabilities in memory management.
+Analyzing object file formats reveals information about the firmware's internal structures, libraries, and dependencies.
 
 ## Expected Results
-A clear understanding of the PLC's firmware structure, including data structures, functions, and memory management.
+The successful execution of the procedure will result in a comprehensive understanding of the PLC firmware's structure, including identifying potential vulnerabilities and weaknesses.
 
 ## Common Pitfalls
-- Insufficient analysis: Failing to thoroughly analyze the PLC firmware may lead to missed security vulnerabilities.
-- Misinterpretation: Incorrectly interpreting the results may lead to false conclusions about the PLC's security posture.
+- Assuming that the firmware is free of vulnerabilities without thorough analysis.
+- Incorrectly interpreting the results due to lack of knowledge about PLC-specific security considerations.
 
 ## References
-- NIST Cybersecurity Framework for Industrial Control Systems (ICS)
-- IEC 62443-3-1 Standard for Industrial Automation and Control Systems Security
+- NIST SP 800-53 Rev 4: "Security Requirements for Automated Systems and Organizations"
+- IEC 62061-1:2006: "Functional safety for lifting machines"

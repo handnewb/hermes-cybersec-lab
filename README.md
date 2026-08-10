@@ -35,7 +35,7 @@
 git clone https://github.com/handnewb/hermes-cybersec-lab.git
 cd hermes-cybersec-lab
 
-# Clone all 7 external repos (1,997 skills total)
+# Clone all 7 external repos (2,062 skills total)
 bash scripts/clone-all.sh
 ```
 

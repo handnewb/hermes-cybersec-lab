@@ -1,35 +1,40 @@
 ---
 name: threat-actor-infrastructure-mapping
-description: This skill enables threat actors to visualize and analyze an adversary's infrastructure by collecting and mapping publicly available domain and IP information using OSINT tools like WHOIS, DNS, and social media intelligence. It helps analysts identify patterns, connections, and potential command-and-control servers, facilitating more effective threat actor profiling.
+description: This skill enables the creation of a comprehensive map of a malicious actor's infrastructure using Open Source Intelligence (OSINT) tools. It is useful for threat actors and security professionals to understand the tactics, techniques, and procedures (TTPs) used by adversaries.
 category: security
 subcategory: osint
-tools_needed: whois, dig, dnsenum, social media analytics tools
+tools_needed: Maltego, Nmap, OSINT Collector
+
+# Threat Actor Infrastructure Mapping
 
 ## Purpose
-Threat actor infrastructure mapping is essential for understanding the scope and reach of a cybercrime campaign. By analyzing an adversary's digital footprint, analysts can identify vulnerabilities, predict future attacks, and disrupt command-and-control networks.
+Threat actor infrastructure mapping helps identify and visualize the command and control (C2) servers, domains, and other communication channels used by malicious actors. This skill addresses the security problem of understanding an adversary's operational model to inform incident response and mitigation strategies.
 
 ## Prerequisites
-- Basic knowledge of OSINT tools like WHOIS and DNS lookup.
-- Familiarity with social media intelligence tools for collecting publicly available information about individuals or organizations.
+- Knowledge of basic OSINT tools and techniques.
+- Familiarity with Maltego and its integration with Nmap.
 
 ## Procedure
 
-### Step 1: Collect Public DNS Information
+### Step 1: Network Discovery Using Nmap
 ```bash
-whois -d example.com
+nmap -sT -A --open -P0 [target IP or domain]
 ```
-Collecting public DNS information helps identify potential domain registration details, contact information, and other metadata that might be linked to the threat actor's infrastructure. Analyze WHOIS output for domain registrant information, IP addresses associated with domains, and any registrar-related details.
+This step discovers the target's network infrastructure by scanning for open ports and services. The `-sT` flag performs a TCP connect scan, while `--open` specifies only open ports to scan.
 
-### Step 2: Enumerate Threat Actor Hosts
+### Step 2: Domain Research Using Maltego
 ```bash
-dig +short -x 8.8.8.8 | grep "example" | cut -d '.' -f 4-6
-dnsenum -i 8.8.8.8 -t A,AAAA | grep example.com
+Maltego -f <target domain> -o export
 ```
-This step involves using DNS enumeration tools to identify potential domain names or IP addresses associated with the threat actor's infrastructure. The output can reveal additional hostnames, domains, or IP addresses linked to the adversary.
+This step extracts and visualizes the target's domain history using Maltego. The `-f` flag specifies the input file, and `--export` formats the output for analysis.
 
 ## Expected Results
-The successful execution of this skill should yield a comprehensive list of identified threat actors' hosts, including domains and IP addresses. Analyzing these findings helps create a map of the adversary's network infrastructure.
+A comprehensive network diagram showing open ports and services, as well as a historical domain report detailing domain registrations and transfers.
 
 ## Common Pitfalls
-- Overlooking domain names with variations in top-level domains (TLDs), which might indicate different country-specific registrants.
-- Failing to account for domain name parking or proxy sites, which can serve as fronts for malicious activity.
+- Misinterpreting DNS records as indicators of malicious activity.
+- Overlooking hidden or encrypted C2 communication channels.
+
+## References
+- Open Source Intelligence (OSINT) techniques and best practices.
+- Maltego documentation and user guide.

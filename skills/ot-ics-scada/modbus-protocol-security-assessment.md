@@ -1,51 +1,48 @@
-```markdown
 ---
 name: modbus-protocol-security-assessment
-description: This skill assesses the security vulnerabilities of Modbus protocol devices in IoT Scada systems, identifying potential entry points for attackers and recommending mitigations to prevent unauthorized access.
+description: This skill assesses the security of Modbus protocol implementations in Industrial Control Systems (ICS) to identify vulnerabilities and provide recommendations for improvement. It is recommended when conducting security audits or vulnerability assessments of SCADA systems that utilize Modbus.
 category: security
 subcategory: ot-ics-scada
-tools_needed: nmap, Wireshark, OpenSSL
+tools_needed: Nmap, Nessus, Wireshark
 
 # Modbus Protocol Security Assessment
 
 ## Purpose
-The Modbus protocol is widely used in Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (Scada) systems to communicate with programmable logic controllers (PLCs), sensors, and actuators. However, the lack of security features and inadequate authentication mechanisms make it vulnerable to exploitation by attackers, potentially leading to unauthorized access, data tampering, or even system compromise.
+Modbus protocol is widely used in Industrial Control Systems (ICS) for communication between devices and controllers. However, it lacks robust security features, making it vulnerable to attacks from unauthorized access or manipulation of critical system data.
 
 ## Prerequisites
-- Basic knowledge of network protocols and device administration
-- Familiarity with nmap and Wireshark for network scanning and packet analysis
-- Understanding of cryptography concepts using OpenSSL
+- Basic knowledge of Modbus protocol architecture and its common configurations
+- Familiarity with network scanning and vulnerability assessment tools such as Nmap and Nessus
 
 ## Procedure
 
-### Step 1: Network Scanning with Nmap
+### Step 1: Network Scanning using Nmap
 ```bash
-nmap -sS -A <Modbus_device_IP>
+nmap -sT -A <target_ip>
 ```
-This step scans the target Modbus device for open ports, identifying potential entry points for attackers.
+This step identifies open ports and services running on the target system, helping to determine if Modbus is configured to listen on specific ports.
 
-### Step 2: Packet Analysis with Wireshark
+### Step 2: Modbus Device Discovery using Nmap Scripting Engine
 ```bash
-Wireshark > capture <network_interface> > capture.pcap
+nmap --script=modbus-usage <target_ip> -Pn
 ```
- Capture network traffic related to the Modbus protocol on the target device or switch to analyze communication patterns and identify suspicious packets.
+This step checks for the presence of Modbus devices on the network, helping to identify potential targets for further assessment.
 
-### Step 3: Modbus Protocol Version Identification using OpenSSL
+### Step 3: Modbus Protocol Traffic Analysis using Wireshark
 ```bash
-openssl s_client -connect <Modbus_device_IP>:1700 -quiet -servername <Modbus_device_IP>
+tshark -r <capture_file> -Y "modbus"
 ```
-This step determines the Modbus protocol version used by the target device, helping to understand its security features and potential vulnerabilities.
+This step analyzes captured network traffic to identify potential security issues such as incorrect authentication or data corruption.
 
 ## Expected Results
-- Open ports identified through nmap scanning
-- Suspicious packets detected during Wireshark analysis
-- Modbus protocol version identified using OpenSSL
+- The target system has at least one open port configured for Modbus communication.
+- Multiple Modbus devices are detected on the network, indicating a potentially vulnerable configuration.
+- Incorrect authentication protocols or security measures are identified during protocol traffic analysis.
 
 ## Common Pitfalls
-- Misconfiguring devices or networks, increasing vulnerability to exploitation
-- Failing to update devices with known security patches
-- Not implementing proper authentication and authorization mechanisms for remote access
+- Misconfiguring Modbus ports and addresses can make it easier for unauthorized access.
+- Using outdated or unsupported Modbus versions can introduce known vulnerabilities into the system.
 
 ## References
-- IEC 62365:2017 Standard for Industrial Communication - Part 6: Functionality of the Device Management (FDM) service
-- Modbus Specification, Version 3.0a
+- IEC 62056, "Electric energy metering - Part 11: Data link layer"
+- NIST SP 800-53 Rev. 4, "Security and Privacy Controls for Federal Information Systems and Organizations"

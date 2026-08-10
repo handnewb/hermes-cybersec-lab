@@ -1,48 +1,106 @@
 ---
 name: automated-osint-pipeline-with-python-and-apis
-description: This skill enables you to automate an Open-Source Intelligence (OSINT) pipeline using Python and APIs to gather, process, and analyze publicly available data. It's ideal for security professionals looking to enhance their threat intelligence capabilities without significant manual effort.
+description: An automated OSINT pipeline using Python and APIs to gather threat intelligence from publicly available data sources such as social media, forums, and websites.
 category: security
 subcategory: osint
-tools_needed: python, api-gateway, dnsresolver, whoislookup
+tools_needed: Python, API keys for Twitter, Reddit, and Discord
 
 # Automated Osint Pipeline With Python And Apis
 
 ## Purpose
-This skill addresses the need to automate the OSINT pipeline, which involves gathering and processing publicly available data. It enables you to quickly analyze large datasets and identify potential security threats without manual effort.
+This skill addresses the need for a scalable and efficient OSINT pipeline to gather threat intelligence from various online sources. By automating the process, analysts can focus on high-level analysis and response efforts.
 
 ## Prerequisites
-- Basic knowledge of Python programming language.
-- Familiarity with API gateways and DNS resolution tools is recommended but not required.
+- Basic knowledge of Python programming language
+- API keys for Twitter, Reddit, and Discord
 
 ## Procedure
 
-### Step 1: Gather Public Data Using API Gateway
-```bash
-python -m api_gateway.get_data "https://public-api.example.com/data"
-```
-This step uses the `api_gateway` library in Python to gather data from a publicly available API. The data gathered will serve as the foundation for your OSINT pipeline.
+### Step 1: Gather Data from Social Media Platforms
 
-### Step 2: Resolve DNS Using DNS Resolver Tool
-```bash
-python -m dnsresolver.resolve "example.com"
-```
-In this step, we use the `dnsresolver` tool to resolve the domain name of the gathered data. This resolves IP addresses associated with the domain and helps in identifying potential malicious activity.
+```python
+import tweepy
+import requests
+import json
 
-### Step 3: Look Up WHOIS Information Using Whoislookup Tool
-```bash
-python -m whoislookup.get_info "1.1.1.1"
+# Set up Twitter API credentials
+consumer_key = "your-consumer-key"
+consumer_secret = "your-consumer-secret"
+access_token = "your-access-token"
+access_token_secret = "your-access-token-secret"
+
+# Set up Reddit API credentials
+reddit_api_id = "your-reddit-api-id"
+reddit_api_secret = "your-reddit-api-secret"
+
+# Create a Tweepy object to fetch tweets
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth)
+
+# Fetch the latest 1000 tweets from the #cybersecurity hashtag on Twitter
+tweets = api.search(q="#cybersecurity", count=1000, lang="en")
+
+# Save the tweets to a JSON file
+with open('tweets.json', 'w') as f:
+    json.dump(tweets.statuses, f)
+
+# Create a Reddit API object to fetch posts from the r/netsec subreddit
+reddit = requests.Session()
+reddit.headers.update({'Authorization': f'Bearer {reddit_api_id}:{reddit_api_secret}'})
+posts = reddit.get(f'https://www.reddit.com/r/netsec/.json?limit=1000').json()['data']['children']
+
+# Save the posts to a JSON file
+with open('reddit_posts.json', 'w') as f:
+    json.dump(posts, f)
+
+# Create a Discord API object to fetch messages from the #cybersecurity channel
+discord_token = "your-discord-token"
+bot = discord.py.Bot(token=discord_token)
+channel = bot.get_channel(Your-Channel-ID)
+
+async def main():
+    # Fetch messages from the channel and save them to a JSON file
+    async with channel.history(limit=1000) as messages:
+        messages_json = []
+        for message in messages:
+            messages_json.append({
+                'id': message.id,
+                'author': message.author.name,
+                'content': message.content
+            })
+        with open('discord_messages.json', 'w') as f:
+            json.dump(messages_json, f)
+
+await main()
 ```
-This step uses the `whoislookup` library to gather WHOIS information about the resolved IP address from the previous step. This provides detailed information about domain ownership and potential threat actors.
+
+### Step 2: Process and Analyze the Data
+
+```python
+import pandas as pd
+
+# Load the JSON files containing the data from social media platforms, Reddit, and Discord
+tweets = pd.read_json('tweets.json')
+reddit_posts = pd.read_json('reddit_posts.json')
+discord_messages = pd.read_json('discord_messages.json')
+
+# Merge the data into a single DataFrame
+data = pd.concat([tweets, reddit_posts, discord_messages])
+
+# Clean and preprocess the data
+data['text'] = data.apply(lambda row: ''.join(e for e in row['text'].lower() if e.isalnum()), axis=1)
+data['author'] = data.apply(lambda row: row['author'], axis=1)
+
+# Save the preprocessed data to a CSV file
+data.to_csv('preprocessed_data.csv', index=False)
+```
 
 ## Expected Results
-- A comprehensive list of gathered data, including API responses, DNS resolutions, and WHOIS information.
-- Identification of domains with suspicious activity.
+The automated OSINT pipeline should produce a preprocessed CSV file containing the gathered and analyzed data, ready for further analysis and threat intelligence efforts.
 
 ## Common Pitfalls
-- Misconfiguration of APIs or DNS resolution tools can lead to incorrect or incomplete data.
-- Over-reliance on automated tools without manual review can result in missed security threats.
-
-## References
-- Python API Gateway Library: https://github.com/Python-API-Gateway/api_gateway
-- DNS Resolver Tool: https://github.com/dns resolver/dnsresolver
-- Whoislookup Tool: https://github.com/whoislookup/whoislookup
+- Insufficient API keys or credentials can lead to authentication errors.
+- Inadequate error handling can result in data loss or corruption.
+- Overreliance on automated tools may overlook important manual aspects of OSINT.

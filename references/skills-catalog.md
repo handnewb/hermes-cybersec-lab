@@ -199,73 +199,6 @@
 | 165 | performing-kubernetes-etcd-security-assessment |
 | 166 | performing-serverless-function-security-review |
 
-## Web Application Security (14)
-
-| # | Skill |
-|---|-------|
-| 167 | analyzing-ethereum-smart-contract-vulnerabilities |
-| 168 | auditing-foundry-smart-contract-security |
-| 169 | performing-security-headers-audit |
-| 170 | performing-soap-web-service-security-testing |
-| 171 | performing-ssl-tls-security-assessment |
-| 172 | testing-api-security-with-owasp-top-10 |
-| 173 | testing-for-business-logic-vulnerabilities |
-| 174 | testing-for-xml-injection-vulnerabilities |
-| 175 | testing-for-xss-vulnerabilities |
-| 176 | testing-for-xss-vulnerabilities-with-burpsuite |
-| 177 | testing-for-xxe-injection-vulnerabilities |
-| 178 | testing-jwt-token-security |
-| 179 | testing-websocket-api-security |
-| 180 | intercepting-mobile-traffic-with-burpsuite |
-
-## OT/ICS/SCADA Security (9)
-
-| # | Skill |
-|---|-------|
-| 181 | implementing-conduit-security-for-ot-remote-access |
-| 182 | implementing-iec-62443-security-zones |
-| 183 | performing-oil-gas-cybersecurity-assessment |
-| 184 | performing-ot-network-security-assessment |
-| 185 | performing-ot-vulnerability-assessment-with-claroty |
-| 186 | performing-ot-vulnerability-scanning-safely |
-| 187 | performing-plc-firmware-security-analysis |
-| 188 | performing-power-grid-cybersecurity-assessment |
-| 189 | performing-s7comm-protocol-security-analysis |
-| 190 | performing-scada-hmi-security-assessment |
-
-## OSINT & Reconnaissance (5)
-
-| # | Skill |
-|---|-------|
-| 191 | conducting-external-reconnaissance-with-osint |
-| 192 | conducting-internal-reconnaissance-with-bloodhound-ce |
-| 193 | performing-osint-with-spiderfoot |
-| 194 | scanning-network-with-nmap-advanced |
-| 195 | performing-wireless-security-assessment-with-kismet |
-
-## Incident Response (6)
-
-| # | Skill |
-|---|-------|
-| 196 | triaging-security-alerts-in-splunk |
-| 197 | triaging-security-incident |
-| 198 | triaging-security-incident-with-ir-playbook |
-| 199 | correlating-security-events-in-qradar |
-| 200 | investigating-insider-threat-indicators |
-| 201 | performing-insider-threat-investigation |
-
-## Threat Hunting & Detection (6)
-
-| # | Skill |
-|---|-------|
-| 202 | detecting-insider-threat-behaviors |
-| 203 | detecting-insider-threat-with-ueba |
-| 204 | detecting-qr-code-phishing-with-email-security |
-| 205 | hunting-advanced-persistent-threats |
-| 206 | hunting-for-defense-evasion-via-timestomping |
-| 207 | performing-threat-hunting-with-elastic-siem |
-| 208 | performing-threat-hunting-with-yara-rules |
-
 ## Security Implementation & Hardening (34)
 
 | # | Skill |
@@ -298,26 +231,6 @@
 | 234 | performing-iot-security-assessment |
 | 235 | security |
 
-## API Security (12)
-
-| # | Skill |
-|---|-------|
-| 236 | conducting-api-security-testing |
-| 237 | implementing-api-gateway-security-controls |
-| 238 | implementing-api-key-security-controls |
-| 239 | implementing-api-schema-validation-security |
-| 240 | implementing-api-security-posture-management |
-| 241 | implementing-api-security-testing-with-42crunch |
-| 242 | implementing-api-threat-protection-with-apigee |
-| 243 | performing-api-security-testing-with-postman |
-| 244 | testing-api-for-mass-assignment-vulnerability |
-| 245 | testing-for-json-web-token-vulnerabilities |
-| 246 | testing-for-open-redirect-vulnerabilities |
-| 247 | testing-android-intents-for-vulnerabilities |
-
----
-
-
 ## AI/LLM Security (20)
 
 | # | Skill |
@@ -343,85 +256,160 @@
 | 266 | secure-fine-tuning-and-lora-adapter-validation |
 | 267 | training-data-poisoning-detection-and-mitigation |
 
-## OT/ICS/SCADA Security (10)
+## OT/ICS/SCADA Security (25)
 
 | # | Skill |
 |---|-------|
-| 268 | dnp3-protocol-vulnerability-analysis |
-| 269 | hmi-security-assessment-methodology |
-| 270 | ics-incident-response-and-containment |
-| 271 | industrial-wireless-protocol-security |
-| 272 | modbus-protocol-security-assessment |
-| 273 | opc-ua-security-configuration-hardening |
-| 274 | ot-asset-discovery-and-inventory-management |
-| 275 | plc-firmware-reverse-engineering |
-| 276 | safety-instrumented-system-(sis)-security |
-| 277 | scada-network-segmentation-and-dmz-design |
+| 268 | bacnet-building-automation-protocol-security |
+| 269 | dnp3-protocol-vulnerability-analysis |
+| 270 | electrical-grid-substation-physical-and-cyber-security |
+| 271 | ethernet-ip-and-cip-protocol-vulnerability-assessment |
+| 272 | hmi-security-assessment-methodology |
+| 273 | ics-honeypot-deployment-with-conpot |
+| 274 | ics-incident-response-and-containment |
+| 275 | ics-supply-chain-and-vendor-risk-management |
+| 276 | ics-vendor-remote-access-security-assessment |
+| 277 | iec-61850-substation-automation-security |
+| 278 | iiot-device-security-assessment-methodology |
+| 279 | industrial-wireless-protocol-security |
+| 280 | manufacturing-execution-system-(mes)-security |
+| 281 | modbus-protocol-security-assessment |
+| 282 | opc-ua-security-configuration-hardening |
+| 283 | ot-asset-discovery-and-inventory-management |
+| 284 | ot-network-monitoring-with-zeek-and-snort |
+| 285 | ot-security-awareness-training-program-design |
+| 286 | plc-firmware-reverse-engineering |
+| 287 | plc-ladder-logic-analysis-for-malicious-code |
+| 288 | purdue-model-network-architecture-security-review |
+| 289 | rtu-and-ied-security-hardening-guide |
+| 290 | safety-instrumented-system-(sis)-security |
+| 291 | scada-network-segmentation-and-dmz-design |
+| 292 | water-and-wastewater-scada-security-assessment |
 
-## OSINT & Reconnaissance (8)
+## OSINT & Reconnaissance (20)
 
 | # | Skill |
 |---|-------|
-| 278 | automated-osint-pipeline-with-python-and-apis |
-| 279 | breach-data-hunting-and-credential-enumeration |
-| 280 | cryptocurrency-transaction-tracing-for-investigations |
-| 281 | dark-web-intelligence-gathering-methodology |
-| 282 | domain-and-dns-intelligence-gathering |
-| 283 | satellite-imagery-osint-for-physical-security |
-| 284 | social-media-footprint-analysis-and-correlation |
-| 285 | threat-actor-infrastructure-mapping |
+| 293 | aircraft-and-maritime-vessel-tracking-for-security |
+| 294 | automated-osint-pipeline-with-python-and-apis |
+| 295 | breach-data-hunting-and-credential-enumeration |
+| 296 | business-email-compromise-target-profiling |
+| 297 | cryptocurrency-transaction-tracing-for-investigations |
+| 298 | dark-web-intelligence-gathering-methodology |
+| 299 | domain-and-dns-intelligence-gathering |
+| 300 | email-header-analysis-and-sender-verification-osint |
+| 301 | geolocation-osint-from-social-media-posts |
+| 302 | github-and-code-repository-intelligence-gathering |
+| 303 | maltego-transforms-and-graph-based-osint-investigation |
+| 304 | metadata-extraction-from-public-documents |
+| 305 | pastebin-and-dark-web-forum-monitoring-automation |
+| 306 | ransomware-group-leak-site-monitoring-and-analysis |
+| 307 | reverse-image-search-for-threat-actor-identification |
+| 308 | satellite-imagery-osint-for-physical-security |
+| 309 | shodan-and-censys-industrial-asset-discovery |
+| 310 | social-media-footprint-analysis-and-correlation |
+| 311 | threat-actor-infrastructure-mapping |
+| 312 | whois-history-and-domain-registration-investigation |
 
 ## Incident Response (8)
 
 | # | Skill |
 |---|-------|
-| 286 | active-directory-compromise-ir-playbook |
-| 287 | business-email-compromise-investigation-framework |
-| 288 | cloud-ir-and-forensics-for-aws-environments |
-| 289 | data-exfiltration-detection-and-response |
-| 290 | insider-threat-detection-and-response-workflow |
-| 291 | ransomware-incident-response-and-recovery-playbook |
-| 292 | supply-chain-compromise-ir-methodology |
-| 293 | zero-day-exploit-containment-and-forensics |
+| 313 | active-directory-compromise-ir-playbook |
+| 314 | business-email-compromise-investigation-framework |
+| 315 | cloud-ir-and-forensics-for-aws-environments |
+| 316 | data-exfiltration-detection-and-response |
+| 317 | insider-threat-detection-and-response-workflow |
+| 318 | ransomware-incident-response-and-recovery-playbook |
+| 319 | supply-chain-compromise-ir-methodology |
+| 320 | zero-day-exploit-containment-and-forensics |
 
 ## Threat Hunting & Detection (8)
 
 | # | Skill |
 |---|-------|
-| 294 | detecting-living-off-the-land-binaries-(lolbins) |
-| 295 | dns-tunneling-and-exfiltration-hunting |
-| 296 | hunting-credential-dumping-with-sysmon-and-elk |
-| 297 | hunting-for-c2-beacons-using-network-flow-analysis |
-| 298 | hunting-for-webshells-in-web-server-directories |
-| 299 | kerberoasting-and-as-rep-roasting-detection |
-| 300 | lateral-movement-detection-via-windows-event-logs |
-| 301 | powershell-obfuscation-detection-at-scale |
+| 321 | detecting-living-off-the-land-binaries-(lolbins) |
+| 322 | dns-tunneling-and-exfiltration-hunting |
+| 323 | hunting-credential-dumping-with-sysmon-and-elk |
+| 324 | hunting-for-c2-beacons-using-network-flow-analysis |
+| 325 | hunting-for-webshells-in-web-server-directories |
+| 326 | kerberoasting-and-as-rep-roasting-detection |
+| 327 | lateral-movement-detection-via-windows-event-logs |
+| 328 | powershell-obfuscation-detection-at-scale |
 
-## Mobile Security (8)
+## Mobile Security (20)
 
 | # | Skill |
 |---|-------|
-| 302 | android-apk-static-analysis-and-malware-triage |
-| 303 | android-intent-hijacking-and-permission-analysis |
-| 304 | detecting-mobile-spyware-and-stalkerware-indicators |
-| 305 | ios-ipa-security-assessment-methodology |
-| 306 | mobile-app-api-traffic-interception-with-burp-mitmproxy |
-| 307 | mobile-app-certificate-pinning-bypass-techniques |
-| 308 | mobile-biometric-authentication-security-testing |
-| 309 | owasp-mobile-top-10-assessment-framework |
+| 329 | android-apk-static-analysis-and-malware-triage |
+| 330 | android-intent-hijacking-and-permission-analysis |
+| 331 | android-obfuscation-and-packer-analysis-with-apkid |
+| 332 | android-runtime-application-self-protection-analysis |
+| 333 | android-safety-net-and-root-detection-bypass-methods |
+| 334 | detecting-mobile-spyware-and-stalkerware-indicators |
+| 335 | frida-based-dynamic-instrumentation-for-android-apps |
+| 336 | ios-ipa-security-assessment-methodology |
+| 337 | ios-jailbreak-detection-bypass-and-hooking-techniques |
+| 338 | ios-keychain-and-secure-enclave-security-assessment |
+| 339 | ios-mach-o-binary-reverse-engineering-basics |
+| 340 | mobile-app-api-traffic-interception-with-burp-mitmproxy |
+| 341 | mobile-app-certificate-pinning-bypass-techniques |
+| 342 | mobile-app-deep-link-hijacking-vulnerability-testing |
+| 343 | mobile-app-push-notification-interception-and-spoofing |
+| 344 | mobile-biometric-authentication-security-testing |
+| 345 | mobile-device-management-(mdm)-bypass-techniques |
+| 346 | mobile-webview-and-javascript-bridge-security-testing |
+| 347 | objection-based-runtime-analysis-for-ios-applications |
+| 348 | owasp-mobile-top-10-assessment-framework |
 
 ## Cloud Security Advanced (8)
 
 | # | Skill |
 |---|-------|
-| 310 | cloud-data-lake-access-control-and-auditing |
-| 311 | cloud-iam-privilege-escalation-paths-enumeration |
-| 312 | cloud-secrets-management-and-vault-auditing |
-| 313 | container-escape-detection-and-prevention |
-| 314 | cross-account-trust-relationship-abuse-detection |
-| 315 | infrastructure-as-code-security-scanning |
-| 316 | kubernetes-rbac-misconfiguration-audit |
-| 317 | serverless-function-security-and-cold-start-attacks |
+| 349 | cloud-data-lake-access-control-and-auditing |
+| 350 | cloud-iam-privilege-escalation-paths-enumeration |
+| 351 | cloud-secrets-management-and-vault-auditing |
+| 352 | container-escape-detection-and-prevention |
+| 353 | cross-account-trust-relationship-abuse-detection |
+| 354 | infrastructure-as-code-security-scanning |
+| 355 | kubernetes-rbac-misconfiguration-audit |
+| 356 | serverless-function-security-and-cold-start-attacks |
+
+## Web Application Security (16)
+
+| # | Skill |
+|---|-------|
+| 357 | content-security-policy-bypass-techniques |
+| 358 | cors-misconfiguration-exploitation-methodology |
+| 359 | cross-site-scripting-(xss)-polyglot-payload-crafting |
+| 360 | graphql-api-introspection-and-injection-testing |
+| 361 | http-request-smuggling-via-cl.te-and-te.cl-techniques |
+| 362 | insecure-deserialization-exploit-chain-development |
+| 363 | jwt-token-manipulation-and-algorithm-confusion-attacks |
+| 364 | oauth-2.0-and-openid-connect-misconfiguration-testing |
+| 365 | prototype-pollution-in-javascript-applications |
+| 366 | server-side-request-forgery-(ssrf)-to-internal-network-pivoting |
+| 367 | server-side-template-injection-(ssti)-exploitation |
+| 368 | sql-injection-exploitation-with-sqlmap-automation |
+| 369 | subdomain-takeover-detection-and-exploitation |
+| 370 | web-cache-poisoning-and-cache-deception-attacks |
+| 371 | websocket-security-testing-and-message-tampering |
+| 372 | xml-external-entity-(xxe)-injection-to-file-disclosure |
+
+## API Security (10)
+
+| # | Skill |
+|---|-------|
+| 373 | api-authentication-bypass-via-parameter-manipulation |
+| 374 | api-schema-validation-and-mass-assignment-vulnerabilities |
+| 375 | api-versioning-vulnerability-and-deprecated-endpoint-testing |
+| 376 | batch-request-api-abuse-and-race-condition-exploitation |
+| 377 | bola-and-bfla-authorization-bypass-testing |
+| 378 | graphql-query-depth-and-rate-limiting-bypass-techniques |
+| 379 | grpc-api-security-assessment-methodology |
+| 380 | rate-limiting-evasion-through-ip-rotation-and-header-spoofing |
+| 381 | rest-api-fuzzing-with-automated-tools-and-custom-payloads |
+| 382 | webhook-security-testing-and-ssrf-via-callbacks |
 
 ## External Skill Repositories
 

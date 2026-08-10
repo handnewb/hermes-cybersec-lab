@@ -1,63 +1,51 @@
 ```markdown
 ---
 name: satellite-imagery-osint-for-physical-security
-description: This skill utilizes satellite imagery for Open-Source Intelligence (OSINT) to identify physical security vulnerabilities in organizations, including perimeter fencing, gates, and other features. It is particularly useful when visual inspections are not feasible or have been inconclusive.
+description: This skill utilizes satellite imagery OSINT to identify potential vulnerabilities in physical security measures, ideal for threat assessment and risk mitigation during reconnaissance or pre-infiltration phases. It requires access to high-resolution satellite images and analytical tools to detect anomalies.
 category: security
 subcategory: osint
-tools_needed: Imagery analysis software like Planet Labs, DigitalGlobe, Google Earth, ArcGIS
+tools_needed: Google Earth Pro, Sentinel-2 data from the European Space Agency's (ESA) Copernicus program, ArcGIS Desktop
 
 # Satellite Imagery Osint For Physical Security
 
 ## Purpose
-This skill helps identify potential physical security vulnerabilities in an organization's perimeter and property boundaries. By analyzing satellite imagery, you can detect features that may indicate a lack of adequate security measures.
+Satellite imagery OSINT can help identify potential vulnerabilities in physical security measures such as perimeter fences, guard patrols, and surveillance cameras. This skill is particularly useful during reconnaissance or pre-infiltration phases to gather information on the target's security posture.
 
 ## Prerequisites
-- Familiarity with digital image analysis software like ArcGIS or QGIS
-- Knowledge of satellite imagery platforms and their data types (e.g., multispectral, hyperspectral)
+- Familiarity with Google Earth Pro and ArcGIS Desktop
+- Access to high-resolution satellite images from Sentinel-2 data
 
 ## Procedure
 
-### Step 1: Obtain Satellite Imagery Data
+### Step 1: Acquire High-Resolution Satellite Images
+Use Google Earth Pro to search for high-resolution satellite images of the target area, focusing on the region surrounding potential vulnerabilities.
+
 ```bash
-aws api --region <region> --endpoint 'https://api.us-east-1 Ð¸Ð¼Ð°Ð³ery.landsat.usgs.gov' --data '{"query":"siteid:USDA_PATRON"}' --format json
+gearth --maxzoom 18 --maxlevel 20
 ```
-This command retrieves Landsat data from the USGS API, which includes satellite imagery of specific sites.
 
-### Step 2: Preprocess Imagery Data
-```python
-import os
-from PIL import Image
+### Step 2: Analyze Satellite Images
+Open acquired images in ArcGIS Desktop and analyze them using Sentinel-2 data. Use tools such as the NDVI (Normalized Difference Vegetation Index) to detect anomalies in vegetation patterns.
 
-# Open and save image files in the correct format
-for file in os.listdir('/path/to/satellite/imagery'):
-    if file.endswith('.jpg') or file.endswith('.png'):
-        img = Image.open(file)
-        img.save('preprocessed_' + file, 'JPEG')
-```
-Preprocessing involves opening, resizing, and saving satellite imagery files to a compatible format for analysis.
-
-### Step 3: Perform Feature Extraction
 ```bash
-import numpy as np
-from scipy.ndimage import filters
-
-# Extract features from the preprocessed images
-features = []
-for img in os.listdir('/path/to/preprocessed/imagery'):
-    img_array = np.array(Image.open(img))
-    img_array = filters.gaussian_filter(img_array, sigma=1)
-    features.append(img_array.mean())
+arccatalog -m "Sentinel-2 data"
 ```
-Feature extraction involves calculating mean pixel values for each image and filtering the data with a Gaussian filter.
+
+### Step 3: Identify Potential Vulnerabilities
+Use Google Earth Pro to mark potential vulnerabilities identified during image analysis, including perimeter fences, guard patrols, and surveillance cameras.
+
+```bash
+gearth --panorama --maxzoom 18 --maxlevel 20 --highlight < highlighted_areas >
+```
 
 ## Expected Results
-The final result should be a set of extracted features that can be used to identify potential physical security vulnerabilities.
+Successful execution of this skill should result in a detailed map of the target area's physical security posture, highlighting potential vulnerabilities that can inform threat assessment and risk mitigation strategies.
 
 ## Common Pitfalls
-- Overlooking or misinterpreting satellite imagery due to lack of expertise in digital image analysis.
-- Not considering contextual information about the site, such as topography or local building codes.
+- Overlooking areas with limited satellite image coverage or vegetation masking vulnerabilities.
+- Misinterpreting anomalies as natural features rather than security breaches.
 
 ## References
-- https://www.usgs.gov/landsat/
-- https://docs.qgis.org/en/qgis/guides/image_analysis.html
+- European Space Agency (ESA). (2022). Sentinel-2 data. Copernicus Program.
+- Google Earth Pro User Guide. (2022). Google Inc.
 ```
