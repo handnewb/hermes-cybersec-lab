@@ -1,19 +1,19 @@
 # 🛡️ Hermes Cybersecurity Lab
 
-**Turnkey cybersecurity ecosystem for Hermes Agent** — **1,927 skills**, **152 tools**, **23 frameworks** across 8 repositories. Preconfigured toolkit with wordlists, forensics, and evolving methodology for security research, pentesting, forensics, threat hunting, and threat intelligence.
+**Turnkey cybersecurity ecosystem for Hermes Agent** — **2,062 skills**, **131+ tools**, **28 frameworks** across 8 repositories. Preconfigured toolkit with wordlists, forensics, and evolving methodology for security research, pentesting, forensics, threat hunting, and threat intelligence.
 
 ## 📊 Ecosystem at a Glance
 
 | Layer | Count | Location |
 |---|---|---|
-| **Skills** | **1,927** | 247 embedded + 1,680 across 7 external repos |
-| **Tools** | **152** | Installed via `scripts/install.sh` — network, forensics, exploitation, cloud, CTI |
+| **Skills** | **2,062** | 382 embedded + 1,680 across 7 external repos |
+| **Tools** | **131+** | Installed via `scripts/install.sh` — network, forensics, exploitation, cloud, CTI |
 | **Frameworks** | **28** | MITRE ATT&CK/D3FEND/ATLAS/F3/FEND, NIST CSF/RMF, ISO 27001, OWASP (Web/LLM/AST10), CIS, CVSS, EPSS, Sigma, YARA, STIX, CWE, PTES, Cyber Kill Chain, Diamond Model, SSVC, IEC 62443 |
 
 ```
                      ┌──────────────────────────────┐
                      │  hermes-cybersec-lab (core)  │
-                     │  247 skills · 152 tools      │
+                     │  382 skills · 131+ tools     │
                      │  28 frameworks · install.sh  │
                      └──────────┬───────────────────┘
                                 │ clone-all.sh
@@ -47,7 +47,7 @@ This pulls every referenced repository into `./external/` — no piecemeal manua
 bash scripts/install.sh
 ```
 
-Installs 152 tools across 7 phases: network recon, exploitation, malware analysis, forensics, web/cloud, CTI/OSINT, and wordlists.
+Installs 131+ tools across 7 phases: network recon, exploitation, malware analysis, forensics, web/cloud, CTI/OSINT, and wordlists.
 
 ### 3. Load in Hermes
 
@@ -59,8 +59,8 @@ cp -r . ~/.hermes/profiles/<profile>/skills/cybersecurity-lab/
 
 When loaded by Hermes, this skill gives the agent:
 
-- **Full ecosystem awareness** — knows all 1,927 skills and which external repo holds each one
-- **Tool inventory awareness** — knows which 152 security tools are installed and where
+- **Full ecosystem awareness** — knows all 2,062 skills and which external repo holds each one
+- **Tool inventory awareness** — knows which 131+ security tools are installed and where
 - **Structured methodology** — passive recon → active scanning → exploitation → forensics → CTI → reporting
 - **Knowledge accumulation** — findings, false positives, and lessons compound over time
 - **Daily updates** — keep tools, wordlists, and nuclei templates current
@@ -71,14 +71,15 @@ When loaded by Hermes, this skill gives the agent:
 hermes-cybersec-lab/
 ├── SKILL.md                          # Main skill — inventory, methodology, quick refs
 ├── README.md                         # This file
+├── skills/                           # 382 embedded SKILL.md files (AI-generated + curated)
 ├── references/
-│   ├── skills-catalog.md             # 247 embedded Hermes procedural skills (15 domains)
-│   ├── tools-ecosystem.md            # 152 tools across 18 categories with install commands
-│   ├── frameworks.md                 # 23 cybersecurity frameworks and standards
+│   ├── skills-catalog.md             # 382 embedded Hermes procedural skills (22 domains)
+│   ├── tools-ecosystem.md            # 131+ tools across 18 categories with install commands
+│   ├── frameworks.md                 # 28 cybersecurity frameworks and standards
 │   ├── methodology.md                # Playbooks: recon, scanning, exploitation, forensics
 │   └── findings.md                   # Living log — discoveries, IOCs, lessons learned
 ├── scripts/
-│   ├── install.sh                    # One-shot installer for all 152 tools + wordlists
+│   ├── install.sh                    # One-shot installer for all 131+ tools + wordlists
 │   └── clone-all.sh                  # One-shot cloner for all 8 ecosystem repos
 └── external/                         # Created by clone-all.sh — 7 external repos
 ```
@@ -95,7 +96,7 @@ hermes-cybersec-lab/
 | 6 | [awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) | curated | Skills, tools, integrations directory |
 | 7 | [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) | curated | Best Hermes-compatible skills and skill factories |
 
-## 📋 Skill Domains (embedded 317)
+## 📋 Skill Domains (embedded 382)
 
 | Domain | Skills |
 |---|---|
@@ -105,15 +106,18 @@ hermes-cybersec-lab/
 | 🧠 Threat Intelligence (CTI) | 32 |
 | 🛡️ Vulnerability Management | 22 |
 | ☁️ Cloud Security | 18 |
-| 🌐 Web Application Security | 14 |
-| 🏭 OT/ICS/SCADA Security | 10 |
-| 🔎 OSINT & Reconnaissance | 5 |
-| 🚨 Incident Response | 6 |
-| 🎯 Threat Hunting & Detection | 7 |
+| 🌐 Web Application Security | 30 |
+| 📡 API Security | 22 |
+| 🏭 OT/ICS/SCADA Security | 25 |
+| 🔎 OSINT & Reconnaissance | 20 |
+| 🚨 Incident Response | 14 |
+| 🎯 Threat Hunting & Detection | 14 |
 | 🔧 Security Implementation & Hardening | 34 |
-| 📡 API Security | 12 |
+| 🔮 AI/LLM Security | 20 |
+| 📱 Mobile Security | 20 |
+| ☁️ Cloud Security Advanced | 8 |
 
-## 🔧 Tool Categories (152 tools)
+## 🔧 Tool Categories (131+ tools)
 
 | Category | Tools |
 |---|---|
@@ -129,7 +133,7 @@ hermes-cybersec-lab/
 
 *\* requires manual installation*
 
-## 📊 Frameworks & Standards (23)
+## 📊 Frameworks & Standards (28)
 
 MITRE ATT&CK · MITRE D3FEND · MITRE ATLAS · MITRE F3 · MITRE FEND · MISP · STIX/TAXII · CVSS v4.0 · EPSS · CWE · Sigma · YARA · OWASP Top 10 · OWASP ASVS · OWASP LLM Top 10 · OWASP AST10 · OWASP Agentic 2026 · NIST CSF 2.0 · NIST SP 800-53 · NIST AI RMF · ISO 27001 · CIS Controls v8 · CISA KEV · PTES · Cyber Kill Chain · Diamond Model · SSVC · IEC 62443
 
