@@ -12,9 +12,9 @@
 
 ```
                      ┌──────────────────────────────┐
-                     │  hermes-cybersec-lab (core)   │
-                     │  247 skills · 152 tools       │
-                     │  23 frameworks · install.sh   │
+                     │  hermes-cybersec-lab (core)  │
+                     │  247 skills · 152 tools      │
+                     │  28 frameworks · install.sh  │
                      └──────────┬───────────────────┘
                                 │ clone-all.sh
           ┌─────────────────────┼─────────────────────┐
