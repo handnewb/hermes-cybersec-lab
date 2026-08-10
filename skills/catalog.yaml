@@ -1,0 +1,572 @@
+# Hermes Cybersecurity Lab — Skill Catalog
+# Generated: 2026-08-10
+# Embedded: 270 | Ecosystem: 450
+
+ai-llm-security:
+  - name: adversarial-examples-defense-for-ml-models
+    path: ai-llm-security/adversarial-examples-defense-for-ml-models.md
+  - name: ai-agent-security-and-tool-use-sandboxing
+    path: ai-llm-security/ai-agent-security-and-tool-use-sandboxing.md
+  - name: ai-generated-content-detection-and-watermarking
+    path: ai-llm-security/ai-generated-content-detection-and-watermarking.md
+  - name: ai-model-watermarking-and-ownership-verification
+    path: ai-llm-security/ai-model-watermarking-and-ownership-verification.md
+  - name: ai-supply-chain-security-and-model-provenance
+    path: ai-llm-security/ai-supply-chain-security-and-model-provenance.md
+  - name: ai-system-monitoring-for-anomalous-behavior
+    path: ai-llm-security/ai-system-monitoring-for-anomalous-behavior.md
+  - name: embedding-inversion-and-privacy-attacks-on-vector-dbs
+    path: ai-llm-security/embedding-inversion-and-privacy-attacks-on-vector-dbs.md
+  - name: federated-learning-security-and-gradient-leakage
+    path: ai-llm-security/federated-learning-security-and-gradient-leakage.md
+  - name: jailbreak-detection-and-guardrail-implementation
+    path: ai-llm-security/jailbreak-detection-and-guardrail-implementation.md
+  - name: llm-api-security-and-rate-limiting
+    path: ai-llm-security/llm-api-security-and-rate-limiting.md
+  - name: llm-output-validation-and-sanitization
+    path: ai-llm-security/llm-output-validation-and-sanitization.md
+  - name: llm-red-teaming-methodology-and-frameworks
+    path: ai-llm-security/llm-red-teaming-methodology-and-frameworks.md
+  - name: mlops-pipeline-security-and-ci-cd-for-ai
+    path: ai-llm-security/mlops-pipeline-security-and-ci-cd-for-ai.md
+  - name: model-extraction-and-intellectual-property-protection
+    path: ai-llm-security/model-extraction-and-intellectual-property-protection.md
+  - name: multi-modal-input-validation-for-vision-language-models
+    path: ai-llm-security/multi-modal-input-validation-for-vision-language-models.md
+  - name: privacy-preserving-ml-inference-techniques
+    path: ai-llm-security/privacy-preserving-ml-inference-techniques.md
+  - name: prompt-injection-prevention-in-llm-applications
+    path: ai-llm-security/prompt-injection-prevention-in-llm-applications.md
+  - name: rag-pipeline-security-and-document-injection
+    path: ai-llm-security/rag-pipeline-security-and-document-injection.md
+  - name: secure-fine-tuning-and-lora-adapter-validation
+    path: ai-llm-security/secure-fine-tuning-and-lora-adapter-validation.md
+  - name: training-data-poisoning-detection-and-mitigation
+    path: ai-llm-security/training-data-poisoning-detection-and-mitigation.md
+
+api-security:
+  - name: api-authentication-bypass-via-parameter-manipulation
+    path: api-security/api-authentication-bypass-via-parameter-manipulation.md
+  - name: api-schema-validation-and-mass-assignment-vulnerabilities
+    path: api-security/api-schema-validation-and-mass-assignment-vulnerabilities.md
+  - name: api-versioning-vulnerability-and-deprecated-endpoint-testing
+    path: api-security/api-versioning-vulnerability-and-deprecated-endpoint-testing.md
+  - name: batch-request-api-abuse-and-race-condition-exploitation
+    path: api-security/batch-request-api-abuse-and-race-condition-exploitation.md
+  - name: bola-and-bfla-authorization-bypass-testing
+    path: api-security/bola-and-bfla-authorization-bypass-testing.md
+  - name: graphql-query-depth-and-rate-limiting-bypass-techniques
+    path: api-security/graphql-query-depth-and-rate-limiting-bypass-techniques.md
+  - name: grpc-api-security-assessment-methodology
+    path: api-security/grpc-api-security-assessment-methodology.md
+  - name: rate-limiting-evasion-through-ip-rotation-and-header-spoofing
+    path: api-security/rate-limiting-evasion-through-ip-rotation-and-header-spoofing.md
+  - name: rest-api-fuzzing-with-automated-tools-and-custom-payloads
+    path: api-security/rest-api-fuzzing-with-automated-tools-and-custom-payloads.md
+  - name: webhook-security-testing-and-ssrf-via-callbacks
+    path: api-security/webhook-security-testing-and-ssrf-via-callbacks.md
+
+cloud-security-advanced:
+  - name: cloud-data-lake-access-control-and-auditing
+    path: cloud-security-advanced/cloud-data-lake-access-control-and-auditing.md
+  - name: cloud-iam-privilege-escalation-paths-enumeration
+    path: cloud-security-advanced/cloud-iam-privilege-escalation-paths-enumeration.md
+  - name: cloud-secrets-management-and-vault-auditing
+    path: cloud-security-advanced/cloud-secrets-management-and-vault-auditing.md
+  - name: container-escape-detection-and-prevention
+    path: cloud-security-advanced/container-escape-detection-and-prevention.md
+  - name: cross-account-trust-relationship-abuse-detection
+    path: cloud-security-advanced/cross-account-trust-relationship-abuse-detection.md
+  - name: infrastructure-as-code-security-scanning
+    path: cloud-security-advanced/infrastructure-as-code-security-scanning.md
+  - name: kubernetes-rbac-misconfiguration-audit
+    path: cloud-security-advanced/kubernetes-rbac-misconfiguration-audit.md
+  - name: serverless-function-security-and-cold-start-attacks
+    path: cloud-security-advanced/serverless-function-security-and-cold-start-attacks.md
+
+cve-2015-2017:
+  - name: cve-2015-0235-cve-2015-0235-ghost-glibc-gethostbyname-buffer-overflow-exploitation
+    path: cve-2015-2017/cve-2015-0235-cve-2015-0235-ghost-glibc-gethostbyname-buffer-overflow-exploitation.md
+  - name: cve-2015-1635-ms15-034-http.sys-rce-cve-2015-1635-exploitation-and-detection
+    path: cve-2015-2017/cve-2015-1635-ms15-034-http.sys-rce-cve-2015-1635-exploitation-and-detection.md
+  - name: cve-2015-1641-cve-2015-1641-microsoft-office-rtf-memory-corruption-exploitation
+    path: cve-2015-2017/cve-2015-1641-cve-2015-1641-microsoft-office-rtf-memory-corruption-exploitation.md
+  - name: cve-2015-1701-cve-2015-1701-windows-win32k-lpe-kernel-exploitation
+    path: cve-2015-2017/cve-2015-1701-cve-2015-1701-windows-win32k-lpe-kernel-exploitation.md
+  - name: cve-2015-2426-cve-2015-2426-windows-otf-driver-remote-code-execution-analysis
+    path: cve-2015-2017/cve-2015-2426-cve-2015-2426-windows-otf-driver-remote-code-execution-analysis.md
+  - name: cve-2015-3456-cve-2015-3456-venom-qemu-floppy-disk-controller-escape-exploitation
+    path: cve-2015-2017/cve-2015-3456-cve-2015-3456-venom-qemu-floppy-disk-controller-escape-exploitation.md
+  - name: cve-2015-4852-cve-2015-4852-weblogic-t3-deserialization-rce-exploitation
+    path: cve-2015-2017/cve-2015-4852-cve-2015-4852-weblogic-t3-deserialization-rce-exploitation.md
+  - name: cve-2015-5119-cve-2015-5119-hacking-team-flash-player-0day-exploitation-and-forensics
+    path: cve-2015-2017/cve-2015-5119-cve-2015-5119-hacking-team-flash-player-0day-exploitation-and-forensics.md
+  - name: cve-2015-7547-cve-2015-7547-glibc-getaddrinfo-stack-buffer-overflow-and-exploitation
+    path: cve-2015-2017/cve-2015-7547-cve-2015-7547-glibc-getaddrinfo-stack-buffer-overflow-and-exploitation.md
+  - name: cve-2015-7645-cve-2015-7645-adobe-flash-player-type-confusion-rce-chain
+    path: cve-2015-2017/cve-2015-7645-cve-2015-7645-adobe-flash-player-type-confusion-rce-chain.md
+  - name: cve-2016-0189-cve-2016-0189-internet-explorer-scripting-engine-memory-corruption
+    path: cve-2015-2017/cve-2016-0189-cve-2016-0189-internet-explorer-scripting-engine-memory-corruption.md
+  - name: cve-2016-0800-cve-2016-0800-drown-sslv2-cross-protocol-attack-exploitation
+    path: cve-2015-2017/cve-2016-0800-cve-2016-0800-drown-sslv2-cross-protocol-attack-exploitation.md
+  - name: cve-2016-2107-cve-2016-2107-openssl-padding-oracle-lucky13-style-attack
+    path: cve-2015-2017/cve-2016-2107-cve-2016-2107-openssl-padding-oracle-lucky13-style-attack.md
+  - name: cve-2016-3714-cve-2016-3714-imagemagick-imagetragick-ssrf-and-rce-exploitation
+    path: cve-2015-2017/cve-2016-3714-cve-2016-3714-imagemagick-imagetragick-ssrf-and-rce-exploitation.md
+  - name: cve-2016-4117-cve-2016-4117-adobe-flash-player-type-confusion-0day-exploitation
+    path: cve-2015-2017/cve-2016-4117-cve-2016-4117-adobe-flash-player-type-confusion-0day-exploitation.md
+  - name: cve-2016-4657-cve-2016-4657-pegasus-trident-ios-kernel-exploit-chain-forensics
+    path: cve-2015-2017/cve-2016-4657-cve-2016-4657-pegasus-trident-ios-kernel-exploit-chain-forensics.md
+  - name: cve-2016-5195-cve-2016-5195-dirty-cow-linux-kernel-privilege-escalation
+    path: cve-2015-2017/cve-2016-5195-cve-2016-5195-dirty-cow-linux-kernel-privilege-escalation.md
+  - name: cve-2016-6366-cve-2016-6366-cisco-asa-snmp-remote-code-execution-attack
+    path: cve-2015-2017/cve-2016-6366-cve-2016-6366-cisco-asa-snmp-remote-code-execution-attack.md
+  - name: cve-2016-7255-cve-2016-7255-windows-win32k-privilege-escalation-exploited-in-wild
+    path: cve-2015-2017/cve-2016-7255-cve-2016-7255-windows-win32k-privilege-escalation-exploited-in-wild.md
+  - name: cve-2016-7855-cve-2016-7855-adobe-flash-player-use-after-free-active-exploitation
+    path: cve-2015-2017/cve-2016-7855-cve-2016-7855-adobe-flash-player-use-after-free-active-exploitation.md
+  - name: cve-2017-0144-cve-2017-0144-eternalblue-smbv1-ms17-010-exploitation-and-eternalrocks
+    path: cve-2015-2017/cve-2017-0144-cve-2017-0144-eternalblue-smbv1-ms17-010-exploitation-and-eternalrocks.md
+  - name: cve-2017-0145-cve-2017-0145-eternalromance-smbv1-exploitation-with-doublepulsar
+    path: cve-2015-2017/cve-2017-0145-cve-2017-0145-eternalromance-smbv1-exploitation-with-doublepulsar.md
+  - name: cve-2017-0199-cve-2017-0199-microsoft-office-rtf-url-moniker-ole2link-rce
+    path: cve-2015-2017/cve-2017-0199-cve-2017-0199-microsoft-office-rtf-url-moniker-ole2link-rce.md
+  - name: cve-2017-10271-cve-2017-10271-oracle-weblogic-wls-security-unauthenticated-rce
+    path: cve-2015-2017/cve-2017-10271-cve-2017-10271-oracle-weblogic-wls-security-unauthenticated-rce.md
+  - name: cve-2017-11780-cve-2017-11780-windows-smbv1-remote-code-execution-ms17-010-variant
+    path: cve-2015-2017/cve-2017-11780-cve-2017-11780-windows-smbv1-remote-code-execution-ms17-010-variant.md
+  - name: cve-2017-11882-cve-2017-11882-microsoft-equation-editor-stack-buffer-overflow-exploitation
+    path: cve-2015-2017/cve-2017-11882-cve-2017-11882-microsoft-equation-editor-stack-buffer-overflow-exploitation.md
+  - name: cve-2017-5638-cve-2017-5638-apache-struts2-jakarta-multipart-parser-rce-exploitation
+    path: cve-2015-2017/cve-2017-5638-cve-2017-5638-apache-struts2-jakarta-multipart-parser-rce-exploitation.md
+  - name: cve-2017-8543-cve-2017-8543-windows-search-rce-via-smb-named-pipe-exploitation
+    path: cve-2015-2017/cve-2017-8543-cve-2017-8543-windows-search-rce-via-smb-named-pipe-exploitation.md
+  - name: cve-2017-8759-cve-2017-8759-microsoft-.net-framework-soap-wsdl-parser-code-injection
+    path: cve-2015-2017/cve-2017-8759-cve-2017-8759-microsoft-.net-framework-soap-wsdl-parser-code-injection.md
+  - name: cve-2017-9805-cve-2017-9805-apache-struts2-rest-plugin-xstream-rce-exploitation
+    path: cve-2015-2017/cve-2017-9805-cve-2017-9805-apache-struts2-rest-plugin-xstream-rce-exploitation.md
+
+cve-2018-2020:
+  - name: cve-2018-11776-cve-2018-11776-apache-struts2-namespace-ognl-injection-and-namespace-attacks
+    path: cve-2018-2020/cve-2018-11776-cve-2018-11776-apache-struts2-namespace-ognl-injection-and-namespace-attacks.md
+  - name: cve-2018-13379-cve-2018-13379-fortios-ssl-vpn-path-traversal-credential-harvesting
+    path: cve-2018-2020/cve-2018-13379-cve-2018-13379-fortios-ssl-vpn-path-traversal-credential-harvesting.md
+  - name: cve-2018-15961-cve-2018-15961-adobe-coldfusion-file-upload-unrestricted-rce-exploitation
+    path: cve-2018-2020/cve-2018-15961-cve-2018-15961-adobe-coldfusion-file-upload-unrestricted-rce-exploitation.md
+  - name: cve-2018-4878-cve-2018-4878-adobe-flash-player-use-after-free-korean-apt-exploitation
+    path: cve-2018-2020/cve-2018-4878-cve-2018-4878-adobe-flash-player-use-after-free-korean-apt-exploitation.md
+  - name: cve-2018-6789-cve-2018-6789-exim-base64-decode-heap-overflow-exploitation
+    path: cve-2018-2020/cve-2018-6789-cve-2018-6789-exim-base64-decode-heap-overflow-exploitation.md
+  - name: cve-2018-7600-cve-2018-7600-drupalgeddon2-remote-code-execution-exploitation-and-forensics
+    path: cve-2018-2020/cve-2018-7600-cve-2018-7600-drupalgeddon2-remote-code-execution-exploitation-and-forensics.md
+  - name: cve-2018-8120-cve-2018-8120-windows-win32k-null-pointer-dereference-lpe-exploitation
+    path: cve-2018-2020/cve-2018-8120-cve-2018-8120-windows-win32k-null-pointer-dereference-lpe-exploitation.md
+  - name: cve-2018-8174-cve-2018-8174-windows-vbscript-double-kill-uaf-0day-exploitation
+    path: cve-2018-2020/cve-2018-8174-cve-2018-8174-windows-vbscript-double-kill-uaf-0day-exploitation.md
+  - name: cve-2018-8453-cve-2018-8453-windows-win32k-lpe-exploited-by-fruityarmor-apt-group
+    path: cve-2018-2020/cve-2018-8453-cve-2018-8453-windows-win32k-lpe-exploited-by-fruityarmor-apt-group.md
+  - name: cve-2018-8581-cve-2018-8581-microsoft-exchange-server-ssrf-to-ntlm-relay-privilege-escalation
+    path: cve-2018-2020/cve-2018-8581-cve-2018-8581-microsoft-exchange-server-ssrf-to-ntlm-relay-privilege-escalation.md
+  - name: cve-2019-0604-cve-2019-0604-microsoft-sharepoint-viewstate-deserialization-rce
+    path: cve-2018-2020/cve-2019-0604-cve-2019-0604-microsoft-sharepoint-viewstate-deserialization-rce.md
+  - name: cve-2019-0708-cve-2019-0708-bluekeep-rdp-remote-code-execution-and-worm-exploitation
+    path: cve-2018-2020/cve-2019-0708-cve-2019-0708-bluekeep-rdp-remote-code-execution-and-worm-exploitation.md
+  - name: cve-2019-10149-cve-2019-10149-exim-mail-transfer-agent-return-path-rce
+    path: cve-2018-2020/cve-2019-10149-cve-2019-10149-exim-mail-transfer-agent-return-path-rce.md
+  - name: cve-2019-11510-cve-2019-11510-pulse-secure-vpn-arbitrary-file-read-exploitation
+    path: cve-2018-2020/cve-2019-11510-cve-2019-11510-pulse-secure-vpn-arbitrary-file-read-exploitation.md
+  - name: cve-2019-1367-cve-2019-1367-internet-explorer-scripting-engine-uaf-0day-exploitation
+    path: cve-2018-2020/cve-2019-1367-cve-2019-1367-internet-explorer-scripting-engine-uaf-0day-exploitation.md
+  - name: cve-2019-14287-cve-2019-14287-sudo-bypass-via-uid--1-exploitation-and-detection
+    path: cve-2018-2020/cve-2019-14287-cve-2019-14287-sudo-bypass-via-uid--1-exploitation-and-detection.md
+  - name: cve-2019-18935-cve-2019-18935-telerik-ui-for-asp.net-ajax-deserialization-rce-exploitation
+    path: cve-2018-2020/cve-2019-18935-cve-2019-18935-telerik-ui-for-asp.net-ajax-deserialization-rce-exploitation.md
+  - name: cve-2019-19781-cve-2019-19781-citrix-adc-netscaler-path-traversal-rce-exploitation
+    path: cve-2018-2020/cve-2019-19781-cve-2019-19781-citrix-adc-netscaler-path-traversal-rce-exploitation.md
+  - name: cve-2019-2725-cve-2019-2725-oracle-weblogic-wls9-async-deserialization-rce
+    path: cve-2018-2020/cve-2019-2725-cve-2019-2725-oracle-weblogic-wls9-async-deserialization-rce.md
+  - name: cve-2019-3396-cve-2019-3396-atlassian-confluence-widget-connector-path-traversal-rce
+    path: cve-2018-2020/cve-2019-3396-cve-2019-3396-atlassian-confluence-widget-connector-path-traversal-rce.md
+  - name: cve-2020-0674-cve-2020-0674-internet-explorer-jscript9-memory-corruption-0day
+    path: cve-2018-2020/cve-2020-0674-cve-2020-0674-internet-explorer-jscript9-memory-corruption-0day.md
+  - name: cve-2020-0688-cve-2020-0688-microsoft-exchange-fixed-cryptographic-key-rce-exploitation
+    path: cve-2018-2020/cve-2020-0688-cve-2020-0688-microsoft-exchange-fixed-cryptographic-key-rce-exploitation.md
+  - name: cve-2020-0796-cve-2020-0796-smbghost-smbv3-compression-kernel-rce-worm-exploitation
+    path: cve-2018-2020/cve-2020-0796-cve-2020-0796-smbghost-smbv3-compression-kernel-rce-worm-exploitation.md
+  - name: cve-2020-1350-cve-2020-1350-windows-dns-server-sigred-wormable-rce-exploitation
+    path: cve-2018-2020/cve-2020-1350-cve-2020-1350-windows-dns-server-sigred-wormable-rce-exploitation.md
+  - name: cve-2020-1472-cve-2020-1472-zerologon-netlogon-cryptographic-bypass-domain-takeover
+    path: cve-2018-2020/cve-2020-1472-cve-2020-1472-zerologon-netlogon-cryptographic-bypass-domain-takeover.md
+  - name: cve-2020-14882-cve-2020-14882-oracle-weblogic-console-authentication-bypass-and-rce
+    path: cve-2018-2020/cve-2020-14882-cve-2020-14882-oracle-weblogic-console-authentication-bypass-and-rce.md
+  - name: cve-2020-1938-cve-2020-1938-apache-tomcat-ajp-ghostcat-file-read-and-rce-exploitation
+    path: cve-2018-2020/cve-2020-1938-cve-2020-1938-apache-tomcat-ajp-ghostcat-file-read-and-rce-exploitation.md
+  - name: cve-2020-3452-cve-2020-3452-cisco-asa-ftd-path-traversal-arbitrary-file-read
+    path: cve-2018-2020/cve-2020-3452-cve-2020-3452-cisco-asa-ftd-path-traversal-arbitrary-file-read.md
+  - name: cve-2020-4006-cve-2020-4006-vmware-workspace-one-access-command-injection-rce-exploitation
+    path: cve-2018-2020/cve-2020-4006-cve-2020-4006-vmware-workspace-one-access-command-injection-rce-exploitation.md
+  - name: cve-2020-5902-cve-2020-5902-f5-big-ip-tmui-directory-traversal-rce-attack-and-detection
+    path: cve-2018-2020/cve-2020-5902-cve-2020-5902-f5-big-ip-tmui-directory-traversal-rce-attack-and-detection.md
+
+cve-2021-2023:
+  - name: cve-2021-21972-cve-2021-21972-vmware-vcenter-server-unauthenticated-file-upload-rce
+    path: cve-2021-2023/cve-2021-21972-cve-2021-21972-vmware-vcenter-server-unauthenticated-file-upload-rce.md
+  - name: cve-2021-22986-cve-2021-22986-f5-big-ip-icontrol-rest-api-unauthenticated-rce-exploitation
+    path: cve-2021-2023/cve-2021-22986-cve-2021-22986-f5-big-ip-icontrol-rest-api-unauthenticated-rce-exploitation.md
+  - name: cve-2021-26084-cve-2021-26084-atlassian-confluence-ognl-injection-rce-exploitation
+    path: cve-2021-2023/cve-2021-26084-cve-2021-26084-atlassian-confluence-ognl-injection-rce-exploitation.md
+  - name: cve-2021-26855-cve-2021-26855-proxylogon-microsoft-exchange-ssrf-to-rce-chain
+    path: cve-2021-2023/cve-2021-26855-cve-2021-26855-proxylogon-microsoft-exchange-ssrf-to-rce-chain.md
+  - name: cve-2021-30551-cve-2021-30551-google-chrome-type-confusion-in-v8-exploited-in-wild
+    path: cve-2021-2023/cve-2021-30551-cve-2021-30551-google-chrome-type-confusion-in-v8-exploited-in-wild.md
+  - name: cve-2021-30860-cve-2021-30860-forcedentry-ios-coregraphics-integer-overflow-exploit-chain
+    path: cve-2021-2023/cve-2021-30860-cve-2021-30860-forcedentry-ios-coregraphics-integer-overflow-exploit-chain.md
+  - name: cve-2021-34527-cve-2021-34527-printnightmare-windows-print-spooler-rce-lpe
+    path: cve-2021-2023/cve-2021-34527-cve-2021-34527-printnightmare-windows-print-spooler-rce-lpe.md
+  - name: cve-2021-36934-cve-2021-36934-hivenightmare-sam-hive-acl-bypass-lpe-exploitation
+    path: cve-2021-2023/cve-2021-36934-cve-2021-36934-hivenightmare-sam-hive-acl-bypass-lpe-exploitation.md
+  - name: cve-2021-40444-cve-2021-40444-mshtml-activex-control-rce-exploited-via-office-docs
+    path: cve-2021-2023/cve-2021-40444-cve-2021-40444-mshtml-activex-control-rce-exploited-via-office-docs.md
+  - name: cve-2021-44228-cve-2021-44228-log4shell-jndi-injection-exploitation-forensics-and-hardening
+    path: cve-2021-2023/cve-2021-44228-cve-2021-44228-log4shell-jndi-injection-exploitation-forensics-and-hardening.md
+  - name: cve-2022-1388-cve-2022-1388-f5-big-ip-icontrol-rest-authentication-bypass-rce
+    path: cve-2021-2023/cve-2022-1388-cve-2022-1388-f5-big-ip-icontrol-rest-authentication-bypass-rce.md
+  - name: cve-2022-22718-cve-2022-22718-windows-print-spooler-lpe-via-seloaddriverprivilege
+    path: cve-2021-2023/cve-2022-22718-cve-2022-22718-windows-print-spooler-lpe-via-seloaddriverprivilege.md
+  - name: cve-2022-22954-cve-2022-22954-vmware-workspace-one-access-ssti-rce-exploitation
+    path: cve-2021-2023/cve-2022-22954-cve-2022-22954-vmware-workspace-one-access-ssti-rce-exploitation.md
+  - name: cve-2022-22965-cve-2022-22965-spring4shell-spring-framework-data-binding-rce-exploitation
+    path: cve-2021-2023/cve-2022-22965-cve-2022-22965-spring4shell-spring-framework-data-binding-rce-exploitation.md
+  - name: cve-2022-26134-cve-2022-26134-atlassian-confluence-ognl-injection-unauthenticated-rce
+    path: cve-2021-2023/cve-2022-26134-cve-2022-26134-atlassian-confluence-ognl-injection-unauthenticated-rce.md
+  - name: cve-2022-26925-cve-2022-26925-petitpotam-ntlm-relay-coercion-and-domain-escalation
+    path: cve-2021-2023/cve-2022-26925-cve-2022-26925-petitpotam-ntlm-relay-coercion-and-domain-escalation.md
+  - name: cve-2022-29464-cve-2022-29464-wso2-carbon-server-arbitrary-file-upload-rce-exploitation
+    path: cve-2021-2023/cve-2022-29464-cve-2022-29464-wso2-carbon-server-arbitrary-file-upload-rce-exploitation.md
+  - name: cve-2022-30190-cve-2022-30190-follina-microsoft-support-diagnostic-tool-rce-exploitation
+    path: cve-2021-2023/cve-2022-30190-cve-2022-30190-follina-microsoft-support-diagnostic-tool-rce-exploitation.md
+  - name: cve-2022-41082-cve-2022-41082-proxynotshell-exchange-server-ssrf-to-rce-exploitation
+    path: cve-2021-2023/cve-2022-41082-cve-2022-41082-proxynotshell-exchange-server-ssrf-to-rce-exploitation.md
+  - name: cve-2022-42475-cve-2022-42475-fortios-ssl-vpn-heap-overflow-rce-exploitation
+    path: cve-2021-2023/cve-2022-42475-cve-2022-42475-fortios-ssl-vpn-heap-overflow-rce-exploitation.md
+  - name: cve-2023-22515-cve-2023-22515-atlassian-confluence-broken-access-control-privilege-escalation
+    path: cve-2021-2023/cve-2023-22515-cve-2023-22515-atlassian-confluence-broken-access-control-privilege-escalation.md
+  - name: cve-2023-23397-cve-2023-23397-microsoft-outlook-elevation-of-privilege-via-calendar-ntlm-leak
+    path: cve-2021-2023/cve-2023-23397-cve-2023-23397-microsoft-outlook-elevation-of-privilege-via-calendar-ntlm-leak.md
+  - name: cve-2023-27350-cve-2023-27350-papercut-ng-mf-authentication-bypass-rce-exploitation
+    path: cve-2021-2023/cve-2023-27350-cve-2023-27350-papercut-ng-mf-authentication-bypass-rce-exploitation.md
+  - name: cve-2023-34362-cve-2023-34362-moveit-transfer-sql-injection-rce-and-data-exfiltration
+    path: cve-2021-2023/cve-2023-34362-cve-2023-34362-moveit-transfer-sql-injection-rce-and-data-exfiltration.md
+  - name: cve-2023-3519-cve-2023-3519-citrix-netscaler-adc-gateway-code-injection-rce-exploitation
+    path: cve-2021-2023/cve-2023-3519-cve-2023-3519-citrix-netscaler-adc-gateway-code-injection-rce-exploitation.md
+  - name: cve-2023-36884-cve-2023-36884-microsoft-office-windows-search-security-feature-bypass-rce
+    path: cve-2021-2023/cve-2023-36884-cve-2023-36884-microsoft-office-windows-search-security-feature-bypass-rce.md
+  - name: cve-2023-38831-cve-2023-38831-winrar-arbitrary-code-execution-via-crafted-archive-extraction
+    path: cve-2021-2023/cve-2023-38831-cve-2023-38831-winrar-arbitrary-code-execution-via-crafted-archive-extraction.md
+  - name: cve-2023-44487-cve-2023-44487-http2-rapid-reset-ddos-amplification-attack
+    path: cve-2021-2023/cve-2023-44487-cve-2023-44487-http2-rapid-reset-ddos-amplification-attack.md
+  - name: cve-2023-4911-cve-2023-4911-looney-tunables-glibc-ld.so-buffer-overflow-lpe-exploitation
+    path: cve-2021-2023/cve-2023-4911-cve-2023-4911-looney-tunables-glibc-ld.so-buffer-overflow-lpe-exploitation.md
+  - name: cve-2023-4966-cve-2023-4966-citrix-netscaler-session-token-leakage-exploitation-citrixbleed
+    path: cve-2021-2023/cve-2023-4966-cve-2023-4966-citrix-netscaler-session-token-leakage-exploitation-citrixbleed.md
+
+cve-2024-2025:
+  - name: cve-2024-0519-cve-2024-0519-chrome-v8-out-of-bounds-memory-access-0day-exploitation
+    path: cve-2024-2025/cve-2024-0519-cve-2024-0519-chrome-v8-out-of-bounds-memory-access-0day-exploitation.md
+  - name: cve-2024-1709-cve-2024-1709-connectwise-screenconnect-authentication-bypass-rce
+    path: cve-2024-2025/cve-2024-1709-cve-2024-1709-connectwise-screenconnect-authentication-bypass-rce.md
+  - name: cve-2024-21887-cve-2024-21887-ivanti-connect-secure-command-injection-zero-day-exploitation
+    path: cve-2024-2025/cve-2024-21887-cve-2024-21887-ivanti-connect-secure-command-injection-zero-day-exploitation.md
+  - name: cve-2024-24919-cve-2024-24919-check-point-vpn-information-disclosure-and-rce-chain
+    path: cve-2024-2025/cve-2024-24919-cve-2024-24919-check-point-vpn-information-disclosure-and-rce-chain.md
+  - name: cve-2024-27198-cve-2024-27198-jetbrains-teamcity-authentication-bypass-rce-exploitation
+    path: cve-2024-2025/cve-2024-27198-cve-2024-27198-jetbrains-teamcity-authentication-bypass-rce-exploitation.md
+  - name: cve-2024-28995-cve-2024-28995-solarwinds-serv-u-path-traversal-exploitation-and-detection
+    path: cve-2024-2025/cve-2024-28995-cve-2024-28995-solarwinds-serv-u-path-traversal-exploitation-and-detection.md
+  - name: cve-2024-3400-cve-2024-3400-pan-os-globalprotect-command-injection-0day-exploitation
+    path: cve-2024-2025/cve-2024-3400-cve-2024-3400-pan-os-globalprotect-command-injection-0day-exploitation.md
+  - name: cve-2024-38021-cve-2024-38021-microsoft-outlook-moniker-link-rce-zero-click-exploitation
+    path: cve-2024-2025/cve-2024-38021-cve-2024-38021-microsoft-outlook-moniker-link-rce-zero-click-exploitation.md
+  - name: cve-2024-38077-cve-2024-38077-windows-remote-desktop-licensing-service-rce-madlicense
+    path: cve-2024-2025/cve-2024-38077-cve-2024-38077-windows-remote-desktop-licensing-service-rce-madlicense.md
+  - name: cve-2024-6387-cve-2024-6387-regresshion-openssh-signal-handler-race-condition-rce
+    path: cve-2024-2025/cve-2024-6387-cve-2024-6387-regresshion-openssh-signal-handler-race-condition-rce.md
+  - name: cve-2025-0282-cve-2025-0282-ivanti-connect-secure-stack-buffer-overflow-exploitation
+    path: cve-2024-2025/cve-2025-0282-cve-2025-0282-ivanti-connect-secure-stack-buffer-overflow-exploitation.md
+  - name: cve-2025-0411-cve-2025-0411-7-zip-mark-of-the-web-bypass-exploitation-and-detection
+    path: cve-2024-2025/cve-2025-0411-cve-2025-0411-7-zip-mark-of-the-web-bypass-exploitation-and-detection.md
+  - name: cve-2025-0613-cve-2025-0613-windows-kernel-toctou-race-condition-lpe-exploitation
+    path: cve-2024-2025/cve-2025-0613-cve-2025-0613-windows-kernel-toctou-race-condition-lpe-exploitation.md
+  - name: cve-2025-0994-cve-2025-0994-vasion-print-virtual-appliance-authentication-bypass-exploitation
+    path: cve-2024-2025/cve-2025-0994-cve-2025-0994-vasion-print-virtual-appliance-authentication-bypass-exploitation.md
+  - name: cve-2025-1115-cve-2025-1115-webkitgtk-and-wpewebkit-type-confusion-exploitation
+    path: cve-2024-2025/cve-2025-1115-cve-2025-1115-webkitgtk-and-wpewebkit-type-confusion-exploitation.md
+  - name: cve-2025-21311-cve-2025-21311-windows-ntlmv1-downgrade-attack-and-legacy-hash-exploitation
+    path: cve-2024-2025/cve-2025-21311-cve-2025-21311-windows-ntlmv1-downgrade-attack-and-legacy-hash-exploitation.md
+  - name: cve-2025-21333-cve-2025-21333-windows-hyper-v-nt-kernel-vsp-heap-overflow-lpe
+    path: cve-2024-2025/cve-2025-21333-cve-2025-21333-windows-hyper-v-nt-kernel-vsp-heap-overflow-lpe.md
+  - name: cve-2025-21355-cve-2025-21355-bing-remote-code-execution-via-network-service-component
+    path: cve-2024-2025/cve-2025-21355-cve-2025-21355-bing-remote-code-execution-via-network-service-component.md
+  - name: cve-2025-21379-cve-2025-21379-dhcp-client-service-remote-code-execution-exploitation
+    path: cve-2024-2025/cve-2025-21379-cve-2025-21379-dhcp-client-service-remote-code-execution-exploitation.md
+  - name: cve-2025-24985-cve-2025-24985-windows-fast-fat-system-file-driver-rce-exploitation
+    path: cve-2024-2025/cve-2025-24985-cve-2025-24985-windows-fast-fat-system-file-driver-rce-exploitation.md
+  - name: cve-2025-24989-cve-2025-24989-power-pages-elevation-of-privilege-and-defense-bypass
+    path: cve-2024-2025/cve-2025-24989-cve-2025-24989-power-pages-elevation-of-privilege-and-defense-bypass.md
+  - name: cve-2025-25015-cve-2025-25015-kibana-prototype-pollution-rce-exploitation-and-hardening
+    path: cve-2024-2025/cve-2025-25015-cve-2025-25015-kibana-prototype-pollution-rce-exploitation-and-hardening.md
+  - name: cve-2025-25892-cve-2025-25892-sudo-heap-buffer-overflow-lpe-exploitation-and-hardening
+    path: cve-2024-2025/cve-2025-25892-cve-2025-25892-sudo-heap-buffer-overflow-lpe-exploitation-and-hardening.md
+  - name: cve-2025-26633-cve-2025-26633-microsoft-management-console-crafted-.msc-file-rce
+    path: cve-2024-2025/cve-2025-26633-cve-2025-26633-microsoft-management-console-crafted-.msc-file-rce.md
+  - name: cve-2025-27408-cve-2025-27408-manifest-v2-deprecation-bypass-web-request-manipulation
+    path: cve-2024-2025/cve-2025-27408-cve-2025-27408-manifest-v2-deprecation-bypass-web-request-manipulation.md
+  - name: cve-2025-28874-cve-2025-28874-sharepoint-server-remote-code-execution-exploitation
+    path: cve-2024-2025/cve-2025-28874-cve-2025-28874-sharepoint-server-remote-code-execution-exploitation.md
+  - name: cve-2025-28879-cve-2025-28879-microsoft-windows-routing-and-remote-access-rce
+    path: cve-2024-2025/cve-2025-28879-cve-2025-28879-microsoft-windows-routing-and-remote-access-rce.md
+  - name: cve-2025-30356-cve-2025-30356-windows-cryptoapi-cryptographic-downgrade-and-bypass
+    path: cve-2024-2025/cve-2025-30356-cve-2025-30356-windows-cryptoapi-cryptographic-downgrade-and-bypass.md
+  - name: cve-2025-32439-cve-2025-32439-apache-struts2-file-upload-path-manipulation-rce
+    path: cve-2024-2025/cve-2025-32439-cve-2025-32439-apache-struts2-file-upload-path-manipulation-rce.md
+  - name: cve-2025-32836-cve-2025-32836-veeam-backup-authentication-bypass-and-remote-exploitation
+    path: cve-2024-2025/cve-2025-32836-cve-2025-32836-veeam-backup-authentication-bypass-and-remote-exploitation.md
+
+cve-driven-2026:
+  - name: cve-2026-11209-chrome-renderer-process-memory-leak-sensitive-dat
+    path: cve-driven-2026/cve-2026-11209-chrome-renderer-process-memory-leak-sensitive-dat.md
+  - name: cve-2026-12569-authentication-bypass-in-enterprise-identity-prov
+    path: cve-driven-2026/cve-2026-12569-authentication-bypass-in-enterprise-identity-prov.md
+  - name: cve-2026-15409-sonicwall-sma1000-unauthenticated-remote-access-e
+    path: cve-driven-2026/cve-2026-15409-sonicwall-sma1000-unauthenticated-remote-access-e.md
+  - name: cve-2026-15971-sglang-ai-inference-sandbox-escape-and-llm-api-pr
+    path: cve-driven-2026/cve-2026-15971-sglang-ai-inference-sandbox-escape-and-llm-api-pr.md
+  - name: cve-2026-16812-cvss-10.0-vco-unauthenticated-rce-infrastructure-
+    path: cve-driven-2026/cve-2026-16812-cvss-10.0-vco-unauthenticated-rce-infrastructure-.md
+  - name: cve-2026-18577-n-able-n-central-authentication-bypass-exploitati
+    path: cve-driven-2026/cve-2026-18577-n-able-n-central-authentication-bypass-exploitati.md
+  - name: cve-2026-20316-cisco-secure-firewall-static-backdoor-account-det
+    path: cve-driven-2026/cve-2026-20316-cisco-secure-firewall-static-backdoor-account-det.md
+  - name: cve-2026-21250-windows-11-24h2-http.sys-privilege-escalation-har
+    path: cve-driven-2026/cve-2026-21250-windows-11-24h2-http.sys-privilege-escalation-har.md
+  - name: cve-2026-32202-ta422-zero-day-exploitation-chain-analysis-and-th
+    path: cve-driven-2026/cve-2026-32202-ta422-zero-day-exploitation-chain-analysis-and-th.md
+  - name: cve-2026-41003-spring-security-relyingpartyregistration-rce-asse
+    path: cve-driven-2026/cve-2026-41003-spring-security-relyingpartyregistration-rce-asse.md
+  - name: cve-2026-46300-fragnesia-linux-kernel-page-cache-poisoning-detec
+    path: cve-driven-2026/cve-2026-46300-fragnesia-linux-kernel-page-cache-poisoning-detec.md
+  - name: cve-2026-48277-adobe-coldfusion-arbitrary-code-execution-hardeni
+    path: cve-driven-2026/cve-2026-48277-adobe-coldfusion-arbitrary-code-execution-hardeni.md
+  - name: cve-2026-5281-chrome-webgpu-zero-day-exploitation-and-browser-de
+    path: cve-driven-2026/cve-2026-5281-chrome-webgpu-zero-day-exploitation-and-browser-de.md
+  - name: cve-2026-63077-jetbrains-teamcity-unauthenticated-rce-detection-
+    path: cve-driven-2026/cve-2026-63077-jetbrains-teamcity-unauthenticated-rce-detection-.md
+  - name: cve-2026-8874-securly-chrome-extension-http-downgrade-and-mitm-e
+    path: cve-driven-2026/cve-2026-8874-securly-chrome-extension-http-downgrade-and-mitm-e.md
+
+incident-response:
+  - name: active-directory-compromise-ir-playbook
+    path: incident-response/active-directory-compromise-ir-playbook.md
+  - name: business-email-compromise-investigation-framework
+    path: incident-response/business-email-compromise-investigation-framework.md
+  - name: cloud-ir-and-forensics-for-aws-environments
+    path: incident-response/cloud-ir-and-forensics-for-aws-environments.md
+  - name: data-exfiltration-detection-and-response
+    path: incident-response/data-exfiltration-detection-and-response.md
+  - name: insider-threat-detection-and-response-workflow
+    path: incident-response/insider-threat-detection-and-response-workflow.md
+  - name: ransomware-incident-response-and-recovery-playbook
+    path: incident-response/ransomware-incident-response-and-recovery-playbook.md
+  - name: supply-chain-compromise-ir-methodology
+    path: incident-response/supply-chain-compromise-ir-methodology.md
+  - name: zero-day-exploit-containment-and-forensics
+    path: incident-response/zero-day-exploit-containment-and-forensics.md
+
+mobile-security:
+  - name: android-apk-static-analysis-and-malware-triage
+    path: mobile-security/android-apk-static-analysis-and-malware-triage.md
+  - name: android-intent-hijacking-and-permission-analysis
+    path: mobile-security/android-intent-hijacking-and-permission-analysis.md
+  - name: android-obfuscation-and-packer-analysis-with-apkid
+    path: mobile-security/android-obfuscation-and-packer-analysis-with-apkid.md
+  - name: android-runtime-application-self-protection-analysis
+    path: mobile-security/android-runtime-application-self-protection-analysis.md
+  - name: android-safety-net-and-root-detection-bypass-methods
+    path: mobile-security/android-safety-net-and-root-detection-bypass-methods.md
+  - name: detecting-mobile-spyware-and-stalkerware-indicators
+    path: mobile-security/detecting-mobile-spyware-and-stalkerware-indicators.md
+  - name: frida-based-dynamic-instrumentation-for-android-apps
+    path: mobile-security/frida-based-dynamic-instrumentation-for-android-apps.md
+  - name: ios-ipa-security-assessment-methodology
+    path: mobile-security/ios-ipa-security-assessment-methodology.md
+  - name: ios-jailbreak-detection-bypass-and-hooking-techniques
+    path: mobile-security/ios-jailbreak-detection-bypass-and-hooking-techniques.md
+  - name: ios-keychain-and-secure-enclave-security-assessment
+    path: mobile-security/ios-keychain-and-secure-enclave-security-assessment.md
+  - name: ios-mach-o-binary-reverse-engineering-basics
+    path: mobile-security/ios-mach-o-binary-reverse-engineering-basics.md
+  - name: mobile-app-api-traffic-interception-with-burp-mitmproxy
+    path: mobile-security/mobile-app-api-traffic-interception-with-burp-mitmproxy.md
+  - name: mobile-app-certificate-pinning-bypass-techniques
+    path: mobile-security/mobile-app-certificate-pinning-bypass-techniques.md
+  - name: mobile-app-deep-link-hijacking-vulnerability-testing
+    path: mobile-security/mobile-app-deep-link-hijacking-vulnerability-testing.md
+  - name: mobile-app-push-notification-interception-and-spoofing
+    path: mobile-security/mobile-app-push-notification-interception-and-spoofing.md
+  - name: mobile-biometric-authentication-security-testing
+    path: mobile-security/mobile-biometric-authentication-security-testing.md
+  - name: mobile-device-management-(mdm)-bypass-techniques
+    path: mobile-security/mobile-device-management-(mdm)-bypass-techniques.md
+  - name: mobile-webview-and-javascript-bridge-security-testing
+    path: mobile-security/mobile-webview-and-javascript-bridge-security-testing.md
+  - name: objection-based-runtime-analysis-for-ios-applications
+    path: mobile-security/objection-based-runtime-analysis-for-ios-applications.md
+  - name: owasp-mobile-top-10-assessment-framework
+    path: mobile-security/owasp-mobile-top-10-assessment-framework.md
+
+osint:
+  - name: aircraft-and-maritime-vessel-tracking-for-security
+    path: osint/aircraft-and-maritime-vessel-tracking-for-security.md
+  - name: automated-osint-pipeline-with-python-and-apis
+    path: osint/automated-osint-pipeline-with-python-and-apis.md
+  - name: breach-data-hunting-and-credential-enumeration
+    path: osint/breach-data-hunting-and-credential-enumeration.md
+  - name: business-email-compromise-target-profiling
+    path: osint/business-email-compromise-target-profiling.md
+  - name: cryptocurrency-transaction-tracing-for-investigations
+    path: osint/cryptocurrency-transaction-tracing-for-investigations.md
+  - name: dark-web-intelligence-gathering-methodology
+    path: osint/dark-web-intelligence-gathering-methodology.md
+  - name: domain-and-dns-intelligence-gathering
+    path: osint/domain-and-dns-intelligence-gathering.md
+  - name: email-header-analysis-and-sender-verification-osint
+    path: osint/email-header-analysis-and-sender-verification-osint.md
+  - name: geolocation-osint-from-social-media-posts
+    path: osint/geolocation-osint-from-social-media-posts.md
+  - name: github-and-code-repository-intelligence-gathering
+    path: osint/github-and-code-repository-intelligence-gathering.md
+  - name: maltego-transforms-and-graph-based-osint-investigation
+    path: osint/maltego-transforms-and-graph-based-osint-investigation.md
+  - name: metadata-extraction-from-public-documents
+    path: osint/metadata-extraction-from-public-documents.md
+  - name: pastebin-and-dark-web-forum-monitoring-automation
+    path: osint/pastebin-and-dark-web-forum-monitoring-automation.md
+  - name: ransomware-group-leak-site-monitoring-and-analysis
+    path: osint/ransomware-group-leak-site-monitoring-and-analysis.md
+  - name: reverse-image-search-for-threat-actor-identification
+    path: osint/reverse-image-search-for-threat-actor-identification.md
+  - name: satellite-imagery-osint-for-physical-security
+    path: osint/satellite-imagery-osint-for-physical-security.md
+  - name: shodan-and-censys-industrial-asset-discovery
+    path: osint/shodan-and-censys-industrial-asset-discovery.md
+  - name: social-media-footprint-analysis-and-correlation
+    path: osint/social-media-footprint-analysis-and-correlation.md
+  - name: threat-actor-infrastructure-mapping
+    path: osint/threat-actor-infrastructure-mapping.md
+  - name: whois-history-and-domain-registration-investigation
+    path: osint/whois-history-and-domain-registration-investigation.md
+
+ot-ics-scada:
+  - name: bacnet-building-automation-protocol-security
+    path: ot-ics-scada/bacnet-building-automation-protocol-security.md
+  - name: dnp3-protocol-vulnerability-analysis
+    path: ot-ics-scada/dnp3-protocol-vulnerability-analysis.md
+  - name: electrical-grid-substation-physical-and-cyber-security
+    path: ot-ics-scada/electrical-grid-substation-physical-and-cyber-security.md
+  - name: ethernet-ip-and-cip-protocol-vulnerability-assessment
+    path: ot-ics-scada/ethernet-ip-and-cip-protocol-vulnerability-assessment.md
+  - name: hmi-security-assessment-methodology
+    path: ot-ics-scada/hmi-security-assessment-methodology.md
+  - name: ics-honeypot-deployment-with-conpot
+    path: ot-ics-scada/ics-honeypot-deployment-with-conpot.md
+  - name: ics-incident-response-and-containment
+    path: ot-ics-scada/ics-incident-response-and-containment.md
+  - name: ics-supply-chain-and-vendor-risk-management
+    path: ot-ics-scada/ics-supply-chain-and-vendor-risk-management.md
+  - name: ics-vendor-remote-access-security-assessment
+    path: ot-ics-scada/ics-vendor-remote-access-security-assessment.md
+  - name: iec-61850-substation-automation-security
+    path: ot-ics-scada/iec-61850-substation-automation-security.md
+  - name: iiot-device-security-assessment-methodology
+    path: ot-ics-scada/iiot-device-security-assessment-methodology.md
+  - name: industrial-wireless-protocol-security
+    path: ot-ics-scada/industrial-wireless-protocol-security.md
+  - name: manufacturing-execution-system-(mes)-security
+    path: ot-ics-scada/manufacturing-execution-system-(mes)-security.md
+  - name: modbus-protocol-security-assessment
+    path: ot-ics-scada/modbus-protocol-security-assessment.md
+  - name: opc-ua-security-configuration-hardening
+    path: ot-ics-scada/opc-ua-security-configuration-hardening.md
+  - name: ot-asset-discovery-and-inventory-management
+    path: ot-ics-scada/ot-asset-discovery-and-inventory-management.md
+  - name: ot-network-monitoring-with-zeek-and-snort
+    path: ot-ics-scada/ot-network-monitoring-with-zeek-and-snort.md
+  - name: ot-security-awareness-training-program-design
+    path: ot-ics-scada/ot-security-awareness-training-program-design.md
+  - name: plc-firmware-reverse-engineering
+    path: ot-ics-scada/plc-firmware-reverse-engineering.md
+  - name: plc-ladder-logic-analysis-for-malicious-code
+    path: ot-ics-scada/plc-ladder-logic-analysis-for-malicious-code.md
+  - name: purdue-model-network-architecture-security-review
+    path: ot-ics-scada/purdue-model-network-architecture-security-review.md
+  - name: rtu-and-ied-security-hardening-guide
+    path: ot-ics-scada/rtu-and-ied-security-hardening-guide.md
+  - name: safety-instrumented-system-(sis)-security
+    path: ot-ics-scada/safety-instrumented-system-(sis)-security.md
+  - name: scada-network-segmentation-and-dmz-design
+    path: ot-ics-scada/scada-network-segmentation-and-dmz-design.md
+  - name: water-and-wastewater-scada-security-assessment
+    path: ot-ics-scada/water-and-wastewater-scada-security-assessment.md
+
+threat-hunting:
+  - name: detecting-living-off-the-land-binaries-(lolbins)
+    path: threat-hunting/detecting-living-off-the-land-binaries-(lolbins).md
+  - name: dns-tunneling-and-exfiltration-hunting
+    path: threat-hunting/dns-tunneling-and-exfiltration-hunting.md
+  - name: hunting-credential-dumping-with-sysmon-and-elk
+    path: threat-hunting/hunting-credential-dumping-with-sysmon-and-elk.md
+  - name: hunting-for-c2-beacons-using-network-flow-analysis
+    path: threat-hunting/hunting-for-c2-beacons-using-network-flow-analysis.md
+  - name: hunting-for-webshells-in-web-server-directories
+    path: threat-hunting/hunting-for-webshells-in-web-server-directories.md
+  - name: kerberoasting-and-as-rep-roasting-detection
+    path: threat-hunting/kerberoasting-and-as-rep-roasting-detection.md
+  - name: lateral-movement-detection-via-windows-event-logs
+    path: threat-hunting/lateral-movement-detection-via-windows-event-logs.md
+  - name: powershell-obfuscation-detection-at-scale
+    path: threat-hunting/powershell-obfuscation-detection-at-scale.md
+
+web-app-security:
+  - name: content-security-policy-bypass-techniques
+    path: web-app-security/content-security-policy-bypass-techniques.md
+  - name: cors-misconfiguration-exploitation-methodology
+    path: web-app-security/cors-misconfiguration-exploitation-methodology.md
+  - name: cross-site-scripting-(xss)-polyglot-payload-crafting
+    path: web-app-security/cross-site-scripting-(xss)-polyglot-payload-crafting.md
+  - name: graphql-api-introspection-and-injection-testing
+    path: web-app-security/graphql-api-introspection-and-injection-testing.md
+  - name: http-request-smuggling-via-cl.te-and-te.cl-techniques
+    path: web-app-security/http-request-smuggling-via-cl.te-and-te.cl-techniques.md
+  - name: insecure-deserialization-exploit-chain-development
+    path: web-app-security/insecure-deserialization-exploit-chain-development.md
+  - name: jwt-token-manipulation-and-algorithm-confusion-attacks
+    path: web-app-security/jwt-token-manipulation-and-algorithm-confusion-attacks.md
+  - name: oauth-2.0-and-openid-connect-misconfiguration-testing
+    path: web-app-security/oauth-2.0-and-openid-connect-misconfiguration-testing.md
+  - name: prototype-pollution-in-javascript-applications
+    path: web-app-security/prototype-pollution-in-javascript-applications.md
+  - name: server-side-request-forgery-(ssrf)-to-internal-network-pivoting
+    path: web-app-security/server-side-request-forgery-(ssrf)-to-internal-network-pivoting.md
+  - name: server-side-template-injection-(ssti)-exploitation
+    path: web-app-security/server-side-template-injection-(ssti)-exploitation.md
+  - name: sql-injection-exploitation-with-sqlmap-automation
+    path: web-app-security/sql-injection-exploitation-with-sqlmap-automation.md
+  - name: subdomain-takeover-detection-and-exploitation
+    path: web-app-security/subdomain-takeover-detection-and-exploitation.md
+  - name: web-cache-poisoning-and-cache-deception-attacks
+    path: web-app-security/web-cache-poisoning-and-cache-deception-attacks.md
+  - name: websocket-security-testing-and-message-tampering
+    path: web-app-security/websocket-security-testing-and-message-tampering.md
+  - name: xml-external-entity-(xxe)-injection-to-file-disclosure
+    path: web-app-security/xml-external-entity-(xxe)-injection-to-file-disclosure.md
+
