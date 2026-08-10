@@ -1,6 +1,6 @@
 ---
 name: cybersecurity-lab
-description: Turnkey cybersecurity lab — 2,062 skills, 131+ tools, 28 frameworks, and evolving methodology for security research, pentesting, forensics, and threat intelligence. Includes one-step ecosystem cloner for 8 repositories.
+description: Turnkey cybersecurity lab — 2,077 skills, 131+ tools, 28 frameworks, and evolving methodology for security research, pentesting, forensics, and threat intelligence. Includes one-step ecosystem cloner for 8 repositories.
 category: security
 ---
 
@@ -14,13 +14,13 @@ category: security
 
 When loaded by Hermes, this skill gives the agent full awareness of:
 
-- **2,062 procedural skills** across 8 repositories — ready-to-execute guides for malware analysis, exploitation, forensics, threat hunting, and more. 382 embedded, 1,680 in external repos cloned by `scripts/clone-all.sh`.
+- **2,077 procedural skills** across 8 repositories — ready-to-execute guides for malware analysis, exploitation, forensics, threat hunting, and more. 397 embedded, 1,680 in external repos cloned by `scripts/clone-all.sh`.
 - **152+ security tools** across 13 domains — from nmap to Shuffle SOAR
 - **28 frameworks & standards** — MITRE ATT&CK, MISP, CVSS, EPSS, STIX, Sigma, YARA, NIST, ISO 27001, OWASP AST10, Agentic 2026, and more
 - **Structured methodology** — passive recon → active scanning → exploitation → forensics → CTI → reporting
 - **Knowledge accumulation** — findings, false positives, and lessons compound over time
 - **One-shot installer** — `scripts/install.sh` installs everything (with Go, Python, and Ruby deps)
-- **One-shot ecosystem cloner** — `scripts/clone-all.sh` clones all 8 repos (2,062 skills) with a single command
+- **One-shot ecosystem cloner** — `scripts/clone-all.sh` clones all 8 repos (2,077 skills) with a single command
 
 ---
 
@@ -60,7 +60,7 @@ curl -s https://api.first.org/data/v1/epss?cve=CVE-2024-XXXX | jq
 | `references/methodology.md` | Playbooks: recon, scanning, exploitation, forensics |
 | `references/findings.md` | Living log — discoveries, IOCs, lessons learned |
 | `scripts/install.sh` | One-shot installer for all 131+ tools + wordlists |
-| `scripts/clone-all.sh` | One-shot ecosystem cloner — 8 repos, 2,062 skills |
+| `scripts/clone-all.sh` | One-shot ecosystem cloner — 8 repos, 2,077 skills |
 
 ---
 

@@ -1,12 +1,12 @@
 # 🛡️ Hermes Cybersecurity Lab
 
-**Turnkey cybersecurity ecosystem for Hermes Agent** — **2,062 skills**, **131+ tools**, **28 frameworks** across 8 repositories. Preconfigured toolkit with wordlists, forensics, and evolving methodology for security research, pentesting, forensics, threat hunting, and threat intelligence.
+**Turnkey cybersecurity ecosystem for Hermes Agent** — **2,077 skills**, **131+ tools**, **28 frameworks** across 8 repositories. Preconfigured toolkit with wordlists, forensics, and evolving methodology for security research, pentesting, forensics, threat hunting, and threat intelligence.
 
 ## 📊 Ecosystem at a Glance
 
 | Layer | Count | Location |
 |---|---|---|
-| **Skills** | **2,062** | 382 embedded + 1,680 across 7 external repos |
+| **Skills** | **2,077** | 397 embedded + 1,680 across 7 external repos |
 | **Tools** | **131+** | Installed via `scripts/install.sh` — network, forensics, exploitation, cloud, CTI |
 | **Frameworks** | **28** | MITRE ATT&CK/D3FEND/ATLAS/F3/FEND, NIST CSF/RMF, ISO 27001, OWASP (Web/LLM/AST10), CIS, CVSS, EPSS, Sigma, YARA, STIX, CWE, PTES, Cyber Kill Chain, Diamond Model, SSVC, IEC 62443 |
 
@@ -35,7 +35,7 @@
 git clone https://github.com/handnewb/hermes-cybersec-lab.git
 cd hermes-cybersec-lab
 
-# Clone all 7 external repos (2,062 skills total)
+# Clone all 7 external repos (2,077 skills total)
 bash scripts/clone-all.sh
 ```
 
@@ -59,7 +59,7 @@ cp -r . ~/.hermes/profiles/<profile>/skills/cybersecurity-lab/
 
 When loaded by Hermes, this skill gives the agent:
 
-- **Full ecosystem awareness** — knows all 2,062 skills and which external repo holds each one
+- **Full ecosystem awareness** — knows all 2,077 skills and which external repo holds each one
 - **Tool inventory awareness** — knows which 131+ security tools are installed and where
 - **Structured methodology** — passive recon → active scanning → exploitation → forensics → CTI → reporting
 - **Knowledge accumulation** — findings, false positives, and lessons compound over time
@@ -71,9 +71,9 @@ When loaded by Hermes, this skill gives the agent:
 hermes-cybersec-lab/
 ├── SKILL.md                          # Main skill — inventory, methodology, quick refs
 ├── README.md                         # This file
-├── skills/                           # 382 embedded SKILL.md files (AI-generated + curated)
+├── skills/                           # 397 embedded SKILL.md files (AI-generated + curated)
 ├── references/
-│   ├── skills-catalog.md             # 382 embedded Hermes procedural skills (22 domains)
+│   ├── skills-catalog.md             # 397 embedded Hermes procedural skills (22 domains)
 │   ├── tools-ecosystem.md            # 131+ tools across 18 categories with install commands
 │   ├── frameworks.md                 # 28 cybersecurity frameworks and standards
 │   ├── methodology.md                # Playbooks: recon, scanning, exploitation, forensics

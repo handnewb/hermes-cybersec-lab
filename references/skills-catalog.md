@@ -411,6 +411,26 @@
 | 381 | rest-api-fuzzing-with-automated-tools-and-custom-payloads |
 | 382 | webhook-security-testing-and-ssrf-via-callbacks |
 
+## CVE-Driven 2026 (Real Exploits) (15)
+
+| # | Skill |
+|---|-------|
+| 383 | cve-2026-11209-chrome-renderer-process-memory-leak-sensitive-dat |
+| 384 | cve-2026-12569-authentication-bypass-in-enterprise-identity-prov |
+| 385 | cve-2026-15409-sonicwall-sma1000-unauthenticated-remote-access-e |
+| 386 | cve-2026-15971-sglang-ai-inference-sandbox-escape-and-llm-api-pr |
+| 387 | cve-2026-16812-cvss-10.0-vco-unauthenticated-rce-infrastructure- |
+| 388 | cve-2026-18577-n-able-n-central-authentication-bypass-exploitati |
+| 389 | cve-2026-20316-cisco-secure-firewall-static-backdoor-account-det |
+| 390 | cve-2026-21250-windows-11-24h2-http.sys-privilege-escalation-har |
+| 391 | cve-2026-32202-ta422-zero-day-exploitation-chain-analysis-and-th |
+| 392 | cve-2026-41003-spring-security-relyingpartyregistration-rce-asse |
+| 393 | cve-2026-46300-fragnesia-linux-kernel-page-cache-poisoning-detec |
+| 394 | cve-2026-48277-adobe-coldfusion-arbitrary-code-execution-hardeni |
+| 395 | cve-2026-5281-chrome-webgpu-zero-day-exploitation-and-browser-de |
+| 396 | cve-2026-63077-jetbrains-teamcity-unauthenticated-rce-detection- |
+| 397 | cve-2026-8874-securly-chrome-extension-http-downgrade-and-mitm-e |
+
 ## External Skill Repositories
 
 | Repository | Skills | Frameworks Mapped | Notes |
