@@ -8,7 +8,7 @@
 |---|---|---|
 | **Skills** | **1,927** | 247 embedded + 1,680 across 7 external repos |
 | **Tools** | **152** | Installed via `scripts/install.sh` — network, forensics, exploitation, cloud, CTI |
-| **Frameworks** | **23** | MITRE ATT&CK/D3FEND/ATLAS/F3/FEND, NIST CSF/RMF, ISO 27001, OWASP (Web/LLM/AST10), CIS, CVSS, EPSS, Sigma, YARA, STIX, CWE, PTES, Cyber Kill Chain, Diamond Model, SSVC, IEC 62443 |
+| **Frameworks** | **28** | MITRE ATT&CK/D3FEND/ATLAS/F3/FEND, NIST CSF/RMF, ISO 27001, OWASP (Web/LLM/AST10), CIS, CVSS, EPSS, Sigma, YARA, STIX, CWE, PTES, Cyber Kill Chain, Diamond Model, SSVC, IEC 62443 |
 
 ```
                      ┌──────────────────────────────┐
