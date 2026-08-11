@@ -7,13 +7,13 @@
 | Layer | Count | Location |
 |---|---|---|
 | **Skills** | **2,077** | 397 embedded + 1,680 across 7 external repos |
-| **Tools** | **131+** | Installed via `scripts/install.sh` — network, forensics, exploitation, cloud, CTI |
+| **Tools** | **150+** | Installed via `scripts/install.sh` — network, forensics, exploitation, cloud, CTI |
 | **Frameworks** | **28** | MITRE ATT&CK/D3FEND/ATLAS/F3/FEND, NIST CSF/RMF, ISO 27001, OWASP (Web/LLM/AST10), CIS, CVSS, EPSS, Sigma, YARA, STIX, CWE, PTES, Cyber Kill Chain, Diamond Model, SSVC, IEC 62443 |
 
 ```
                      ┌──────────────────────────────┐
                      │  hermes-cybersec-lab (core)  │
-                     │  382 skills · 131+ tools     │
+                     │  382 skills · 150+ tools     │
                      │  28 frameworks · install.sh  │
                      └──────────┬───────────────────┘
                                 │ clone-all.sh
